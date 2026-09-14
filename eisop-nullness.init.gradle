@@ -109,6 +109,12 @@ beforeProject { project ->
                     def ep = t.options.extensions.getByName('errorprone')
                     ep.allErrorsAsWarnings.set(true)
                     ep.warn('NullAway')
+                    // Extra NullAway flags for the arm, e.g. "JSpecifyExperimental=true", so
+                    // NullAway can be compared at a stricter setting than the project's own.
+                    (System.getenv('NULLAWAY_OPTS') ?: '').trim().split(/\s+/).findAll { it }.each {
+                        def kv = it.split('=', 2)
+                        ep.option("NullAway:${kv[0]}", kv.length > 1 ? kv[1] : 'true')
+                    }
                 }
             }
         }

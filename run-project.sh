@@ -25,10 +25,19 @@ arm_args() {
     jspecify)             echo "-Amode=jspecify" ;;
     jspecify-nolocations) echo "-AonlyAnnotatedFor -AjspecifyNullMarkedAlias=true -AassumeInitialized -AassumeKeyFor" ;;
     jspecify-bytecode)    echo "-Amode=jspecify -AuseConservativeDefaultsForUncheckedCode=bytecode" ;;
+    nullaway-experimental) arm_args jspecify-nolocations ;;
     *) echo "unknown arm: $1" >&2; exit 2 ;;
   esac
 }
-ALL_ARMS=(jspecify jspecify-nolocations jspecify-bytecode)
+# NullAway flags added on top of the project's own configuration, so NullAway can be compared at
+# its most spec-faithful setting: JSpecify's JDK models, wildcard handling, and inference warnings.
+arm_nullaway_opts() {
+  case "$1" in
+    nullaway-experimental) echo "JSpecifyMode=true JSpecifyExperimental=true" ;;
+    *) echo "" ;;
+  esac
+}
+ALL_ARMS=(jspecify jspecify-nolocations jspecify-bytecode nullaway-experimental)
 
 name="${1:?usage: run-project.sh <name> [arm...]}"
 shift
@@ -81,7 +90,8 @@ for arm in "${arms[@]}"; do
   out="$RESULTS_DIR/$name/$arm"
   mkdir -p "$out"
   export EISOP_ARGS="$(arm_args "$arm")"
-  echo "== $name @ ${sha:0:12} arm=$arm ($EISOP_ARGS)"
+  export NULLAWAY_OPTS="$(arm_nullaway_opts "$arm")"
+  echo "== $name @ ${sha:0:12} arm=$arm ($EISOP_ARGS${NULLAWAY_OPTS:+; NullAway: $NULLAWAY_OPTS})"
   set +e
   # CI is unset because several projects hide Error Prone warnings (and so NullAway's, once
   # demoted to warnings) when it is present.
@@ -103,5 +113,8 @@ gradle_exit	$status
 date	$(date -u +%Y-%m-%dT%H:%M:%SZ)
 META
   python3 "$HERE/summarize.py" "$src" "$out" || failed=1
+  if [ -n "$NULLAWAY_OPTS" ]; then
+    python3 "$HERE/compare.py" "$out/diagnostics.tsv" > "$out/comparison.md"
+  fi
 done
 exit "${failed:-0}"

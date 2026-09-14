@@ -97,6 +97,9 @@ jobs:
           for arm in results/${{ matrix.project }}/*/; do
             arm="$(basename "$arm")"
             cat "results/${{ matrix.project }}/$arm/summary.md" >> "$GITHUB_STEP_SUMMARY"
+            if [ -f "results/${{ matrix.project }}/$arm/comparison.md" ]; then
+              cat "results/${{ matrix.project }}/$arm/comparison.md" >> "$GITHUB_STEP_SUMMARY"
+            fi
             base="baselines/${{ matrix.project }}/$arm/diagnostics.tsv"
             if [ -f "$base" ]; then
               echo '```diff' >> "$GITHUB_STEP_SUMMARY"

@@ -18,6 +18,7 @@ adds the processor, and it records each diagnostic so runs can be compared again
 | `run-project.sh <name> [arm...]` | clones at the pinned SHA, adds canaries, runs each arm, summarizes |
 | `summarize.py` | `build.log` → `diagnostics.tsv`, `counts.tsv`, `summary.md` |
 | `diff.py <base> <new>` | compares two `diagnostics.tsv` by (tool, key, file, message), ignoring line shifts |
+| `compare.py <diagnostics.tsv>` | pairs EISOP and NullAway findings by (file, line) into both / EISOP-only / NullAway-only; written as `comparison.md` for the `nullaway-experimental` arm |
 | `baselines/<project>/<arm>/` | stored `diagnostics.tsv` and `summary.md` that CI diffs against |
 
 ## Arms
@@ -27,6 +28,11 @@ adds the processor, and it records each diagnostic so runs can be compared again
 | `jspecify` | `-Amode=jspecify` |
 | `jspecify-nolocations` | the mode's options except `-AjspecifyUnrecognizedLocations`, spelled out |
 | `jspecify-bytecode` | `-Amode=jspecify -AuseConservativeDefaultsForUncheckedCode=bytecode` |
+| `nullaway-experimental` | `jspecify-nolocations`'s options, plus NullAway `JSpecifyMode=true JSpecifyExperimental=true` on top of the project's own NullAway configuration |
+
+`nullaway-experimental` is the arm to compare the two tools with. Projects configure NullAway
+without `JSpecifyExperimental`, which leaves out JSpecify's JDK models. On context-propagation,
+NullAway reports 0 findings under the project's own configuration and 9 with the flag.
 
 The second arm spells out its options because every option the mode adds is a presence flag with
 no negative form. Once `-Amode=jspecify` is passed, none of them can be turned off.
@@ -75,6 +81,16 @@ canaries.
 - **`jspecify-bytecode`: blocked by the same crash, so no baseline.** Compared with `jspecify`, it
   adds 2 diagnostics, both in `Slf4jThreadLocalAccessor`: a return and a `Map.put` argument,
   involving the unmarked SLF4J dependency.
+- **`nullaway-experimental`: NullAway reports 9, and all 9 are at locations EISOP also reports.**
+  - **Both tools report:** 7 overrides that give `<T>` a non-null bound where the JDK's is
+    nullable, and 2 `Map.put(key, accessor.getValue())` calls. At those 9 locations EISOP reports
+    21 findings, because one bad override bound produces up to 3 EISOP findings.
+  - **EISOP's annotated JDK, which disagrees with JSpecify's JDK models:** 4 `Future<?>`
+    overrides clash with EISOP's `Future<@Nullable ?>`, and `ContextRegistry.java:91-92` clash
+    with its `ThreadLocal<@Nullable T>`.
+  - **EISOP only, probably a real bug:** `ContextRegistry.java:108` passes a
+    `V extends @Nullable Object` as the type argument of `ThreadLocalAccessor<V>`, whose `V` is
+    non-null.
 - **The scoping-anomaly counter proves nothing here.** Every one of the project's 13 main source
   files is in a `@NullMarked` package, so the counter cannot fire. Only the unmarked canary checks
   scoping on this project.
