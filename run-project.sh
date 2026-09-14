@@ -89,9 +89,10 @@ failed=0
 python3 "$HERE/summarize.py" "$src" "$out" || failed=1
 {
   if [ "$failed" -ne 0 ]; then
-    # A checker crash is a javac error, and javac then stops analyzing later classes, so Error Prone
-    # never reaches them either: both sides of the comparison are incomplete, not just EISOP's.
-    printf '> **Not a valid comparison:** the checker crashed or a canary check failed. A crash also stops NullAway from analyzing later classes, so both tools'"'"' findings may be incomplete.\n\n'
+    # EISOP reports a crash as a javac error.  EISOP skips the rest of the crashing file but keeps
+    # checking other files; Error Prone, and so NullAway, skips every file compiled after it.  Which
+    # files those are depends on compile order, so both sides are incomplete, differently per machine.
+    printf '> **Not a valid comparison:** the checker crashed or a canary check failed. After an EISOP crash, EISOP is missing the rest of the file it crashed in, and NullAway is missing every file compiled after that file, which depends on compile order.\n\n'
   fi
   python3 "$HERE/compare.py" "$out/diagnostics.tsv"
 } > "$out/comparison.md"
