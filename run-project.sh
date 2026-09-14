@@ -1,8 +1,10 @@
 #!/bin/bash
-# Runs the EISOP Nullness Checker over one corpus project under one or more arms, and summarizes
-# the diagnostics per arm.
+# Runs the EISOP Nullness Checker under -Amode=jspecify, with NullAway in the same build, over one
+# corpus project, then summarizes the diagnostics and compares the two tools.
 #
-#   ./run-project.sh <name> [arm...]        (default arms: all of them)
+#   ./run-project.sh <name>
+#
+# The checker and NullAway options live in eisop-nullness.init.gradle.
 #
 # Environment:
 #   EISOP_VERSION   checker version to resolve (default 3.49.5-eisop2-SNAPSHOT, from mavenLocal)
@@ -17,32 +19,7 @@ WORK_DIR="${WORK_DIR:-$HERE/work}"
 RESULTS_DIR="${RESULTS_DIR:-$HERE/results}"
 export EISOP_VERSION="${EISOP_VERSION:-3.49.5-eisop2-SNAPSHOT}"
 
-# An arm is a named checker option set.  The mode-derived arms must spell the mode's options out:
-# every option -Amode=jspecify adds is a presence flag with no negative form, so it cannot be
-# turned back off when the mode itself is passed.
-arm_args() {
-  case "$1" in
-    jspecify)             echo "-Amode=jspecify" ;;
-    jspecify-nolocations) echo "-AonlyAnnotatedFor -AjspecifyNullMarkedAlias=true -AassumeInitialized -AassumeKeyFor" ;;
-    jspecify-bytecode)    echo "-Amode=jspecify -AuseConservativeDefaultsForUncheckedCode=bytecode" ;;
-    nullaway-experimental) arm_args jspecify-nolocations ;;
-    *) echo "unknown arm: $1" >&2; exit 2 ;;
-  esac
-}
-# NullAway flags added on top of the project's own configuration, so NullAway can be compared at
-# its most spec-faithful setting: JSpecify's JDK models, wildcard handling, and inference warnings.
-arm_nullaway_opts() {
-  case "$1" in
-    nullaway-experimental) echo "JSpecifyMode=true JSpecifyExperimental=true" ;;
-    *) echo "" ;;
-  esac
-}
-ALL_ARMS=(jspecify jspecify-nolocations jspecify-bytecode nullaway-experimental)
-
-name="${1:?usage: run-project.sh <name> [arm...]}"
-shift
-arms=("$@")
-[ ${#arms[@]} -eq 0 ] && arms=("${ALL_ARMS[@]}")
+name="${1:?usage: run-project.sh <name>}"
 
 row="$(awk -F'\t' -v n="$name" 'NR > 1 && $1 == n' "$HERE/corpus.tsv")"
 [ -n "$row" ] || { echo "no project '$name' in corpus.tsv" >&2; exit 2; }
@@ -65,7 +42,7 @@ fi
 
 # Canaries make "no findings" trustworthy.  The marked one sits in a @NullMarked package and must
 # be reported; the unmarked one sits in a new package of the same source root and, under
-# -AonlyAnnotatedFor, must not be.  summarize.py reports both and leaves them out of the counts.
+# -Amode=jspecify, must not be.  summarize.py reports both and leaves them out of the counts.
 marked_info="$(grep -rlE '@(org\.jspecify\.annotations\.)?NullMarked' --include=package-info.java "$src" \
                | grep '/src/main/java/' | sort | head -1 || true)"
 canaries=()
@@ -86,35 +63,36 @@ fi
 cleanup() { [ ${#canaries[@]} -eq 0 ] || rm -rf "${canaries[@]}"; }
 trap cleanup EXIT
 
-for arm in "${arms[@]}"; do
-  out="$RESULTS_DIR/$name/$arm"
-  mkdir -p "$out"
-  export EISOP_ARGS="$(arm_args "$arm")"
-  export NULLAWAY_OPTS="$(arm_nullaway_opts "$arm")"
-  echo "== $name @ ${sha:0:12} arm=$arm ($EISOP_ARGS${NULLAWAY_OPTS:+; NullAway: $NULLAWAY_OPTS})"
-  set +e
-  # CI is unset because several projects hide Error Prone warnings (and so NullAway's, once
-  # demoted to warnings) when it is present.
-  (cd "$src" && env -u CI JAVA_HOME="$java_home" ./gradlew \
-      --init-script "$HERE/eisop-nullness.init.gradle" \
-      --no-configuration-cache --no-build-cache --no-parallel --continue --console=plain \
-      $tasks) > "$out/build.log" 2>&1
-  status=$?
-  set -e
-  cat > "$out/meta.tsv" <<META
+out="$RESULTS_DIR/$name"
+rm -rf "$out"
+mkdir -p "$out"
+echo "== $name @ ${sha:0:12}"
+set +e
+# CI is unset because several projects hide Error Prone warnings (and so NullAway's, once
+# demoted to warnings) when it is present.
+(cd "$src" && env -u CI JAVA_HOME="$java_home" ./gradlew \
+    --init-script "$HERE/eisop-nullness.init.gradle" \
+    --no-configuration-cache --no-build-cache --no-parallel --continue --console=plain \
+    $tasks) > "$out/build.log" 2>&1
+status=$?
+set -e
+cat > "$out/meta.tsv" <<META
 project	$name
 repo	$repo
 sha	$sha
-arm	$arm
-args	$EISOP_ARGS
 eisop_version	$EISOP_VERSION
 java_home	$java_home
 gradle_exit	$status
 date	$(date -u +%Y-%m-%dT%H:%M:%SZ)
 META
-  python3 "$HERE/summarize.py" "$src" "$out" || failed=1
-  if [ -n "$NULLAWAY_OPTS" ]; then
-    python3 "$HERE/compare.py" "$out/diagnostics.tsv" > "$out/comparison.md"
+failed=0
+python3 "$HERE/summarize.py" "$src" "$out" || failed=1
+{
+  if [ "$failed" -ne 0 ]; then
+    # A checker crash is a javac error, and javac then stops analyzing later classes, so Error Prone
+    # never reaches them either: both sides of the comparison are incomplete, not just EISOP's.
+    printf '> **Not a valid comparison:** the checker crashed or a canary check failed. A crash also stops NullAway from analyzing later classes, so both tools'"'"' findings may be incomplete.\n\n'
   fi
-done
-exit "${failed:-0}"
+  python3 "$HERE/compare.py" "$out/diagnostics.tsv"
+} > "$out/comparison.md"
+exit "$failed"

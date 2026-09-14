@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Compares two diagnostics.tsv files from the same project and arm.
+"""Compares two diagnostics.tsv files from the same project.
 
 usage: diff.py <baseline diagnostics.tsv> <new diagnostics.tsv>
 

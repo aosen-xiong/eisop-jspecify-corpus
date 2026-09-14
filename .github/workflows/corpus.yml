@@ -94,19 +94,18 @@ jobs:
           set +e
           ./run-project.sh "${{ matrix.project }}"
           status=$?
-          for arm in results/${{ matrix.project }}/*/; do
-            arm="$(basename "$arm")"
-            cat "results/${{ matrix.project }}/$arm/summary.md" >> "$GITHUB_STEP_SUMMARY"
-            if [ -f "results/${{ matrix.project }}/$arm/comparison.md" ]; then
-              cat "results/${{ matrix.project }}/$arm/comparison.md" >> "$GITHUB_STEP_SUMMARY"
-            fi
-            base="baselines/${{ matrix.project }}/$arm/diagnostics.tsv"
-            if [ -f "$base" ]; then
-              echo '```diff' >> "$GITHUB_STEP_SUMMARY"
-              python3 diff.py "$base" "results/${{ matrix.project }}/$arm/diagnostics.tsv" >> "$GITHUB_STEP_SUMMARY" 2>&1 || status=1
-              echo '```' >> "$GITHUB_STEP_SUMMARY"
+          out="results/${{ matrix.project }}"
+          for md in summary.md comparison.md; do
+            if [ -f "$out/$md" ]; then
+              cat "$out/$md" >> "$GITHUB_STEP_SUMMARY"
             fi
           done
+          base="baselines/${{ matrix.project }}/diagnostics.tsv"
+          if [ -f "$base" ]; then
+            echo '```diff' >> "$GITHUB_STEP_SUMMARY"
+            python3 diff.py "$base" "$out/diagnostics.tsv" >> "$GITHUB_STEP_SUMMARY" 2>&1 || status=1
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+          fi
           echo "EISOP ${{ needs.build-eisop.outputs.sha }} (${{ needs.build-eisop.outputs.version }}), built with JDK 21, run with JDK 25" >> "$GITHUB_STEP_SUMMARY"
           exit $status
       - if: always()

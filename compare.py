@@ -3,8 +3,7 @@
 
 usage: compare.py <diagnostics.tsv>
 
-Both tools must have run in the same build (the nullaway-experimental arm), so that their line
-numbers refer to the same source.  Diagnostics are joined on (file, line), not compared one to
+Both tools run in the same build, so their line numbers refer to the same source.  Diagnostics are joined on (file, line), not compared one to
 one: EISOP reports several keys for one root cause -- override.typaram.invalid,
 override.param.invalid and override.return.invalid on one overriding method -- where NullAway
 reports one, so only locations are comparable.  An exact line match misses a pair when the two

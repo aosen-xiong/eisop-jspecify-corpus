@@ -4,12 +4,14 @@
 //
 // Configured through the environment:
 //   EISOP_VERSION  io.github.eisop:checker version; resolved from mavenLocal() first.
-//   EISOP_ARGS     space-separated checker options for the arm being run.
 //   EISOP_TASKS    comma-separated JavaCompile task names to check (default: compileJava).
 
 def cfVersion = System.getenv('EISOP_VERSION') ?: '3.49.5-eisop2-SNAPSHOT'
-def armArgs = (System.getenv('EISOP_ARGS') ?: '-Amode=jspecify').trim().split(/\s+/) as List
 def checkedTasks = (System.getenv('EISOP_TASKS') ?: 'compileJava').split(',') as Set
+def eisopArgs = ['-Amode=jspecify']
+// Added to the project's own NullAway configuration.  Projects leave out JSpecifyExperimental,
+// and with it JSpecify's JDK models, so without it NullAway is not comparable with EISOP.
+def nullawayOptions = [JSpecifyMode: 'true', JSpecifyExperimental: 'true']
 def nullnessChecker = 'org.checkerframework.checker.nullness.NullnessChecker'
 
 def projectReposForbidden = false
@@ -90,9 +92,12 @@ beforeProject { project ->
                 } else {
                     args.addAll(['-processor', ([nullnessChecker] + discovered).join(',')])
                 }
-                args.addAll(armArgs)
+                args.addAll(eisopArgs)
                 args.addAll(['-Awarns', '-Xmaxwarns', '1000000', '-Xmaxerrs', '1000000'])
-                logger.lifecycle("[eisop] ${t.path}: -processor ${args[args.indexOf('-processor') + 1]} ${armArgs.join(' ')}")
+                def nullaway = t.options.extensions.findByName('errorprone') == null ? 'not configured'
+                        : nullawayOptions.collect { k, v -> "$k=$v" }.join(' ')
+                logger.lifecycle("[eisop] ${t.path}: -processor ${args[args.indexOf('-processor') + 1]} "
+                        + "${eisopArgs.join(' ')}; NullAway: ${nullaway}")
             }
         }
     }
@@ -109,12 +114,7 @@ beforeProject { project ->
                     def ep = t.options.extensions.getByName('errorprone')
                     ep.allErrorsAsWarnings.set(true)
                     ep.warn('NullAway')
-                    // Extra NullAway flags for the arm, e.g. "JSpecifyExperimental=true", so
-                    // NullAway can be compared at a stricter setting than the project's own.
-                    (System.getenv('NULLAWAY_OPTS') ?: '').trim().split(/\s+/).findAll { it }.each {
-                        def kv = it.split('=', 2)
-                        ep.option("NullAway:${kv[0]}", kv.length > 1 ? kv[1] : 'true')
-                    }
+                    nullawayOptions.each { k, v -> ep.option("NullAway:${k}", v) }
                 }
             }
         }

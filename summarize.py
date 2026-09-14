@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Turns one arm's build.log into diagnostics.tsv, counts.tsv and summary.md.
+"""Turns a project's build.log into diagnostics.tsv, counts.tsv and summary.md.
 
 usage: summarize.py <project-source-dir> <result-dir>
 
@@ -131,14 +131,17 @@ def main():
     eisop = [d for d in diags if d["tool"] == "eisop"]
     anomalies = [d for d in eisop if d["scope"] == "unmarked"]
     location = sum(1 for d in eisop if d["key"].startswith("jspecify.unrecognized.location"))
-    injected = sum(1 for l in open(os.path.join(out, "build.log"), errors="replace")
-                   if l.startswith("[eisop] "))
+    with open(os.path.join(out, "build.log"), encoding="utf-8", errors="replace") as f:
+        injections = [l.rstrip("\n")[len("[eisop] "):] for l in f if l.startswith("[eisop] ")]
+    injected = len(injections)
 
     with open(os.path.join(out, "summary.md"), "w", encoding="utf-8") as f:
-        f.write(f"# {meta.get('project', '?')} / {meta.get('arm', '?')}\n\n")
-        for k in ("sha", "args", "eisop_version", "java_home", "gradle_exit"):
+        f.write(f"# {meta.get('project', '?')}\n\n")
+        for k in ("sha", "eisop_version", "java_home", "gradle_exit"):
             f.write(f"- {k}: `{meta.get(k, '?')}`\n")
         f.write(f"- compile tasks the checker was injected into: {injected}\n")
+        for injection in injections:
+            f.write(f"  - `{injection}`\n")
         f.write(f"- @NullMarked packages: {len(marked_dirs)}; class-level marked/unmarked files: "
                 f"{len(marked_files)}; NullAway suppression sites: {len(suppressions)}\n")
         f.write(f"- EISOP diagnostics: {len(eisop)} ({location} jspecify.unrecognized.location.*)\n")
@@ -162,7 +165,7 @@ def main():
         print("WARNING: the checker was not injected into any compile task", file=sys.stderr)
     failed = False
     if "eisop" not in canary_hits["marked"] or "eisop" in canary_hits["unmarked"]:
-        print("WARNING: canary check failed; this arm's counts are not trustworthy", file=sys.stderr)
+        print("WARNING: canary check failed; the counts are not trustworthy", file=sys.stderr)
         failed = True
     if crashes or unanchored:
         # A crash also stops checking the rest of its compilation unit, so counts undercount.

@@ -1,8 +1,8 @@
 # EISOP JSpecify-mode corpus
 
 Runs the EISOP Nullness Checker's `-Amode=jspecify` over pinned revisions of real
-JSpecify-annotated projects that already check themselves with NullAway, and records what EISOP
-reports inside their `@NullMarked` scope.
+JSpecify-annotated projects that already check themselves with NullAway. It records what EISOP
+reports inside their `@NullMarked` scope, and compares it with NullAway on the same code.
 
 The projects need no edits. An init script, `eisop-nullness.init.gradle`, adds the checker to their
 compile tasks, the same idea as NullAway's `compile-other-projects` CI job. There are two
@@ -14,42 +14,37 @@ adds the processor, and it records each diagnostic so runs can be compared again
 | file | purpose |
 |---|---|
 | `corpus.tsv` | the projects: repo, pinned SHA, build system, compile tasks, JDK, status |
-| `eisop-nullness.init.gradle` | injects the checker; configured by `EISOP_VERSION`, `EISOP_ARGS`, `EISOP_TASKS` |
-| `run-project.sh <name> [arm...]` | clones at the pinned SHA, adds canaries, runs each arm, summarizes |
+| `eisop-nullness.init.gradle` | injects the checker and sets its options and NullAway's; configured by `EISOP_VERSION` and `EISOP_TASKS` |
+| `run-project.sh <name>` | clones at the pinned SHA, adds canaries, builds, summarizes, compares |
 | `summarize.py` | `build.log` → `diagnostics.tsv`, `counts.tsv`, `summary.md` |
+| `compare.py <diagnostics.tsv>` | pairs EISOP and NullAway findings by (file, line) into both / EISOP-only / NullAway-only → `comparison.md` |
 | `diff.py <base> <new>` | compares two `diagnostics.tsv` by (tool, key, file, message), ignoring line shifts |
-| `compare.py <diagnostics.tsv>` | pairs EISOP and NullAway findings by (file, line) into both / EISOP-only / NullAway-only; written as `comparison.md` for the `nullaway-experimental` arm |
-| `baselines/<project>/<arm>/` | stored `diagnostics.tsv` and `summary.md` that CI diffs against |
+| `baselines/<project>/` | stored `diagnostics.tsv` that CI diffs against |
 
-## Arms
+## Run setting
 
-| arm | options |
-|---|---|
-| `jspecify` | `-Amode=jspecify` |
-| `jspecify-nolocations` | the mode's options except `-AjspecifyUnrecognizedLocations`, spelled out |
-| `jspecify-bytecode` | `-Amode=jspecify -AuseConservativeDefaultsForUncheckedCode=bytecode` |
-| `nullaway-experimental` | `jspecify-nolocations`'s options, plus NullAway `JSpecifyMode=true JSpecifyExperimental=true` on top of the project's own NullAway configuration |
+Each project is built once, with both tools in the same compile.
 
-`nullaway-experimental` is the arm to compare the two tools with. Projects configure NullAway
-without `JSpecifyExperimental`, which leaves out JSpecify's JDK models. On context-propagation,
-NullAway reports 0 findings under the project's own configuration and 9 with the flag.
-
-The second arm spells out its options because every option the mode adds is a presence flag with
-no negative form. Once `-Amode=jspecify` is passed, none of them can be turned off.
+- **EISOP:** `-Amode=jspecify` and nothing else. It is the configuration being evaluated.
+- **NullAway:** the project's own configuration, plus `JSpecifyMode=true JSpecifyExperimental=true`.
+  Projects leave out `JSpecifyExperimental`, and with it JSpecify's JDK models, so their own
+  NullAway setting is not a fair comparison. On context-propagation it reports 0 findings where
+  the experimental setting reports 9.
 
 ## What makes a run trustworthy
 
 - **Canaries.** Each run adds one class that returns a `@Nullable` parameter from a non-null
   method. One copy goes in a `@NullMarked` package, where EISOP must report it. The other goes in a
-  new, unmarked package, where under `-AonlyAnnotatedFor` EISOP must not. If either check fails,
-  the arm fails. This catches a checker that silently never ran.
+  new, unmarked package, where under `-Amode=jspecify` EISOP must not. If either check fails, the
+  run fails. This catches a checker that silently never ran.
 - **No javac errors.** The Checker Framework skips type-checking once javac has reported any
   error. So the init script removes `-Werror`, passes `-Awarns`, and demotes NullAway, which these
   projects configure as an error, to a warning. NullAway's findings therefore land in the same log.
-- **Crashes fail the arm.** A crash also stops checking of the rest of that file, so the counts
-  would undercount.
+- **Crashes fail the run, and invalidate the comparison.** A crash is reported as a javac error.
+  It stops EISOP checking the rest of that file, and javac then stops analyzing later classes, so
+  NullAway loses findings too. `comparison.md` is marked invalid when that happens.
 - **Scoping anomalies.** Any EISOP diagnostic in a file outside `@NullMarked` scope is listed
-  separately, because `-AonlyAnnotatedFor` should make that impossible.
+  separately, because `-Amode=jspecify` should make that impossible.
 
 ## Running locally
 
@@ -64,24 +59,18 @@ On macOS the JDK comes from `/usr/libexec/java_home -v <jdk>`; elsewhere set `JD
 
 ## Status
 
-`context-propagation` (EISOP 026312a, JDK 25) runs end to end, and all three arms pass both
-canaries.
+`context-propagation` (EISOP 026312a, JDK 25) runs end to end and passes both canaries, but it is
+**blocked by a crash, so there is no baseline**.
 
-- **`jspecify`: blocked by a crash, so no baseline.** `-AjspecifyUnrecognizedLocations` crashes in
+- **The crash.** `-AjspecifyUnrecognizedLocations`, which the mode turns on, crashes in
   `TreeUtils.getExplicitAnnotationTrees` on a method reference whose qualifier is a method call
-  (`capture()::wrap`, `ContextExecutorService.java:77`). The crash ends checking of that file, so
-  this arm reports 22 EISOP diagnostics where the uncrashed arm reports 29. The 7 missing ones are
-  all in that file, below the crash site.
-- **The location check itself never fired.** Across the whole project it reported zero
-  `jspecify.unrecognized.location.*` diagnostics. Once the crash is fixed, `jspecify` and
-  `jspecify-nolocations` are expected to match.
-- **`jspecify-nolocations`: 29 EISOP diagnostics, 0 from NullAway.** 20 are `override.*` reports on
-  `ExecutorService` / `ScheduledExecutorService` overrides. The rest are argument and type-argument
-  reports around `ThreadLocal` and `Map.put`. They have not been triaged yet.
-- **`jspecify-bytecode`: blocked by the same crash, so no baseline.** Compared with `jspecify`, it
-  adds 2 diagnostics, both in `Slf4jThreadLocalAccessor`: a return and a `Map.put` argument,
-  involving the unmarked SLF4J dependency.
-- **`nullaway-experimental`: NullAway reports 9, and all 9 are at locations EISOP also reports.**
+  (`capture()::wrap`, `ContextExecutorService.java:77`). The run reports 22 EISOP findings and 6
+  NullAway findings, both incomplete.
+- **What the complete result looks like.** Before this repo settled on the mode alone, it ran the
+  mode's options without `-AjspecifyUnrecognizedLocations`. That run did not crash, and it is the
+  expected result once the crash is fixed:
+  - EISOP 29, NullAway 9, at 16 locations: 9 reported by both, 7 by EISOP only, 0 by NullAway only.
+    The location check itself reported nothing, so turning it back on should not add findings.
   - **Both tools report:** 7 overrides that give `<T>` a non-null bound where the JDK's is
     nullable, and 2 `Map.put(key, accessor.getValue())` calls. At those 9 locations EISOP reports
     21 findings, because one bad override bound produces up to 3 EISOP findings.
