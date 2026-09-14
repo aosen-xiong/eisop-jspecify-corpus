@@ -1,0 +1,116 @@
+// Injects the EISOP Nullness Checker into a Gradle project that has never heard of the
+// Checker Framework, without editing its build files.  Modeled on NullAway's
+// use-snapshot.gradle.kts, which only swaps a version; this also adds the processor.
+//
+// Configured through the environment:
+//   EISOP_VERSION  io.github.eisop:checker version; resolved from mavenLocal() first.
+//   EISOP_ARGS     space-separated checker options for the arm being run.
+//   EISOP_TASKS    comma-separated JavaCompile task names to check (default: compileJava).
+
+def cfVersion = System.getenv('EISOP_VERSION') ?: '3.49.5-eisop2-SNAPSHOT'
+def armArgs = (System.getenv('EISOP_ARGS') ?: '-Amode=jspecify').trim().split(/\s+/) as List
+def checkedTasks = (System.getenv('EISOP_TASKS') ?: 'compileJava').split(',') as Set
+def nullnessChecker = 'org.checkerframework.checker.nullness.NullnessChecker'
+
+def projectReposForbidden = false
+settingsEvaluated { settings ->
+    def drm = settings.dependencyResolutionManagement
+    drm.repositories.mavenLocal()
+    projectReposForbidden = drm.repositoriesMode.get() == RepositoriesMode.FAIL_ON_PROJECT_REPOS
+}
+
+// Names the processors a processor path would contribute through service discovery, which an
+// explicit -processor turns off; without re-listing them, Lombok & co. would silently stop running.
+def discoverProcessors = { Iterable<File> path ->
+    def names = []
+    def service = 'META-INF/services/javax.annotation.processing.Processor'
+    path.each { File f ->
+        String text = null
+        if (f.isDirectory()) {
+            def sf = new File(f, service)
+            if (sf.isFile()) text = sf.text
+        } else if (f.isFile() && f.name.endsWith('.jar')) {
+            def zip = new java.util.zip.ZipFile(f)
+            try {
+                def entry = zip.getEntry(service)
+                if (entry != null) text = zip.getInputStream(entry).text
+            } finally {
+                zip.close()
+            }
+        }
+        text?.eachLine { line ->
+            def name = line.replaceAll(/#.*/, '').trim()
+            if (name) names << name
+        }
+    }
+    names
+}
+
+beforeProject { project ->
+    if (!projectReposForbidden) {
+        project.repositories.mavenLocal()
+    }
+    project.plugins.withType(JavaBasePlugin).configureEach {
+        def checker = project.configurations.maybeCreate('eisopNullnessChecker')
+        checker.canBeConsumed = false
+        checker.canBeResolved = true
+        checker.resolutionStrategy.cacheChangingModulesFor(0, 'seconds')
+        project.dependencies.add('eisopNullnessChecker', "io.github.eisop:checker:${cfVersion}")
+        // The checker loads its own qualifiers (e.g. @Deterministic) from the compile classpath.
+        def checkerQual = project.configurations.maybeCreate('eisopNullnessCheckerQual')
+        checkerQual.canBeConsumed = false
+        checkerQual.canBeResolved = true
+        checkerQual.transitive = false
+        checkerQual.resolutionStrategy.cacheChangingModulesFor(0, 'seconds')
+        project.dependencies.add('eisopNullnessCheckerQual', "io.github.eisop:checker-qual:${cfVersion}")
+        def emptyFiles = project.files()
+
+        project.tasks.withType(JavaCompile).configureEach { JavaCompile t ->
+            if (!checkedTasks.contains(t.name)) {
+                return
+            }
+            // A skipped or cache-restored compile emits no diagnostics.
+            t.outputs.upToDateWhen { false }
+            t.outputs.cacheIf { false }
+
+            t.doFirst {
+                def existing = t.options.annotationProcessorPath ?: emptyFiles
+                def discovered = discoverProcessors(existing.files)
+                // EISOP goes first: Error Prone's processor path carries an older
+                // org.checkerframework checker-qual whose TypeUseLocation would otherwise shadow ours.
+                t.options.annotationProcessorPath = checker + existing
+                t.classpath = checkerQual + t.classpath
+
+                def args = t.options.compilerArgs
+                // Every finding must be reported, not just those before the first failing module.
+                args.removeAll { it == '-Werror' }
+                int i = args.indexOf('-processor')
+                if (i >= 0) {
+                    args[i + 1] = args[i + 1] + ',' + nullnessChecker
+                } else {
+                    args.addAll(['-processor', ([nullnessChecker] + discovered).join(',')])
+                }
+                args.addAll(armArgs)
+                args.addAll(['-Awarns', '-Xmaxwarns', '1000000', '-Xmaxerrs', '1000000'])
+                logger.lifecycle("[eisop] ${t.path}: -processor ${args[args.indexOf('-processor') + 1]} ${armArgs.join(' ')}")
+            }
+        }
+    }
+    // Keep NullAway's own findings in the same log, as warnings, for the baseline diff.  Any javac
+    // error -- a NullAway one included -- makes the Checker Framework skip type-checking entirely,
+    // so no Error Prone finding may stay an error.  allErrorsAsWarnings alone does not demote a
+    // check the build names explicitly (error('NullAway')), and the build's own configureEach runs
+    // after one registered here, so NullAway is demoted from afterEvaluate, which runs last.  The
+    // plugin finalizes these properties before task actions run, so neither can move to doFirst.
+    project.afterEvaluate {
+        project.plugins.withId('net.ltgt.errorprone') {
+            project.tasks.withType(JavaCompile).configureEach { JavaCompile t ->
+                if (checkedTasks.contains(t.name)) {
+                    def ep = t.options.extensions.getByName('errorprone')
+                    ep.allErrorsAsWarnings.set(true)
+                    ep.warn('NullAway')
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+name: corpus
+
+on:
+  workflow_dispatch:
+    inputs:
+      eisop_repo:
+        description: Checker Framework repository to build
+        default: eisop/checker-framework
+      eisop_ref:
+        description: Branch, tag, or SHA of that repository
+        default: master
+      projects:
+        description: Space-separated corpus names (empty = every Gradle project with status smoke or verified)
+        default: ''
+  schedule:
+    - cron: '0 6 * * 1'
+  push:
+    branches: [main]
+
+jobs:
+  build-eisop:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.publish.outputs.version }}
+      sha: ${{ steps.publish.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.eisop_repo || 'eisop/checker-framework' }}
+          ref: ${{ inputs.eisop_ref || 'master' }}
+          path: checker-framework
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+      - uses: gradle/actions/setup-gradle@v4
+      - id: publish
+        working-directory: checker-framework
+        run: |
+          ./gradlew publishToMavenLocal -x javadoc -x allJavadoc --console=plain
+          echo "version=$(./gradlew -q :checker:properties | sed -n 's/^version: //p')" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eisop-maven-local
+          path: ~/.m2/repository/io/github/eisop
+          retention-days: 7
+
+  select:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.select.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: select
+        env:
+          PROJECTS: ${{ inputs.projects }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import csv, json, os
+          wanted = set(os.environ.get("PROJECTS", "").split())
+          rows = csv.DictReader(open("corpus.tsv"), delimiter="\t")
+          # Projects not yet proven locally would fail as builds, not as findings, so they run
+          # only when named explicitly.
+          names = [r["name"] for r in rows
+                   if r["build"] == "gradle"
+                   and (r["name"] in wanted if wanted else r["status"] in ("smoke", "verified"))]
+          print("matrix=" + json.dumps({"project": names}))
+          PY
+
+  corpus:
+    needs: [build-eisop, select]
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.select.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: eisop-maven-local
+          path: ~/.m2/repository/io/github/eisop
+      - id: jdk25
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '25'
+      - name: Run ${{ matrix.project }}
+        env:
+          EISOP_VERSION: ${{ needs.build-eisop.outputs.version }}
+          JDK_HOME_25: ${{ steps.jdk25.outputs.path }}
+        run: |
+          set +e
+          ./run-project.sh "${{ matrix.project }}"
+          status=$?
+          for arm in results/${{ matrix.project }}/*/; do
+            arm="$(basename "$arm")"
+            cat "results/${{ matrix.project }}/$arm/summary.md" >> "$GITHUB_STEP_SUMMARY"
+            base="baselines/${{ matrix.project }}/$arm/diagnostics.tsv"
+            if [ -f "$base" ]; then
+              echo '```diff' >> "$GITHUB_STEP_SUMMARY"
+              python3 diff.py "$base" "results/${{ matrix.project }}/$arm/diagnostics.tsv" >> "$GITHUB_STEP_SUMMARY" 2>&1 || status=1
+              echo '```' >> "$GITHUB_STEP_SUMMARY"
+            fi
+          done
+          echo "EISOP ${{ needs.build-eisop.outputs.sha }} (${{ needs.build-eisop.outputs.version }}), built with JDK 21, run with JDK 25" >> "$GITHUB_STEP_SUMMARY"
+          exit $status
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ matrix.project }}
+          path: results/${{ matrix.project }}
