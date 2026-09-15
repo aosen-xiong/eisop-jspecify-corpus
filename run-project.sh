@@ -43,6 +43,8 @@ fi
 # Canaries make "no findings" trustworthy.  The marked one sits in a @NullMarked package and must
 # be reported; the unmarked one sits in a new package of the same source root and, under
 # -Amode=jspecify, must not be.  summarize.py reports both and leaves them out of the counts.
+# The unmarked one is explicitly @NullUnmarked: some projects run Error Prone's
+# RequireExplicitNullMarking as an error, and any javac error makes EISOP skip the whole module.
 marked_info="$(grep -rlE '@(org\.jspecify\.annotations\.)?NullMarked' --include=package-info.java "$src" \
                | grep '/src/main/java/' | sort | head -1 || true)"
 canaries=()
@@ -57,7 +59,8 @@ if [ -n "$marked_info" ]; then
 }'
   mkdir -p "$src_root/eisopcorpus/unmarked"
   printf 'package %s;\n\n%s\n' "$pkg" "$canary_body" > "$pkg_dir/EisopCorpusCanary.java"
-  printf 'package eisopcorpus.unmarked;\n\n%s\n' "$canary_body" > "$src_root/eisopcorpus/unmarked/EisopCorpusCanary.java"
+  printf 'package eisopcorpus.unmarked;\n\n@org.jspecify.annotations.NullUnmarked\n%s\n' "$canary_body" \
+    > "$src_root/eisopcorpus/unmarked/EisopCorpusCanary.java"
   canaries=("$pkg_dir/EisopCorpusCanary.java" "$src_root/eisopcorpus")
 fi
 cleanup() { [ ${#canaries[@]} -eq 0 ] || rm -rf "${canaries[@]}"; }
@@ -70,9 +73,13 @@ echo "== $name @ ${sha:0:12}"
 set +e
 # CI is unset because several projects hide Error Prone warnings (and so NullAway's, once
 # demoted to warnings) when it is present.
-(cd "$src" && env -u CI JAVA_HOME="$java_home" ./gradlew \
+# The checked tasks compile with the manifest JDK, not the project's toolchain; see
+# EISOP_COMPILE_JDK in the init script.  Gradle is told where that JDK is, rather than left to find
+# or download one.
+(cd "$src" && env -u CI JAVA_HOME="$java_home" EISOP_COMPILE_JDK="$jdk" ./gradlew \
     --init-script "$HERE/eisop-nullness.init.gradle" \
     --no-configuration-cache --no-build-cache --no-parallel --continue --console=plain \
+    -Porg.gradle.java.installations.paths="$java_home" \
     $tasks) > "$out/build.log" 2>&1
 status=$?
 set -e

@@ -16,7 +16,7 @@ Current results per project are in [STATUS.md](STATUS.md).
 | file | purpose |
 |---|---|
 | `corpus.tsv` | the projects: repo, pinned SHA, build system, compile tasks, JDK, status |
-| `eisop-nullness.init.gradle` | injects the checker and sets its options and NullAway's; configured by `EISOP_VERSION` and `EISOP_TASKS` |
+| `eisop-nullness.init.gradle` | injects the checker and sets its options and NullAway's; configured by `EISOP_VERSION`, `EISOP_TASKS` and `EISOP_COMPILE_JDK` |
 | `run-project.sh <name>` | clones at the pinned SHA, adds canaries, builds, summarizes, compares |
 | `summarize.py` | `build.log` → `diagnostics.tsv`, `counts.tsv`, `summary.md` |
 | `compare.py <diagnostics.tsv>` | pairs EISOP and NullAway findings by (file, line) into both / EISOP-only / NullAway-only → `comparison.md` |
@@ -33,13 +33,20 @@ Each project is built once, with both tools in the same compile.
   Projects leave out `JSpecifyExperimental`, and with it JSpecify's JDK models, so their own
   NullAway setting is not a fair comparison. On context-propagation it reports 0 findings where
   the experimental setting reports 9.
+- **Compiler:** the checked compile tasks use the manifest's JDK (the `jdk` column), not the
+  project's own toolchain; the project's `--release` is kept. Before JDK 22, javac does not read
+  type-use annotations such as `@Nullable` on a type argument from dependency class files, so on
+  an older toolchain both tools would silently see a `@NullMarked` dependency's generic types
+  unannotated. `summary.md` records the JDK each compile task actually used.
 
 ## What makes a run trustworthy
 
 - **Canaries.** Each run adds one class that returns a `@Nullable` parameter from a non-null
   method. One copy goes in a `@NullMarked` package, where EISOP must report it. The other goes in a
-  new, unmarked package, where under `-Amode=jspecify` EISOP must not. If either check fails, the
-  run fails. This catches a checker that silently never ran.
+  new package and is annotated `@NullUnmarked`, where under `-Amode=jspecify` EISOP must not. If
+  either check fails, the run fails. This catches a checker that silently never ran. The second copy
+  is explicitly `@NullUnmarked` because some projects run Error Prone's
+  `RequireExplicitNullMarking` as an error, and that error would stop EISOP in the whole module.
 - **No javac errors.** The Checker Framework skips type-checking once javac has reported any
   error. So the init script removes `-Werror`, passes `-Awarns`, and demotes NullAway, which these
   projects configure as an error, to a warning. NullAway's findings therefore land in the same log.

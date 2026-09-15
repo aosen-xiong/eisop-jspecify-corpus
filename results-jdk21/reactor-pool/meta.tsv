@@ -1,0 +1,7 @@
+project	reactor-pool
+repo	reactor/reactor-pool
+sha	6d40ec6e904fa6048709eefeef6858d48063e735
+eisop_version	3.49.5-eisop2-SNAPSHOT
+java_home	/Library/Java/JavaVirtualMachines/jdk-25.jdk/Contents/Home
+gradle_exit	0
+date	2026-09-14T22:59:21Z

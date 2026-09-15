@@ -91,6 +91,54 @@ should record the two separately.
 The scoping-anomaly counter proves nothing on this project. All 13 main source files are in
 `@NullMarked` packages, so it cannot fire; only the unmarked canary checks scoping here.
 
+## reactor-pool
+
+`reactor/reactor-pool` @ `6d40ec6e`, modules `reactor-pool` and `reactor-pool-micrometer`. The run
+is clean: both canaries pass, nothing crashes, and its `diagnostics.tsv` is the baseline.
+
+- **Moving dependency.** The pinned revision depends on `reactor-core 3.8.8-SNAPSHOT`, which can
+  change between runs.
+- **Toolchain.** The project pins a JDK 21 toolchain. The corpus compiles with JDK 25 instead, and
+  JDK 21 gave identical findings here.
+
+### Findings
+
+EISOP 44, NullAway 1, at 44 locations: 0 reported by both tools, 43 by EISOP only, 1 by NullAway
+only. All findings are in `reactor-pool`; `reactor-pool-micrometer` has none.
+
+| group | EISOP | NullAway | cause |
+|---|---|---|---|
+| `Void` | 41 | 0 | EISOP's `@Nullable Void` default, which JSpecify does not have (below) |
+| `assert x != null` (`SimpleDequePool.java:436`, `:444`) | 2 | 0 | settings: EISOP trusts asserts only with `-AassumeAssertionsAreEnabled`, which the mode does not set; the project's NullAway uses `AssertsEnabled=true` |
+| lambda returning `null` (`SamplingAllocationStrategy.java:56`) | 1 | 0 | the tools agree: the project suppresses NullAway on this method |
+| `e.poll()` inside `while (!e.isEmpty())` (`SimpleDequePool.java:207`) | 0 | 1 | EISOP is more precise: it knows `poll()` is non-null after the `isEmpty()` check, and JSpecify's JDK models make `poll()` nullable |
+
+The project's other NullAway suppression, `@SuppressWarnings("NullAway.Init")` on a field
+(`SimpleDequePool.java:760`), is silent in EISOP too, because the mode assumes initialization.
+
+### The `Void` findings
+
+The 41 findings are 21 `type.argument.type.incompatible` on `Mono<Void>`, 15
+`type.arguments.not.inferred` (such as `Sinks.empty()` assigned to `Sinks.Empty<Void>`), and 5
+`bound.type.incompatible` on `CoreSubscriber<? super Void>`.
+
+- **EISOP:** checker-qual's `@Nullable` carries `@DefaultFor(types = Void.class)`, so every
+  unannotated `Void` is `@Nullable Void`, and `-Amode=jspecify` does not change that. reactor-core
+  declares `Mono<T extends Object>` in a `@NullMarked` package, so `Mono<@Nullable Void>` breaks
+  the bound. A `Box<Void>` in a `@NullMarked` package reproduces it.
+- **JSpecify:** an unannotated type in `@NullMarked` code excludes `null`, and `Void` gets no
+  special treatment. A non-null `Void` has no values, which is what `Mono<Void>` means: the `Mono`
+  completes or fails but never emits a value. Where a `null` really is delivered as a `Void`,
+  JSpecify's own JDK models write it out, as in `CompletableFuture<@Nullable Void> runAsync(...)`.
+  The JSpecify reference checker disables the `DefaultFor` defaulting, and NullAway reports none of
+  these.
+
+So the 41 are false positives under JSpecify's rules. No `Void` value flows through these
+`Mono`s, so they are not runtime problems either way. Dropping the default under the mode would
+remove them, but it would also make `return null` from a bare `Void` method an error in
+`@NullMarked` code. JSpecify requires that, but it is a behavior change the fix has to decide
+deliberately.
+
 ## Other projects
 
 - **Gradle projects** in `corpus.tsv` are `untried`, and CI runs them only when named explicitly.

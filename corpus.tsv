@@ -1,6 +1,6 @@
 name	repo	sha	build	tasks	jdk	status	notes
 context-propagation	micrometer-metrics/context-propagation	6a9d15dcd0b6b491ad6d4f6ef809a722056029e0	gradle	:context-propagation:compileJava	25	smoke	15 main files, 2 @NullMarked packages, 0 NullAway suppressions; NullAway 0.14.1 JSpecifyMode+OnlyNullMarked
-reactor-pool	reactor/reactor-pool	6d40ec6e904fa6048709eefeef6858d48063e735	gradle	compileJava	25	untried	27 main files, 4 @NullMarked packages, 2 NullAway suppressions
+reactor-pool	reactor/reactor-pool	6d40ec6e904fa6048709eefeef6858d48063e735	gradle	compileJava	25	verified	27 main files, 4 @NullMarked packages, 2 NullAway suppressions; depends on reactor-core 3.8.8-SNAPSHOT; pins a JDK 21 toolchain
 caffeine	ben-manes/caffeine	3afc2ec8a7ecffd53bbb418cdaef295fd5f6b93a	gradle	:caffeine:compileJava	25	untried	only JSpecifyExperimental NullAway baseline; 32 NullAway suppressions; heavy build
 micrometer	micrometer-metrics/micrometer	8a69589a69e969f4109eae87b5737afe18f269e0	gradle	compileJava	25	untried	791 main files, 107 @NullMarked packages, 87 NullAway suppressions
 junit-framework	junit-team/junit-framework	2e63847c82b82e4a9297079c48908ffacb9b7554	gradle	compileJava	25	untried	in NullAway's own compile-other-projects matrix

@@ -5,9 +5,12 @@
 // Configured through the environment:
 //   EISOP_VERSION  io.github.eisop:checker version; resolved from mavenLocal() first.
 //   EISOP_TASKS    comma-separated JavaCompile task names to check (default: compileJava).
+//   EISOP_COMPILE_JDK  JDK feature version to compile the checked tasks with; unset keeps the
+//                  project's own toolchain.
 
 def cfVersion = System.getenv('EISOP_VERSION') ?: '3.49.5-eisop2-SNAPSHOT'
 def checkedTasks = (System.getenv('EISOP_TASKS') ?: 'compileJava').split(',') as Set
+def compileJdk = System.getenv('EISOP_COMPILE_JDK') as Integer
 def eisopArgs = ['-Amode=jspecify']
 // Added to the project's own NullAway configuration.  Projects leave out JSpecifyExperimental,
 // and with it JSpecify's JDK models, so without it NullAway is not comparable with EISOP.
@@ -74,6 +77,15 @@ beforeProject { project ->
             // A skipped or cache-restored compile emits no diagnostics.
             t.outputs.upToDateWhen { false }
             t.outputs.cacheIf { false }
+            // Compile with the corpus JDK rather than the project's toolchain.  Before JDK 22 javac
+            // does not read type-use annotations (such as @Nullable on a type argument) from
+            // dependency class files, so both checkers would silently see a @NullMarked
+            // dependency's generic types unannotated.  The project's --release stays as it is.
+            if (compileJdk != null) {
+                t.javaCompiler = project.extensions.getByType(JavaToolchainService).compilerFor {
+                    languageVersion = JavaLanguageVersion.of(compileJdk)
+                }
+            }
 
             t.doFirst {
                 def existing = t.options.annotationProcessorPath ?: emptyFiles
@@ -96,8 +108,12 @@ beforeProject { project ->
                 args.addAll(['-Awarns', '-Xmaxwarns', '1000000', '-Xmaxerrs', '1000000'])
                 def nullaway = t.options.extensions.findByName('errorprone') == null ? 'not configured'
                         : nullawayOptions.collect { k, v -> "$k=$v" }.join(' ')
+                // The toolchain can differ from JAVA_HOME, and it matters: before JDK 22 javac does
+                // not read type-use annotations from dependency class files by default.
+                def javac = t.javaCompiler.getOrNull()?.metadata
+                def jdk = javac == null ? 'unknown' : "${javac.languageVersion} (${javac.javaRuntimeVersion})"
                 logger.lifecycle("[eisop] ${t.path}: -processor ${args[args.indexOf('-processor') + 1]} "
-                        + "${eisopArgs.join(' ')}; NullAway: ${nullaway}")
+                        + "${eisopArgs.join(' ')}; NullAway: ${nullaway}; javac: JDK ${jdk}")
             }
         }
     }

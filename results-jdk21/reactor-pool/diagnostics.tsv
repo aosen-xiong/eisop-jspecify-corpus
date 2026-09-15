@@ -1,0 +1,46 @@
+tool	kind	key	scope	nullaway_suppressed_file	file	line	msg
+eisop	warning	argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	436	incompatible argument for parameter element of SimpleDequePool.createSlot.
+eisop	warning	argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	444	incompatible argument for parameter error of Borrower.fail.
+eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	534	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	753	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	765	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	767	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	898	incompatible bounds in wildcard
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	158	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	174	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	363	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	371	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/Pool.java	180	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/PoolBuilder.java	581	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/PoolBuilder.java	594	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/PooledRef.java	69	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/PooledRef.java	83	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	178	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	489	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	674	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	690	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	751	incompatible type argument for type parameter T of CoreSubscriber.
+eisop	warning	type.argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	874	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	59	incompatible type argument for type parameter T of Empty.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	174	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	235	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	261	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	289	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	309	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	168	Could not infer type arguments for Mono.fromRunnable
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	176	Could not infer type arguments for Mono.from
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	179	Could not infer type arguments for Mono.error
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/PoolBuilder.java	594	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	179	Could not infer type arguments for Mono.defer
+eisop	warning	type.arguments.not.inferred	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	466	Could not infer type arguments for Flux.flatMap
+eisop	warning	type.arguments.not.inferred	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	490	Could not infer type arguments for Mono.flatMap
+eisop	warning	type.arguments.not.inferred	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	675	Could not infer type arguments for Mono.defer
+eisop	warning	type.arguments.not.inferred	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	691	Could not infer type arguments for Mono.defer
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	69	Could not infer type arguments for Sinks.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	242	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	291	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	293	Could not infer type arguments for Mono.defer
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	311	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-pool/src/main/java/reactor/pool/decorators/GracefulShutdownInstrumentedPool.java	313	Could not infer type arguments for Mono.defer
+eisop	warning	type.arguments.not.inferred	package	yes	reactor-pool/src/main/java/reactor/pool/introspection/SamplingAllocationStrategy.java	56	Could not infer type arguments for PoolBuilder.build
+nullaway	warning	NullAway	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	208	dereferenced expression 'ref' is @Nullable
