@@ -1,6 +1,0 @@
-tool	key	count
-eisop	type.argument.type.incompatible	21
-eisop	type.arguments.not.inferred	16
-eisop	bound.type.incompatible	5
-eisop	argument.type.incompatible	2
-nullaway	NullAway	1
