@@ -74,6 +74,29 @@ beforeProject { project ->
     if (project.gradle.parent != null) {
         return
     }
+    // A dependency compiled with the checker carries its qualifiers (@NonNull, @Initialized) in its
+    // class files, and Kotlin reports an inaccessible type annotation as a warning, which a project
+    // with allWarningsAsErrors turns into a failure.  The Java tasks get checker-qual on their
+    // classpath in the doFirst below; this gives it to the Kotlin tasks too.  From afterEvaluate:
+    // Gradle rejects observing the plugin collection from inside the JavaBasePlugin callback.
+    project.afterEvaluate {
+        if ((project.pluginManager.hasPlugin('org.jetbrains.kotlin.jvm') || project.pluginManager.hasPlugin('kotlin'))
+                && project.configurations.findByName('compileOnly') != null) {
+            project.dependencies.add('compileOnly', "${cfGroup}:checker-qual:${cfVersion}")
+        }
+        // The checker also stores its own reading of each type in the class files, such as @NonNull
+        // on a type parameter for its lower bound.  Kotlin reads that @NonNull as making the type
+        // parameter non-null, so a Kotlin module that uses a <T extends @Nullable Object> from a
+        // checked dependency no longer compiles (spring-test).  Kotlin is told to ignore the Checker
+        // Framework's nullness annotations, leaving the JSpecify ones the source declares.  Warnings
+        // are not errors either, as for -Werror on the Java tasks: a Kotlin failure would stop the
+        // same module's Java compile, which is the one being checked.
+        project.tasks.matching { it.name.startsWith('compile') && it.name.endsWith('Kotlin') && it.hasProperty('compilerOptions') }
+                .configureEach { t ->
+                    t.compilerOptions.freeCompilerArgs.add('-Xnullability-annotations=@org.checkerframework.checker.nullness.qual:ignore')
+                    t.compilerOptions.allWarningsAsErrors.set(false)
+                }
+    }
     // A project that declares any repository of its own no longer sees the settings-level ones,
     // so mavenLocal() goes on the project only when it already has repositories, or when there
     // are no settings-level ones to hide.  Otherwise settings-level mavenLocal() is enough.
