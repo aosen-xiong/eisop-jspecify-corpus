@@ -252,11 +252,19 @@ RULES = [
     ("tools:isEmpty-then-poll",
      lambda f: nullaway(f) and "dereferenced expression" in f.msg and any("isEmpty()" in l for l in f.before(15))),
     # Both JDK models declare <T extends @Nullable Object>; the override declares a non-null bound.
+    # Only the JDK types whose declarations were compared on both sides.
     ("jspecify:override-type-parameter-bound",
      lambda f: (eisop("override.typaram.invalid", "override.return.invalid", "override.param.invalid")(f)
                 and "extends @NonNull Object" in f.found
-                and re.search(r"extends @Nullable Object", f.required))
+                and re.search(r"extends @Nullable Object", f.required)
+                and re.match(r"@NonNull (ExecutorService|ScheduledExecutorService|ScheduledThreadPoolExecutor"
+                             r"|AbstractExecutorService|Collection)\b", f.overridden))
      or (nullaway(f) and "non-null upper bound" in f.msg)),
+    # The same shape over a library with no JSpecify annotations (jOOQ 3.14.16, grpc-api 1.84, both
+    # checked: no @NullMarked): its bounds are unspecified, so the override is not an error.
+    ("unspec:override of unannotated library bound",
+     lambda f: eisop("override.typaram.invalid", "override.return.invalid", "override.param.invalid")(f)
+     and re.match(r"@NonNull (DefaultDSLContext|ServerInterceptor|ClientInterceptor)\b", f.overridden)),
     # EISOP: @PolyNull V compute(...) and similar in ConcurrentMap; JSpecify: @Nullable V.
     ("jdk:@PolyNull override", lambda f: eisop("override.return.invalid", "override.param.invalid")(f)
      and "@PolyNull" in f.required and "@PolyNull" not in f.found),
