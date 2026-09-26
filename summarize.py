@@ -31,7 +31,10 @@ JAVAC_LINT = {
 # internal failure the checker caught and reported, and it keeps checking, so those are counted
 # separately from crashes and do not fail the run.
 CRASH = re.compile(r"The Checker Framework crashed|An exception has occurred in the compiler")
-KEYLESS_ERROR = re.compile(r"^/\S+\.java:\d+: error: (?!\[)")
+# A compiler error on a source line ("X.java:12: error: cannot access NonNull") or on a class file
+# ("X.class: error: Cannot attach type annotations ..."); keyed diagnostics are matched by DIAG.
+KEYLESS_ERROR = re.compile(r"^/\S+: error: (?!\[)")
+TASK_FAILED = re.compile(r"^> Task (\S+) FAILED$")
 MARKED = re.compile(r"@(?:org\.jspecify\.annotations\.)?NullMarked\b")
 UNMARKED = re.compile(r"@(?:org\.jspecify\.annotations\.)?NullUnmarked\b")
 NULLAWAY_SUPPRESSION = re.compile(r"@SuppressWarnings\([^)]*\"NullAway[^\"]*\"")
@@ -142,7 +145,9 @@ def main():
     anomalies = [d for d in eisop if d["scope"] == "unmarked"]
     location = sum(1 for d in eisop if d["key"].startswith("jspecify.unrecognized.location"))
     with open(os.path.join(out, "build.log"), encoding="utf-8", errors="replace") as f:
-        injections = [l.rstrip("\n")[len("[eisop] "):] for l in f if l.startswith("[eisop] ")]
+        log_lines = [l.rstrip("\n") for l in f]
+    injections = [l[len("[eisop] "):] for l in log_lines if l.startswith("[eisop] ")]
+    failed_tasks = {m.group(1) for m in map(TASK_FAILED.match, log_lines) if m}
     injected = len(injections)
 
     # run-project.sh puts one canary pair into every source root with a @NullMarked package.  A root
@@ -154,16 +159,22 @@ def main():
         with open(canaries_path, encoding="utf-8") as f:
             canary_roots = [os.path.realpath(l.strip()) for l in f if l.strip()]
     # ":a:b:compileJava: ..." names project "b"; ":compileJava: ..." is the root project, "".
-    compiled = {inj.split(": ", 1)[0].rsplit(":", 2)[-2] for inj in injections}
+    injected_tasks = {inj.split(": ", 1)[0] for inj in injections}
+    compiled = {t.rsplit(":", 2)[-2] for t in injected_tasks}
+    # A checked task that failed with a compiler error reported nothing from the checker, which
+    # skips type-checking after any javac error; its root is neither compiled nor a canary miss.
+    errored = {t.rsplit(":", 2)[-2] for t in injected_tasks & failed_tasks}
 
-    def root_compiled(root):
-        return os.path.basename(root) in compiled or ("" in compiled and root == src)
+    def root_in(names, root):
+        return os.path.basename(root) in names or ("" in names and root == src)
 
-    ran = [r for r in canary_roots if root_compiled(r)]
+    ran = [r for r in canary_roots if root_in(compiled, r) and not root_in(errored, r)]
+    errored_roots = [os.path.relpath(r, src) for r in canary_roots if root_in(compiled, r) and root_in(errored, r)]
     missed = [r for r in ran if "eisop" not in canary_hits[(r, "marked")]]
     leaked = [r for r in canary_roots if "eisop" in canary_hits[(r, "unmarked")]]
     nullaway_saw = sum(1 for r in ran if "nullaway" in canary_hits[(r, "marked")])
-    not_compiled = [os.path.relpath(r, src) for r in canary_roots if r not in ran]
+    not_compiled = [os.path.relpath(r, src) for r in canary_roots
+                    if r not in ran and os.path.relpath(r, src) not in errored_roots]
     canary_report = [
         f"- canaries: {len(canary_roots)} source roots, {len(ran)} of them compiled",
         "- compiled roots whose marked canary EISOP missed (must be none): "
@@ -172,6 +183,10 @@ def main():
         + (", ".join(os.path.relpath(r, src) for r in leaked) or "none"),
         f"- NullAway reported the marked canary in {nullaway_saw} of {len(ran)} compiled roots",
     ]
+    if errored_roots:
+        canary_report.append(
+            f"- roots whose checked task failed with a compiler error, so the checker reported"
+            f" nothing there: {len(errored_roots)} ({', '.join(errored_roots)})")
     if not_compiled:
         shown = ", ".join(not_compiled[:8]) + (", ..." if len(not_compiled) > 8 else "")
         canary_report.append(
