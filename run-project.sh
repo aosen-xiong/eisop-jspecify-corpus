@@ -45,40 +45,50 @@ fi
 # -Amode=jspecify, must not be.  summarize.py reports both and leaves them out of the counts.
 # The unmarked one is explicitly @NullUnmarked: some projects run Error Prone's
 # RequireExplicitNullMarking as an error, and any javac error makes EISOP skip the whole module.
-marked_info="$(grep -rlE '@(org\.jspecify\.annotations\.)?NullMarked' --include=package-info.java "$src" \
-               | grep '/src/main/java/' | sort | head -1 || true)"
-canaries=()
-if [ -n "$marked_info" ]; then
-  pkg="$(sed -nE 's/^[[:space:]]*package[[:space:]]+([A-Za-z0-9_.]+)[[:space:]]*;.*/\1/p' "$marked_info" | head -1)"
-  pkg_dir="$(dirname "$marked_info")"
-  src_root="${pkg_dir%/"${pkg//.//}"}"
-  canary_body='final class EisopCorpusCanary {
+# One pair goes into every source root that has a @NullMarked package, so that each module of a
+# multi-module build is tested; summarize.py matches roots to the modules whose compile task ran.
+canary_body='final class EisopCorpusCanary {
   static String canary(@org.jspecify.annotations.Nullable String s) {
     return s;
   }
 }'
+canaries=()
+canary_roots=""
+while IFS= read -r marked_info; do
+  pkg="$(sed -nE 's/^[[:space:]]*package[[:space:]]+([A-Za-z0-9_.]+)[[:space:]]*;.*/\1/p' "$marked_info" | head -1)"
+  pkg_dir="$(dirname "$marked_info")"
+  src_root="${pkg_dir%/"${pkg//.//}"}"
+  if [ -z "$pkg" ] || [ "$src_root" = "$pkg_dir" ] || printf '%s' "$canary_roots" | grep -qxF "$src_root"; then
+    continue
+  fi
+  canary_roots="$canary_roots$src_root"$'\n'
   mkdir -p "$src_root/eisopcorpus/unmarked"
   printf 'package %s;\n\n%s\n' "$pkg" "$canary_body" > "$pkg_dir/EisopCorpusCanary.java"
   printf 'package eisopcorpus.unmarked;\n\n@org.jspecify.annotations.NullUnmarked\n%s\n' "$canary_body" \
     > "$src_root/eisopcorpus/unmarked/EisopCorpusCanary.java"
-  canaries=("$pkg_dir/EisopCorpusCanary.java" "$src_root/eisopcorpus")
-fi
+  canaries+=("$pkg_dir/EisopCorpusCanary.java" "$src_root/eisopcorpus")
+done < <(grep -rlE '@(org\.jspecify\.annotations\.)?NullMarked' --include=package-info.java "$src" \
+           | grep '/src/main/java/' | sort)
 cleanup() { [ ${#canaries[@]} -eq 0 ] || rm -rf "${canaries[@]}"; }
 trap cleanup EXIT
 
 out="$RESULTS_DIR/$name"
 rm -rf "$out"
 mkdir -p "$out"
+printf '%s' "$canary_roots" | sed 's|/src/main/java$||' > "$out/canaries.tsv"
 echo "== $name @ ${sha:0:12}"
 set +e
 # CI is unset because several projects hide Error Prone warnings (and so NullAway's, once
 # demoted to warnings) when it is present.
 # The checked tasks compile with the manifest JDK, not the project's toolchain; see
 # EISOP_COMPILE_JDK in the init script.  Gradle is told where that JDK is, rather than left to find
-# or download one.
+# or download one.  The init script's task actions hold Gradle objects the configuration cache cannot
+# store, so it stays off; Isolated Projects, which some projects enable, requires it, so that is
+# turned off too (a -D on the command line takes precedence over the project's gradle.properties).
 (cd "$src" && env -u CI JAVA_HOME="$java_home" EISOP_COMPILE_JDK="$jdk" ./gradlew \
     --init-script "$HERE/eisop-nullness.init.gradle" \
-    --no-configuration-cache --no-build-cache --no-parallel --continue --console=plain \
+    --no-configuration-cache -Dorg.gradle.isolated-projects=false \
+    --no-build-cache --no-parallel --continue --console=plain \
     -Porg.gradle.java.installations.paths="$java_home" \
     $tasks) > "$out/build.log" 2>&1
 status=$?

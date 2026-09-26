@@ -20,6 +20,7 @@ Current results per project are in [STATUS.md](STATUS.md).
 | `run-project.sh <name>` | clones at the pinned SHA, adds canaries, builds, summarizes, compares |
 | `summarize.py` | `build.log` → `diagnostics.tsv`, `counts.tsv`, `summary.md` |
 | `compare.py <diagnostics.tsv>` | pairs EISOP and NullAway findings by (file, line) into both / EISOP-only / NullAway-only → `comparison.md` |
+| `triage.py <src> <result-dir>` | assigns every EISOP and NullAway finding a cause category → `triage.tsv`; see [TRIAGE.md](TRIAGE.md) |
 | `diff.py <base> <new>` | compares two `diagnostics.tsv` by (tool, key, file, message), ignoring line shifts |
 | `baselines/<project>/` | stored `diagnostics.tsv` that CI diffs against |
 | `STATUS.md` | current results and open problems per project |
@@ -32,20 +33,30 @@ Each project is built once, with both tools in the same compile.
 - **NullAway:** the project's own configuration, plus `JSpecifyMode=true JSpecifyExperimental=true`.
   Projects leave out `JSpecifyExperimental`, and with it JSpecify's JDK models, so their own
   NullAway setting is not a fair comparison. On context-propagation it reports 0 findings where
-  the experimental setting reports 9.
-- **Compiler:** the checked compile tasks use the manifest's JDK (the `jdk` column), not the
-  project's own toolchain; the project's `--release` is kept. Before JDK 22, javac does not read
+  the experimental setting reports 9. NullAway itself is pinned to 0.14.1 in every project, as
+  NullAway's own compile-other-projects job swaps in one version: projects pin their own, and a
+  version before 0.14.0 silently ignores `JSpecifyExperimental`. `summary.md` names the NullAway
+  jar each compile task actually used.
+- **Compiler:** the checked compile tasks use the manifest's JDK (the `jdk` column), whatever
+  compiler or toolchain the project configures, so every project is checked by the same javac. The
+  project's `--release` is kept; a project releasing for a newer Java than its `jdk` column fails
+  to build, and needs that column raised. If the project's build has already locked a task's
+  compiler (reading `javaCompiler` in Gradle locks it), that task keeps the project's compiler and
+  the build log says so. Before JDK 22, javac does not read
   type-use annotations such as `@Nullable` on a type argument from dependency class files, so on
   an older toolchain both tools would silently see a `@NullMarked` dependency's generic types
   unannotated. `summary.md` records the JDK each compile task actually used.
 
 ## What makes a run trustworthy
 
-- **Canaries.** Each run adds one class that returns a `@Nullable` parameter from a non-null
-  method. One copy goes in a `@NullMarked` package, where EISOP must report it. The other goes in a
-  new package and is annotated `@NullUnmarked`, where under `-Amode=jspecify` EISOP must not. If
-  either check fails, the run fails. This catches a checker that silently never ran. The second copy
-  is explicitly `@NullUnmarked` because some projects run Error Prone's
+- **Canaries.** Each run adds a class that returns a `@Nullable` parameter from a non-null method,
+  as a pair in every source root that has a `@NullMarked` package. One copy goes in a `@NullMarked`
+  package, where EISOP must report it. The other goes in a new package and is annotated
+  `@NullUnmarked`, where under `-Amode=jspecify` EISOP must not. A root is judged only if its
+  module's compile task ran: in a multi-module build, one failing module stops every module that
+  depends on it from compiling. The run fails if EISOP misses a compiled root's marked canary,
+  reports any unmarked canary, or no root compiled at all. This catches a checker that silently
+  never ran. The second copy is explicitly `@NullUnmarked` because some projects run Error Prone's
   `RequireExplicitNullMarking` as an error, and that error would stop EISOP in the whole module.
 - **No javac errors.** The Checker Framework skips type-checking once javac has reported any
   error. So the init script removes `-Werror`, passes `-Awarns`, and demotes NullAway, which these
@@ -58,6 +69,9 @@ Each project is built once, with both tools in the same compile.
     results can differ between a local run and CI.
 
   `comparison.md` is marked invalid when that happens.
+- **Recovered internal failures do not fail the run.** A `*.crashed` warning key, such as
+  `type.argument.inference.crashed`, means EISOP caught an internal failure and kept checking. It
+  is counted separately in `summary.md`, unlike a crash, which stops checking.
 - **Scoping anomalies.** Any EISOP diagnostic in a file outside `@NullMarked` scope is listed
   separately, because `-Amode=jspecify` should make that impossible.
 
@@ -79,3 +93,19 @@ On macOS the JDK comes from `/usr/libexec/java_home -v <jdk>`; elsewhere set `JD
 - The checker and its checker-qual go first on the processor path and classpath. Error Prone's
   dependencies carry an older `org.checkerframework` checker-qual that would otherwise shadow them.
 - `CI` is unset for the build, because several projects hide Error Prone warnings on CI.
+- The configuration cache is off, because the init script's task actions hold Gradle objects it
+  cannot store. Isolated Projects, which requires it and which junit-framework enables in
+  `gradle.properties`, is turned off with `-Dorg.gradle.isolated-projects=false`.
+- Included builds and `buildSrc` are left untouched: they are the project's build logic, not code
+  under evaluation.
+- `mavenLocal()` is added to the settings-level repositories, and to a project's own repositories
+  only if it already declares some or settings declares none. A project that declares any
+  repository no longer sees the settings-level ones, so adding it unconditionally hid every real
+  repository from projects that rely on settings.
+- When the checked task compiles a named module (a `module-info.java`), the checker's qualifiers are
+  added with `--add-modules org.checkerframework.checker.qual`; a module does not read the
+  classpath.
+- NullAway is demoted to a warning both in Error Prone's check map and through the
+  `net.ltgt.nullaway` plugin's own extension, which would otherwise re-apply the project's
+  `nullaway { error() }` afterwards. `summary.md` logs the NullAway arguments Error Prone actually
+  receives.

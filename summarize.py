@@ -27,7 +27,11 @@ JAVAC_LINT = {
     "static", "strictfp", "synchronization", "text-blocks", "this-escape", "try", "unchecked",
     "varargs",
 }
-CRASH = re.compile(r"The Checker Framework crashed|\.crashed\]|An exception has occurred in the compiler")
+# A crash stops checking; a "*.crashed" warning key (such as type.argument.inference.crashed) is an
+# internal failure the checker caught and reported, and it keeps checking, so those are counted
+# separately from crashes and do not fail the run.
+CRASH = re.compile(r"The Checker Framework crashed|An exception has occurred in the compiler")
+KEYLESS_ERROR = re.compile(r"^/\S+\.java:\d+: error: (?!\[)")
 MARKED = re.compile(r"@(?:org\.jspecify\.annotations\.)?NullMarked\b")
 UNMARKED = re.compile(r"@(?:org\.jspecify\.annotations\.)?NullUnmarked\b")
 NULLAWAY_SUPPRESSION = re.compile(r"@SuppressWarnings\([^)]*\"NullAway[^\"]*\"")
@@ -86,10 +90,16 @@ def main():
                 unanchored.append(line)
             m = DIAG.match(line)
             if not m:
+                # A javac error without a [key], such as "cannot access NonNull", still fails
+                # the compile task.
+                if KEYLESS_ERROR.match(line):
+                    unanchored.append(line)
                 continue
             if m.group("file").endswith("/EisopCorpusCanary.java"):
-                where = "unmarked" if "/eisopcorpus/unmarked/" in m.group("file") else "marked"
-                canary_hits[where].add(tool_of(m.group("key")))
+                canary_file = os.path.realpath(m.group("file"))
+                where = "unmarked" if "/eisopcorpus/unmarked/" in canary_file else "marked"
+                root = canary_file.split("/src/main/java/", 1)[0]
+                canary_hits[(root, where)].add(tool_of(m.group("key")))
                 continue
             d = m.groupdict()
             path = os.path.realpath(d["file"])
@@ -135,6 +145,39 @@ def main():
         injections = [l.rstrip("\n")[len("[eisop] "):] for l in f if l.startswith("[eisop] ")]
     injected = len(injections)
 
+    # run-project.sh puts one canary pair into every source root with a @NullMarked package.  A root
+    # is judged only if its module's checked compile task ran: in a multi-module build, a module
+    # that fails stops every module depending on it from compiling at all.
+    canary_roots = []
+    canaries_path = os.path.join(out, "canaries.tsv")
+    if os.path.exists(canaries_path):
+        with open(canaries_path, encoding="utf-8") as f:
+            canary_roots = [os.path.realpath(l.strip()) for l in f if l.strip()]
+    # ":a:b:compileJava: ..." names project "b"; ":compileJava: ..." is the root project, "".
+    compiled = {inj.split(": ", 1)[0].rsplit(":", 2)[-2] for inj in injections}
+
+    def root_compiled(root):
+        return os.path.basename(root) in compiled or ("" in compiled and root == src)
+
+    ran = [r for r in canary_roots if root_compiled(r)]
+    missed = [r for r in ran if "eisop" not in canary_hits[(r, "marked")]]
+    leaked = [r for r in canary_roots if "eisop" in canary_hits[(r, "unmarked")]]
+    nullaway_saw = sum(1 for r in ran if "nullaway" in canary_hits[(r, "marked")])
+    not_compiled = [os.path.relpath(r, src) for r in canary_roots if r not in ran]
+    canary_report = [
+        f"- canaries: {len(canary_roots)} source roots, {len(ran)} of them compiled",
+        "- compiled roots whose marked canary EISOP missed (must be none): "
+        + (", ".join(os.path.relpath(r, src) for r in missed) or "none"),
+        "- roots whose unmarked canary EISOP reported (must be none): "
+        + (", ".join(os.path.relpath(r, src) for r in leaked) or "none"),
+        f"- NullAway reported the marked canary in {nullaway_saw} of {len(ran)} compiled roots",
+    ]
+    if not_compiled:
+        shown = ", ".join(not_compiled[:8]) + (", ..." if len(not_compiled) > 8 else "")
+        canary_report.append(
+            f"- roots whose module's checked task did not run (not requested, or blocked by a failed"
+            f" module): {len(not_compiled)} ({shown})")
+
     with open(os.path.join(out, "summary.md"), "w", encoding="utf-8") as f:
         f.write(f"# {meta.get('project', '?')}\n\n")
         for k in ("sha", "eisop_version", "java_home", "gradle_exit"):
@@ -147,10 +190,11 @@ def main():
         f.write(f"- EISOP diagnostics: {len(eisop)} ({location} jspecify.unrecognized.location.*)\n")
         f.write(f"- NullAway diagnostics: {sum(1 for d in diags if d['tool'] == 'nullaway')}\n")
         f.write(f"- crash lines: {len(crashes)}; compiler errors not tied to a file: {len(unanchored)}\n")
+        recovered = sum(1 for d in eisop if d["key"].endswith(".crashed"))
+        f.write(f"- internal failures EISOP caught and reported as warnings (*.crashed keys): {recovered}\n")
         f.write(f"- EISOP diagnostics in unmarked files (scoping anomalies): {len(anomalies)}\n")
-        for where, expect in (("marked", "reported"), ("unmarked", "not reported")):
-            tools = ", ".join(sorted(canary_hits[where])) or "none"
-            f.write(f"- {where} canary (expect EISOP {expect}): tools reporting it: {tools}\n")
+        for line in canary_report:
+            f.write(line + "\n")
         f.write("\n")
         f.write("| tool | key | count |\n|---|---|---|\n")
         for (tool, key), n in sorted(counts.items(), key=lambda kv: (kv[0][0], -kv[1], kv[0][1])):
@@ -164,7 +208,7 @@ def main():
     if injected == 0:
         print("WARNING: the checker was not injected into any compile task", file=sys.stderr)
     failed = False
-    if "eisop" not in canary_hits["marked"] or "eisop" in canary_hits["unmarked"]:
+    if not ran or missed or leaked:
         print("WARNING: canary check failed; the counts are not trustworthy", file=sys.stderr)
         failed = True
     if crashes or unanchored:

@@ -8,20 +8,38 @@
 //   EISOP_COMPILE_JDK  JDK feature version to compile the checked tasks with; unset keeps the
 //                  project's own toolchain.
 
-def cfVersion = System.getenv('EISOP_VERSION') ?: '3.49.5-eisop2-SNAPSHOT'
+// CF_GROUP selects the checker: io.github.eisop (default) or org.checkerframework, which has no
+// -Amode=jspecify, so CF_NO_MODE drops the mode for a like-for-like timing comparison.
+def cfGroup = System.getenv('CF_GROUP') ?: 'io.github.eisop'
+def cfVersion = System.getenv('EISOP_VERSION')
+        ?: (cfGroup == 'io.github.eisop' ? '3.49.5-eisop2-SNAPSHOT' : '3.49.5')
 def checkedTasks = (System.getenv('EISOP_TASKS') ?: 'compileJava').split(',') as Set
 def compileJdk = System.getenv('EISOP_COMPILE_JDK') as Integer
-def eisopArgs = ['-Amode=jspecify']
+def eisopArgs = (System.getenv('CF_NO_MODE') != null || cfGroup != 'io.github.eisop')
+        ? [] : ['-Amode=jspecify']
 // Added to the project's own NullAway configuration.  Projects leave out JSpecifyExperimental,
 // and with it JSpecify's JDK models, so without it NullAway is not comparable with EISOP.
 def nullawayOptions = [JSpecifyMode: 'true', JSpecifyExperimental: 'true']
+// One NullAway for every project, like NullAway's own compile-other-projects job: projects pin
+// their own, and a version before 0.14.0 silently ignores JSpecifyExperimental.
+def nullawayVersion = '0.14.1'
 def nullnessChecker = 'org.checkerframework.checker.nullness.NullnessChecker'
+// Which tools run on the checked tasks: both (default), eisop, nullaway, or none.  Used to
+// measure each tool's share of compile time; every mode still logs [eisop-time] per task.
+def mode = System.getenv('EISOP_MODE') ?: 'both'
+def runEisop = mode in ['both', 'eisop']
+def runNullaway = mode in ['both', 'nullaway', 'nullaway-only']
+// nullaway-only also turns off Error Prone's other checks, so that a project that runs the full
+// Error Prone check set is measured on the same footing as one that disables it.
+def onlyNullaway = mode == 'nullaway-only'
 
 def projectReposForbidden = false
+def settingsDeclaresRepos = false
 settingsEvaluated { settings ->
     def drm = settings.dependencyResolutionManagement
-    drm.repositories.mavenLocal()
     projectReposForbidden = drm.repositoriesMode.get() == RepositoriesMode.FAIL_ON_PROJECT_REPOS
+    settingsDeclaresRepos = !drm.repositories.isEmpty()
+    drm.repositories.mavenLocal()
 }
 
 // Names the processors a processor path would contribute through service discovery, which an
@@ -52,22 +70,39 @@ def discoverProcessors = { Iterable<File> path ->
 }
 
 beforeProject { project ->
-    if (!projectReposForbidden) {
-        project.repositories.mavenLocal()
+    // Included builds and buildSrc are the project's build logic, not code under evaluation.
+    if (project.gradle.parent != null) {
+        return
+    }
+    // A project that declares any repository of its own no longer sees the settings-level ones,
+    // so mavenLocal() goes on the project only when it already has repositories, or when there
+    // are no settings-level ones to hide.  Otherwise settings-level mavenLocal() is enough.
+    project.afterEvaluate {
+        if (!projectReposForbidden && (!project.repositories.isEmpty() || !settingsDeclaresRepos)) {
+            project.repositories.mavenLocal()
+        }
+    }
+    project.configurations.configureEach { Configuration c ->
+        c.resolutionStrategy.eachDependency { DependencyResolveDetails d ->
+            if (d.requested.group == 'com.uber.nullaway' && d.requested.name == 'nullaway') {
+                d.useVersion(nullawayVersion)
+                d.because('eisop-jspecify-corpus compares against one NullAway version')
+            }
+        }
     }
     project.plugins.withType(JavaBasePlugin).configureEach {
         def checker = project.configurations.maybeCreate('eisopNullnessChecker')
         checker.canBeConsumed = false
         checker.canBeResolved = true
         checker.resolutionStrategy.cacheChangingModulesFor(0, 'seconds')
-        project.dependencies.add('eisopNullnessChecker', "io.github.eisop:checker:${cfVersion}")
+        project.dependencies.add('eisopNullnessChecker', "${cfGroup}:checker:${cfVersion}")
         // The checker loads its own qualifiers (e.g. @Deterministic) from the compile classpath.
         def checkerQual = project.configurations.maybeCreate('eisopNullnessCheckerQual')
         checkerQual.canBeConsumed = false
         checkerQual.canBeResolved = true
         checkerQual.transitive = false
         checkerQual.resolutionStrategy.cacheChangingModulesFor(0, 'seconds')
-        project.dependencies.add('eisopNullnessCheckerQual', "io.github.eisop:checker-qual:${cfVersion}")
+        project.dependencies.add('eisopNullnessCheckerQual', "${cfGroup}:checker-qual:${cfVersion}")
         def emptyFiles = project.files()
 
         project.tasks.withType(JavaCompile).configureEach { JavaCompile t ->
@@ -77,17 +112,20 @@ beforeProject { project ->
             // A skipped or cache-restored compile emits no diagnostics.
             t.outputs.upToDateWhen { false }
             t.outputs.cacheIf { false }
-            // Compile with the corpus JDK rather than the project's toolchain.  Before JDK 22 javac
-            // does not read type-use annotations (such as @Nullable on a type argument) from
-            // dependency class files, so both checkers would silently see a @NullMarked
-            // dependency's generic types unannotated.  The project's --release stays as it is.
-            if (compileJdk != null) {
-                t.javaCompiler = project.extensions.getByType(JavaToolchainService).compilerFor {
-                    languageVersion = JavaLanguageVersion.of(compileJdk)
-                }
+
+            def taskStart = new java.util.concurrent.atomic.AtomicLong()
+            t.doLast {
+                logger.lifecycle("[eisop-time] ${t.path}: ${(long) ((System.nanoTime() - taskStart.get()) / 1_000_000L)} ms")
             }
 
             t.doFirst {
+                // Every finding must be reported, not just those before the first failing module.
+                // Outside the injection below, so that it also holds when the checker is off.
+                t.options.compilerArgs.removeAll { it == '-Werror' }
+                if (!runEisop) {
+                    logger.lifecycle("[eisop] ${t.path}: checker not injected (EISOP_MODE=${mode})")
+                    return
+                }
                 def existing = t.options.annotationProcessorPath ?: emptyFiles
                 def discovered = discoverProcessors(existing.files)
                 // EISOP goes first: Error Prone's processor path carries an older
@@ -96,8 +134,6 @@ beforeProject { project ->
                 t.classpath = checkerQual + t.classpath
 
                 def args = t.options.compilerArgs
-                // Every finding must be reported, not just those before the first failing module.
-                args.removeAll { it == '-Werror' }
                 int i = args.indexOf('-processor')
                 if (i >= 0) {
                     args[i + 1] = args[i + 1] + ',' + nullnessChecker
@@ -106,14 +142,72 @@ beforeProject { project ->
                 }
                 args.addAll(eisopArgs)
                 args.addAll(['-Awarns', '-Xmaxwarns', '1000000', '-Xmaxerrs', '1000000'])
-                def nullaway = t.options.extensions.findByName('errorprone') == null ? 'not configured'
-                        : nullawayOptions.collect { k, v -> "$k=$v" }.join(' ')
+                // Compiling a named module does not read the classpath, so the checker could not
+                // load its own qualifiers there; checker-qual is itself a module, which Gradle puts
+                // on the module path.  --add-modules adds it to the module graph, and --add-reads
+                // lets the compiled module read it; without that, javac reports "cannot access
+                // NonNull" in some modules.
+                def moduleInfo = System.getenv('EISOP_NO_ADD_MODULES') != null ? null
+                        : t.source.files.find { it.name == 'module-info.java' }
+                if (moduleInfo != null) {
+                    args.addAll(['--add-modules', 'org.checkerframework.checker.qual'])
+                    // The checker writes its defaulted qualifiers into the class files it produces, so a
+                    // dependency compiled earlier in the same build carries @NonNull and @Initialized.
+                    // Reading such a class file resolves those annotations in the module that owns it, so
+                    // every module on the compile classpath needs the read edge, not just this one.
+                    def moduleNames = []
+                    def declared = moduleInfo.text =~ /(?m)^\s*(?:@\S+\s+)*(?:open\s+)?module\s+([\w.]+)/
+                    if (declared.find()) {
+                        moduleNames << declared.group(1)
+                    }
+                    try {
+                        def paths = t.classpath.files.findAll { it.exists() }.collect { it.toPath() }
+                        java.lang.module.ModuleFinder.of(paths as java.nio.file.Path[]).findAll().each {
+                            moduleNames << it.descriptor().name()
+                        }
+                    } catch (Exception e) {
+                        logger.lifecycle("[eisop-note] ${t.path}: cannot list the classpath's modules: ${e}")
+                    }
+                    moduleNames.unique()
+                            .findAll { it != 'org.checkerframework.checker.qual' }
+                            .each { args.addAll(['--add-reads', "${it}=org.checkerframework.checker.qual".toString()]) }
+                }
+                // What Error Prone is actually told about NullAway, read back from the compiler
+                // arguments: another plugin, such as net.ltgt.nullaway, can set NullAway's severity
+                // after this script demotes it, and an error would make EISOP skip the compile.
+                def epPlugin = t.options.allCompilerArgs.find { it.startsWith('-Xplugin:ErrorProne') }
+                def nullawayJar = existing.files.find { it.name ==~ /nullaway-[0-9][^\/]*\.jar/ }?.name
+                def nullaway = epPlugin == null ? 'Error Prone not enabled'
+                        : ((epPlugin =~ /-Xep:NullAway(?::\w+)?|-XepOpt:NullAway:JSpecify\w+=\w+/)
+                                .findAll().join(' ') ?: 'not mentioned') + " (${nullawayJar ?: 'no NullAway jar'})"
                 // The toolchain can differ from JAVA_HOME, and it matters: before JDK 22 javac does
                 // not read type-use annotations from dependency class files by default.
                 def javac = t.javaCompiler.getOrNull()?.metadata
                 def jdk = javac == null ? 'unknown' : "${javac.languageVersion} (${javac.javaRuntimeVersion})"
                 logger.lifecycle("[eisop] ${t.path}: -processor ${args[args.indexOf('-processor') + 1]} "
                         + "${eisopArgs.join(' ')}; NullAway: ${nullaway}; javac: JDK ${jdk}")
+            }
+            t.doFirst { taskStart.set(System.nanoTime()) }
+        }
+    }
+    // Compile with the corpus JDK, so every project is checked by the same javac.  Before JDK 22
+    // javac does not read type-use annotations (such as @Nullable on a type argument) from
+    // dependency class files, so an older toolchain would make both checkers silently see a
+    // @NullMarked dependency's generic types unannotated.  The project's --release is kept.  The
+    // compiler is set without being read first: reading javaCompiler finalizes it.  Registered
+    // from afterEvaluate so that it runs after the project's own javaCompiler configuration.  If
+    // the project's build already read it (reactor-core's benchmarks project does), the project's
+    // compiler is kept; summary.md records the JDK each checked task actually used.
+    project.afterEvaluate {
+        project.tasks.withType(JavaCompile).configureEach { JavaCompile t ->
+            if (compileJdk != null && checkedTasks.contains(t.name)) {
+                try {
+                    t.javaCompiler = project.extensions.getByType(JavaToolchainService).compilerFor {
+                        languageVersion = JavaLanguageVersion.of(compileJdk)
+                    }
+                } catch (IllegalStateException e) {
+                    logger.lifecycle("[eisop-note] ${t.path}: kept the project's compiler: ${e.message}")
+                }
             }
         }
     }
@@ -128,9 +222,33 @@ beforeProject { project ->
             project.tasks.withType(JavaCompile).configureEach { JavaCompile t ->
                 if (checkedTasks.contains(t.name)) {
                     def ep = t.options.extensions.getByName('errorprone')
+                    if (!runNullaway) {
+                        // Measuring one tool at a time: Error Prone carries NullAway.  Its plugin is
+                        // also what passes javac's internal packages to the compiler JVM, which the
+                        // checker needs, so those flags move here when it is off.
+                        ep.enabled.set(false)
+                        // Fork in every mode, including the tool-free baseline: Error Prone forks
+                        // when it is on, and an in-process compile is not comparable with a forked one.
+                        if (true) {
+                            t.options.fork = true
+                            ['api', 'code', 'comp', 'file', 'main', 'model', 'parser', 'processing',
+                             'tree', 'util'].each { pkg ->
+                                t.options.forkOptions.jvmArgs.add("--add-exports=jdk.compiler/com.sun.tools.javac.${pkg}=ALL-UNNAMED".toString())
+                                t.options.forkOptions.jvmArgs.add("--add-opens=jdk.compiler/com.sun.tools.javac.${pkg}=ALL-UNNAMED".toString())
+                            }
+                        }
+                        return
+                    }
+                    if (onlyNullaway) {
+                        ep.disableAllChecks.set(true)
+                    }
                     ep.allErrorsAsWarnings.set(true)
                     ep.warn('NullAway')
                     nullawayOptions.each { k, v -> ep.option("NullAway:${k}", v) }
+                    // The net.ltgt.nullaway plugin sets NullAway's severity through its own
+                    // extension and emits it after the check map above, so nullaway { error() }
+                    // would win over warn('NullAway'); demote it there too.
+                    ep.extensions.findByName('nullaway')?.warn()
                 }
             }
         }

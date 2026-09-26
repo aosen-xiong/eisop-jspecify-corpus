@@ -2,3 +2,5 @@ work/
 results/
 results-*/
 __pycache__/
+results-*.out
+.DS_Store
