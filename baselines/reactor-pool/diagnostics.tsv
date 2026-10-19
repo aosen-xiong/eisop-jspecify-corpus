@@ -1,11 +1,11 @@
 tool	kind	key	scope	nullaway_suppressed_file	file	line	msg
-eisop	warning	argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	436	incompatible argument for parameter element of SimpleDequePool.createSlot.
-eisop	warning	argument.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	444	incompatible argument for parameter error of Borrower.fail.
 eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	534	incompatible bounds in wildcard
 eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	753	incompatible bounds in wildcard
 eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	765	incompatible bounds in wildcard
 eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	767	incompatible bounds in wildcard
 eisop	warning	bound.type.incompatible	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	898	incompatible bounds in wildcard
+eisop	warning	override.param.invalid	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	797	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	yes	reactor-pool/src/main/java/reactor/pool/SimpleDequePool.java	828	Incompatible parameter type for s.
 eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	158	incompatible type argument for type parameter T of Mono.
 eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	174	incompatible type argument for type parameter T of Mono.
 eisop	warning	type.argument.type.incompatible	package	no	reactor-pool/src/main/java/reactor/pool/AbstractPool.java	363	incompatible type argument for type parameter T of Mono.

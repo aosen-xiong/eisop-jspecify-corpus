@@ -1,0 +1,225 @@
+tool	kind	key	scope	nullaway_suppressed_file	file	line	msg
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	103	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	119	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	238	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	244	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	319	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	334	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	373	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	382	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AbstractLinkedDeque.java	421	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedBuffer.java	110	incompatible argument for parameter arg0 of VarHandle.setRelease.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	363	incompatible argument for parameter arg0 of VarHandle.compareAndSet.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	364	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	786	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	921	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	959	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1124	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1348	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1356	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1384	incompatible argument for parameter arg1 of ConcurrentMap.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1431	incompatible argument for parameter arg1 of ConcurrentMap.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1463	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1483	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2317	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2334	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2352	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2514	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2651	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2685	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2697	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2732	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2870	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3216	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3262	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3500	incompatible argument for parameter arg0 of Function.apply.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3875	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3876	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3891	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3892	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3893	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3907	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3909	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3922	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3923	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4113	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4114	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4201	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4211	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4220	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java	275	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java	287	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/CaffeineSpec.java	306	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LinkedDeque.java	145	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LinkedDeque.java	146	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LinkedDeque.java	156	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LinkedDeque.java	157	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	118	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	157	incompatible argument for parameter arg0 of Entry.setValue.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	170	incompatible argument for parameter cache of AsyncBulkCompleter constructor.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	174	incompatible argument for parameter arg0 of CompletableFuture.handle.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	304	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	318	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	435	incompatible argument for parameter arg0 of Map.containsKey.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	439	incompatible argument for parameter arg0 of Map.containsValue.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	442	incompatible argument for parameter arg0 of Map.get.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	494	incompatible argument for parameter arg0 of Map.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	497	incompatible argument for parameter arg0 of ConcurrentMap.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	497	incompatible argument for parameter arg1 of ConcurrentMap.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	592	incompatible argument for parameter arg0 of Set.contains.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	595	incompatible argument for parameter arg0 of Set.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	849	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	855	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	867	incompatible argument for parameter arg0 of Map.get.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	873	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	933	incompatible argument for parameter arg0 of Map.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	939	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1170	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1326	incompatible argument for parameter arg0 of Set.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1687	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1697	incompatible argument for parameter arg0 of Map.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache.java	132	incompatible argument for parameter arg0 of Entry.setValue.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	112	incompatible argument for parameter expiry of LocalCache.compute.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	158	incompatible argument for parameter arg0 of Map.remove.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCacheFactory.java	135	incompatible argument for parameter arg0 of MethodHandle.invokeExact.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalLoadingCache.java	179	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalLoadingCache.java	210	incompatible argument for parameter arg1 of ConcurrentMap.remove.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalLoadingCache.java	224	incompatible argument for parameter arg1 of ConcurrentMap.remove.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	399	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	409	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	418	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	613	incompatible argument for parameter arg0 of VarHandle.setRelease.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	625	incompatible argument for parameter arg0 of VarHandle.getVolatile.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Pacer.java	77	incompatible argument for parameter arg0 of VarHandle.setRelease.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	192	incompatible argument for parameter arg1 of WeakReference constructor.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	228	incompatible argument for parameter arg1 of WeakReference constructor.
+eisop	warning	argument.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	269	incompatible argument for parameter arg1 of WeakReference constructor.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/TimerWheel.java	382	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	222	incompatible argument for parameter arg0 of VarHandle.compareAndSet.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	223	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	255	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	344	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	437	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	443	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	449	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	455	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	497	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	518	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	156	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	163	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	169	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache.java	131	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache.java	136	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache.java	197	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalLoadingCache.java	115	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/TimerWheel.java	501	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/TimerWheel.java	508	incompatible types in assignment.
+eisop	warning	bound.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	122	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	138	incompatible bounds in wildcard
+eisop	warning	cast.unsafe	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedBuffer.java	105	cast from "@Nullable Object" to "E [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedBuffer.java	192	cast from "@Nullable Object" to "@NonNull long" cannot be statically verified
+eisop	warning	cast.unsafe	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1390	cast from "@Nullable CompletableFuture<capture#012 [ extends V [ extends @Nullable Object super @Nullable NullType ] super @NonNull NullType ]>" to "V [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	5137	cast from "@Nullable Object" to "@NonNull int" cannot be statically verified
+eisop	warning	cast.unsafe	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	5141	cast from "@Nullable Object" to "@NonNull int" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	390	cast from "@Nullable Object" to "E [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	512	cast from "@Nullable Object" to "E [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	569	cast from "@Nullable Object" to "@NonNull long" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/MpscGrowableArrayQueue.java	625	cast from "@Nullable Object" to "E [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	conditional.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1390	incompatible types in conditional expression.
+eisop	warning	conditional.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3066	incompatible types in conditional expression.
+eisop	warning	conditional.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	280	incompatible types in conditional expression.
+eisop	warning	conditional.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	281	incompatible types in conditional expression.
+eisop	warning	conditional.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	347	incompatible types in conditional expression.
+eisop	warning	contracts.conditional.postcondition.not.satisfied	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	126	conditional postcondition is not satisfied when equals returns true.
+eisop	warning	contracts.conditional.postcondition.not.satisfied	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	167	conditional postcondition is not satisfied when equals returns true.
+eisop	warning	contracts.conditional.postcondition.not.satisfied	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	203	conditional postcondition is not satisfied when equals returns true.
+eisop	warning	contracts.conditional.postcondition.not.satisfied	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	239	conditional postcondition is not satisfied when equals returns true.
+eisop	warning	contracts.conditional.postcondition.not.satisfied	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	284	conditional postcondition is not satisfied when equals returns true.
+eisop	warning	contracts.conditional.postcondition.not.satisfied	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	329	conditional postcondition is not satisfied when equals returns true.
+eisop	warning	enhancedfor.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	144	incompatible types in enhanced for loop.
+eisop	warning	enhancedfor.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	346	incompatible types in enhanced for loop.
+eisop	warning	enhancedfor.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	358	incompatible types in enhanced for loop.
+eisop	warning	enhancedfor.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncLoadingCache.java	129	incompatible types in enhanced for loop.
+eisop	warning	enhancedfor.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalManualCache.java	83	incompatible types in enhanced for loop.
+eisop	warning	methodref.receiver.invalid	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	310	Incompatible receiver type
+eisop	warning	override.param.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	528	Incompatible parameter type for remappingFunction.
+eisop	warning	override.param.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1037	Incompatible parameter type for mappingFunction.
+eisop	warning	override.param.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1133	Incompatible parameter type for remappingFunction.
+eisop	warning	override.param.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	111	Incompatible parameter type for remappingFunction.
+eisop	warning	override.param.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	748	Incompatible parameter type for array.
+eisop	warning	override.param.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	941	Incompatible parameter type for array.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AsyncCacheLoader.java	167	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3015	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3057	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/CacheLoader.java	230	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	518	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	526	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	549	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1085	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1132	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	1168	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	110	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	142	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalManualCache.java	62	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	292	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	341	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	743	Incompatible return type.
+eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	936	Incompatible return type.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AsyncCacheLoader.java	165	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	467	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	472	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	542	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	1103	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2296	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2658	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2680	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2725	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2918	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2956	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2977	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3095	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3103	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3138	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3157	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3209	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4943	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/CacheLoader.java	223	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	259	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	266	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCacheFactory.java	115	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCacheFactory.java	135	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/NodeFactory.java	151	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	275	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/References.java	320	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	316	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	369	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	378	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	393	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	506	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	532	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	749	incompatible types in return.
+eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	942	incompatible types in return.
+eisop	warning	toarray.nullable.elements.not.newarray	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	749	call of toArray on collection of non-null elements yields an array of possibly-null elements; omit the argument to toArray or make it an explicit array constructor
+eisop	warning	toarray.nullable.elements.not.newarray	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	942	call of toArray on collection of non-null elements yields an array of possibly-null elements; omit the argument to toArray or make it an explicit array constructor
+eisop	warning	type.argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	37	incompatible type argument for type parameter V of ConcurrentMap.
+eisop	warning	type.argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	52	incompatible type argument for type parameter V of RemovalListener.
+eisop	warning	type.argument.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	61	incompatible type argument for type parameter V of Expiry.
+eisop	warning	type.arguments.not.inferred	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	2460	Could not infer type arguments for Collections.unmodifiableMap
+eisop	warning	type.arguments.not.inferred	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3036	Could not infer type arguments for LocalCache.statsAware
+eisop	warning	type.arguments.not.inferred	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	1109	Could not infer type arguments for BoundedLocalManualCache constructor
+eisop	warning	type.arguments.not.inferred	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	1110	Could not infer type arguments for UnboundedLocalManualCache constructor
+eisop	warning	type.arguments.not.inferred	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	1135	Could not infer type arguments for BoundedLocalLoadingCache constructor
+eisop	warning	type.arguments.not.inferred	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	1136	Could not infer type arguments for UnboundedLocalLoadingCache constructor
+eisop	warning	type.arguments.not.inferred	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	1170	Could not infer type arguments for BoundedLocalAsyncCache constructor
+eisop	warning	type.arguments.not.inferred	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	1171	Could not infer type arguments for UnboundedLocalAsyncCache constructor
+eisop	warning	type.arguments.not.inferred	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	1229	Could not infer type arguments for BoundedLocalAsyncLoadingCache constructor
+eisop	warning	type.arguments.not.inferred	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/Caffeine.java	1230	Could not infer type arguments for UnboundedLocalAsyncLoadingCache constructor
+eisop	warning	type.arguments.not.inferred	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	721	Could not infer type arguments for Collections.unmodifiableMap
+eisop	warning	type.arguments.not.inferred	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalLoadingCache.java	97	Could not infer type arguments for Collections.unmodifiableMap
+eisop	warning	type.arguments.not.inferred	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalManualCache.java	96	Could not infer type arguments for Collections.unmodifiableMap
+eisop	warning	type.arguments.not.inferred	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	174	Could not infer type arguments for Collections.unmodifiableMap
+eisop	warning	type.invalid.annotations.on.use	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4434	invalid type: annotations [@Nullable] conflict with declaration of type java.util.Optional
+eisop	warning	type.invalid.annotations.on.use	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4435	invalid type: annotations [@Nullable] conflict with declaration of type java.util.Optional
+eisop	warning	type.invalid.annotations.on.use	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4436	invalid type: annotations [@Nullable] conflict with declaration of type java.util.Optional
+eisop	warning	type.invalid.annotations.on.use	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4437	invalid type: annotations [@Nullable] conflict with declaration of type java.util.Optional
+eisop	warning	type.invalid.annotations.on.use	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4438	invalid type: annotations [@Nullable] conflict with declaration of type java.util.Optional

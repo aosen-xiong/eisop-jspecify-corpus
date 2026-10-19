@@ -1,0 +1,1103 @@
+tool	kind	key	scope	nullaway_suppressed_file	file	line	msg
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/EmitterProcessor.java	540	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferBoundary.java	72	incompatible argument for parameter actual of BufferBoundaryMain constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferPredicate.java	390	incompatible argument for parameter arg0 of Collections.singleton.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferTimeout.java	541	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferTimeout.java	847	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferTimeout.java	858	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	293	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	394	incompatible argument for parameter arg0 of Queue.offer.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCombineLatest.java	398	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	378	incompatible argument for parameter arg0 of Function.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	741	incompatible argument for parameter arg0 of Function.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCreate.java	261	incompatible argument for parameter t of FluxSink.next.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCreate.java	887	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCreate.java	1048	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinct.java	447	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDoOnEach.java	276	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxElapsed.java	101	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterFuseable.java	95	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterFuseable.java	314	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	128	incompatible argument for parameter parent of FilterWhenInner constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	206	incompatible argument for parameter arg1 of AtomicReferenceArray.getAndSet.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	306	incompatible argument for parameter arg1 of AtomicReferenceArray.getAndSet.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	326	incompatible argument for parameter arg1 of AtomicReferenceArray.lazySet.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFirstWithValue.java	368	incompatible argument for parameter throwables of Exceptions.multiple.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	640	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	717	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	382	incompatible argument for parameter arg0 of Function.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	445	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	588	incompatible argument for parameter arg0 of Function.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	633	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	780	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	231	incompatible argument for parameter arg0 of BiFunction.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	270	incompatible argument for parameter arg0 of BiFunction.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	321	incompatible argument for parameter arg0 of Consumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	355	incompatible argument for parameter arg0 of BiFunction.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupBy.java	350	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupBy.java	395	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupBy.java	571	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupBy.java	623	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupBy.java	693	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandleFuseable.java	174	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandleFuseable.java	485	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndexFuseable.java	114	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndexFuseable.java	278	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIterable.java	322	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIterable.java	389	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIterable.java	650	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIterable.java	719	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapFuseable.java	104	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapFuseable.java	186	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapFuseable.java	273	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapFuseable.java	375	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeComparing.java	328	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeSequential.java	440	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMetricsFuseable.java	106	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	351	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	364	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	444	incompatible argument for parameter arg0 of StringBuilder constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBuffer.java	271	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBuffer.java	309	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferStrategy.java	184	incompatible argument for parameter arg0 of Consumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferStrategy.java	277	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferTimeout.java	369	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeekFuseable.java	186	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeekFuseable.java	479	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublish.java	577	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishMulticast.java	499	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	448	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	493	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	1007	incompatible argument for parameter t of ConditionalSubscriber.tryOnNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	1054	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRepeatWhen.java	80	incompatible argument for parameter arg0 of Publisher.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxReplay.java	176	incompatible argument for parameter value of TimedNode constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxReplay.java	303	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxReplay.java	685	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxReplay.java	944	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRetryWhen.java	78	incompatible argument for parameter arg0 of Publisher.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	58	incompatible argument for parameter parent of SwitchMapInner constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTake.java	390	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTapFuseable.java	195	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimeout.java	157	incompatible argument for parameter arg0 of Publisher.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	336	incompatible argument for parameter actual of Flux.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	340	incompatible argument for parameter actual of Flux.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	371	incompatible argument for parameter arg0 of Publisher.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	392	incompatible argument for parameter arg0 of Publisher.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	456	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	501	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	679	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	723	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	795	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowTimeout.java	1265	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	925	incompatible argument for parameter arg0 of Function.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	3252	incompatible argument for parameter source of Flux.onAssembly.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateIf.java	148	incompatible argument for parameter arg0 of Predicate.test.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	295	incompatible argument for parameter actual of Mono.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCreate.java	295	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFilterWhen.java	89	incompatible argument for parameter parent of FilterWhenInner constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFilterWhen.java	89	incompatible argument for parameter value of FilterWhenInner constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFilterWhen.java	92	incompatible argument for parameter parent of FilterWhenInner constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFilterWhen.java	92	incompatible argument for parameter value of FilterWhenInner constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	257	incompatible argument for parameter parent of FlatMapInner constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoMetricsFuseable.java	117	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	162	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	188	incompatible argument for parameter arg1 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	229	incompatible argument for parameter arg1 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	273	incompatible argument for parameter arg0 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	307	incompatible argument for parameter arg0 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	307	incompatible argument for parameter arg1 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoRepeatWhen.java	74	incompatible argument for parameter arg0 of Publisher.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSequenceEqual.java	246	incompatible argument for parameter arg0 of BiPredicate.test.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSequenceEqual.java	246	incompatible argument for parameter arg1 of BiPredicate.test.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSingle.java	52	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoUsing.java	215	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	228	incompatible argument for parameter arg0 of Publisher.subscribe.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	188	incompatible argument for parameter arg1 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	251	incompatible argument for parameter arg1 of BiPredicate.test.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	256	incompatible argument for parameter arg1 of BiFunction.apply.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	490	incompatible argument for parameter arg0 of Consumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	535	incompatible argument for parameter arg0 of Consumer.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	1861	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/QueueDrainSubscriber.java	222	incompatible argument for parameter v of QueueDrainSubscriber.accept.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Signal.java	284	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/SinkManyEmitterProcessor.java	480	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/SinkManyUnicast.java	288	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/SinkManyUnicast.java	326	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/UnicastProcessor.java	393	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/UnicastProcessor.java	431	incompatible argument for parameter arg0 of Subscriber.onNext.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	240	incompatible argument for parameter arg1 of Logger.trace.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	260	incompatible argument for parameter arg1 of Logger.debug.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	280	incompatible argument for parameter arg1 of Logger.info.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	300	incompatible argument for parameter arg1 of Logger.warn.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	320	incompatible argument for parameter arg1 of Logger.error.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscArrayQueue.java	69	incompatible argument for parameter arg1 of AtomicReferenceArray.lazySet.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscLinkedArrayQueue.java	157	incompatible argument for parameter arg1 of AtomicReferenceArray.lazySet.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscLinkedArrayQueue.java	162	incompatible argument for parameter arg1 of AtomicReferenceArray.lazySet.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	155	incompatible argument for parameter key of Context1 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	155	incompatible argument for parameter value of Context1 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	157	incompatible argument for parameter key1 of Context2 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	157	incompatible argument for parameter value1 of Context2 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	158	incompatible argument for parameter key2 of Context2 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	158	incompatible argument for parameter value2 of Context2 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	160	incompatible argument for parameter key1 of Context3 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	160	incompatible argument for parameter value1 of Context3 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	161	incompatible argument for parameter key2 of Context3 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	161	incompatible argument for parameter value2 of Context3 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	162	incompatible argument for parameter key3 of Context3 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	162	incompatible argument for parameter value3 of Context3 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	164	incompatible argument for parameter key1 of Context4 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	164	incompatible argument for parameter value1 of Context4 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	165	incompatible argument for parameter key2 of Context4 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	165	incompatible argument for parameter value2 of Context4 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	166	incompatible argument for parameter key3 of Context4 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	166	incompatible argument for parameter value3 of Context4 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	167	incompatible argument for parameter key4 of Context4 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	167	incompatible argument for parameter value4 of Context4 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	169	incompatible argument for parameter key1 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	169	incompatible argument for parameter value1 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	170	incompatible argument for parameter key2 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	170	incompatible argument for parameter value2 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	171	incompatible argument for parameter key3 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	171	incompatible argument for parameter value3 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	172	incompatible argument for parameter key4 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	172	incompatible argument for parameter value4 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	173	incompatible argument for parameter key5 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	173	incompatible argument for parameter value5 of Context5 constructor.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	179	incompatible argument for parameter arg0 of Objects.requireNonNull.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	298	incompatible argument for parameter arg0 of Map.forEach.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/ContextN.java	178	incompatible argument for parameter arg0 of HashMap.putAll.
+eisop	warning	argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/ContextN.java	207	incompatible argument for parameter arg0 of Map.forEach.
+eisop	warning	array.initializer.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ConnectableFlux.java	106	incompatible types in array initializer.
+eisop	warning	arrays.copyof.size.mismatch	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	604	call of Arrays.copyOf yields an array of possibly-null elements; the length argument is not an array length access
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ConnectableFlux.java	106	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java	51	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCombineLatest.java	450	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	263	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	303	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	309	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	656	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	861	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	1087	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFromMonoOperator.java	75	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeSequential.java	315	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	604	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	224	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	910	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	937	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	996	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/InternalConnectableFluxOperator.java	54	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/InternalFluxOperator.java	54	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/InternalMonoOperator.java	62	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFromFluxOperator.java	73	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	507	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	601	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	152	incompatible types in assignment.
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	73	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	116	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	135	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	139	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	148	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	50	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	60	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	78	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	79	incompatible bounds in wildcard
+eisop	warning	bound.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	91	incompatible bounds in wildcard
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	266	cast from "@Nullable Object" to "TLeft [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	343	cast from "@Nullable Object" to "TRight [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferTimeout.java	235	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferTimeout.java	283	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureLatest.java	174	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSample.java	222	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowTimeout.java	2058	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowWhen.java	322	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	1195	cast from "@Nullable Object" to "R [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPublishOn.java	178	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	conditional.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferBoundary.java	73	incompatible types in conditional expression.
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCombineLatest.java	441	dereference of possibly-null reference v
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCombineLatest.java	445	dereference of possibly-null reference v
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	423	dereference of possibly-null reference end
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	429	dereference of possibly-null reference end
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleTimeout.java	289	dereference of possibly-null reference o
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	356	dereference of possibly-null reference si
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindow.java	648	dereference of possibly-null reference t
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelDoOnEach.java	114	dereference of possibly-null reference onNext
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelDoOnEach.java	115	dereference of possibly-null reference onError
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelDoOnEach.java	116	dereference of possibly-null reference onComplete
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/SignalLogger.java	243	dereference of possibly-null reference clazz.getPackage()
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/UnicastProcessor.java	317	dereference of possibly-null reference onOverflow
+eisop	warning	dereference.of.nullable	package	no	reactor-core/src/main/java/reactor/core/scheduler/Schedulers.java	1278	dereference of possibly-null reference t.getThreadGroup()
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/adapter/JdkFlowAdapter.java	86	Incompatible parameter type for subscriber.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/adapter/JdkFlowAdapter.java	103	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/adapter/JdkFlowAdapter.java	114	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/adapter/JdkFlowAdapter.java	146	Incompatible parameter type for subscription.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/adapter/JdkFlowAdapter.java	157	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/CoreSubscriber.java	60	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/Fuseable.java	213	Incompatible parameter type for a.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BaseSubscriber.java	148	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BaseSubscriber.java	171	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BlockingFirstSubscriber.java	43	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BlockingIterable.java	234	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BlockingIterable.java	255	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BlockingLastSubscriber.java	39	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BlockingMonoSubscriber.java	44	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BlockingOptionalMonoSubscriber.java	66	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BlockingOptionalMonoSubscriber.java	74	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/BlockingSingleSubscriber.java	52	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java	256	Incompatible parameter type for terminationType.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java	312	Incompatible parameter type for error.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java	328	Incompatible parameter type for error.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java	344	Incompatible parameter type for error.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java	360	Incompatible parameter type for listenerError.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ContextPropagation.java	368	Incompatible parameter type for originalContext.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ContextTrackingFunctionWrapper.java	87	Incompatible parameter type for subscriber.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/DelegateProcessor.java	61	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/DelegateProcessor.java	71	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/DirectProcessor.java	127	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/DirectProcessor.java	163	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/EmitterProcessor.java	288	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/EmitterProcessor.java	383	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	8861	Incompatible parameter type for actual.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9399	Incompatible parameter type for ignored.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9404	Incompatible parameter type for ignored1.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9404	Incompatible parameter type for ignored2.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9436	Incompatible parameter type for ignored.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9441	Incompatible parameter type for ignored1.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9441	Incompatible parameter type for listenerContext.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBuffer.java	127	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBuffer.java	169	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBuffer.java	279	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBuffer.java	328	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBuffer.java	469	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBuffer.java	523	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferBoundary.java	159	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferBoundary.java	179	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferBoundary.java	312	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferBoundary.java	340	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferPredicate.java	192	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferPredicate.java	330	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferTimeout.java	225	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferTimeout.java	329	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferTimeout.java	986	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferTimeout.java	1003	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	158	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	187	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	465	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	487	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	534	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	562	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCancelOn.java	69	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCancelOn.java	102	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCombineLatest.java	602	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCombineLatest.java	614	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatArray.java	158	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatArray.java	188	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatArray.java	327	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatArray.java	357	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	206	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	258	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	572	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	627	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	872	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMapNoPrefetch.java	159	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMapNoPrefetch.java	218	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxContextWrite.java	97	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxContextWrite.java	122	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxContextWriteRestoringThreadLocals.java	98	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxContextWriteRestoringThreadLocals.java	138	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxContextWriteRestoringThreadLocalsFuseable.java	100	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxContextWriteRestoringThreadLocalsFuseable.java	140	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDefaultIfEmpty.java	143	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDelaySequence.java	89	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDelaySequence.java	116	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDelaySubscription.java	113	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDelaySubscription.java	135	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDelaySubscription.java	182	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDelaySubscription.java	192	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDematerialize.java	73	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDematerialize.java	110	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDetach.java	78	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDetach.java	96	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinct.java	119	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinct.java	173	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinct.java	255	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinct.java	342	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinct.java	426	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinct.java	487	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinctUntilChanged.java	92	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinctUntilChanged.java	154	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinctUntilChanged.java	227	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDistinctUntilChanged.java	287	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDoFinally.java	103	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDoFinally.java	117	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDoOnEach.java	118	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDoOnEach.java	177	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxElapsed.java	84	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxElapsed.java	108	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxExpand.java	111	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxExpand.java	137	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxExpand.java	464	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxExpand.java	479	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilter.java	83	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilter.java	152	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilter.java	217	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilter.java	286	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterFuseable.java	84	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterFuseable.java	157	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterFuseable.java	302	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterFuseable.java	377	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	161	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	213	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	456	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	474	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFirstWithSignal.java	315	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFirstWithSignal.java	336	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFirstWithValue.java	322	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFirstWithValue.java	342	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	369	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	449	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	952	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	996	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	208	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	261	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupBy.java	170	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupBy.java	219	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupJoin.java	539	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupJoin.java	551	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupJoin.java	607	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGroupJoin.java	621	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandle.java	89	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandle.java	208	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandle.java	316	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandle.java	427	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandleFuseable.java	163	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandleFuseable.java	224	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandleFuseable.java	473	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandleFuseable.java	591	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHide.java	76	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHide.java	87	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHide.java	119	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHide.java	141	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndex.java	84	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndex.java	111	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndex.java	177	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndex.java	224	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndexFuseable.java	88	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndexFuseable.java	135	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndexFuseable.java	232	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxIndexFuseable.java	299	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxLimitRequest.java	110	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxLimitRequest.java	129	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMap.java	88	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMap.java	126	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMap.java	190	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMap.java	257	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapFuseable.java	93	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapFuseable.java	135	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapFuseable.java	262	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapFuseable.java	333	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapSignal.java	119	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMapSignal.java	161	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMaterialize.java	99	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMaterialize.java	118	Incompatible parameter type for ev.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeComparing.java	430	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeComparing.java	447	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeSequential.java	193	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeSequential.java	247	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeSequential.java	552	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMergeSequential.java	589	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMetrics.java	163	Incompatible parameter type for e.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMetrics.java	193	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMetricsFuseable.java	155	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	296	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	544	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	631	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBuffer.java	161	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBuffer.java	198	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferStrategy.java	141	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferStrategy.java	211	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferTimeout.java	218	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferTimeout.java	253	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureDrop.java	104	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureDrop.java	146	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureLatest.java	121	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureLatest.java	141	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnErrorResume.java	71	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnErrorResume.java	88	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnErrorReturn.java	89	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnErrorReturn.java	171	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeek.java	160	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeek.java	207	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeekFuseable.java	164	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeekFuseable.java	216	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeekFuseable.java	457	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeekFuseable.java	535	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeekFuseable.java	799	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPeekFuseable.java	880	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublish.java	226	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublish.java	320	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishMulticast.java	228	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishMulticast.java	287	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishMulticast.java	741	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishMulticast.java	754	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishMulticast.java	840	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishMulticast.java	855	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	177	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	243	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	747	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	812	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRefCount.java	206	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRefCount.java	247	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRefCountGrace.java	259	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRefCountGrace.java	322	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRepeatWhen.java	149	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRepeatWhen.java	236	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRepeatWhen.java	246	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxReplay.java	1262	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxReplay.java	1358	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRetry.java	93	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRetryWhen.java	185	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRetryWhen.java	271	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRetryWhen.java	281	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSample.java	135	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSample.java	199	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSample.java	254	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSample.java	281	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleFirst.java	159	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleFirst.java	227	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleFirst.java	276	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleFirst.java	290	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleTimeout.java	184	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleTimeout.java	228	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleTimeout.java	380	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleTimeout.java	396	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxScan.java	84	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxScan.java	116	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxScanSeed.java	209	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxScanSeed.java	243	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkip.java	75	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkip.java	97	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipLast.java	73	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipLast.java	95	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipUntil.java	77	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipUntil.java	147	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipUntilOther.java	89	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipUntilOther.java	107	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipUntilOther.java	202	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipUntilOther.java	226	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipWhile.java	76	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSkipWhile.java	147	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSubscribeOn.java	123	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSubscribeOn.java	158	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	199	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	246	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	491	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	521	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMapNoPrefetch.java	141	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMapNoPrefetch.java	225	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMapNoPrefetch.java	360	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMapNoPrefetch.java	497	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchOnFirst.java	496	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchOnFirst.java	558	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchOnFirst.java	916	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchOnFirst.java	942	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTake.java	97	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTake.java	139	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTake.java	219	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTake.java	289	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTake.java	371	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTake.java	419	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeLast.java	87	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeLast.java	103	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeLast.java	170	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeLast.java	189	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeUntil.java	71	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeUntil.java	106	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeUntilOther.java	93	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeUntilOther.java	112	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeUntilOther.java	231	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeUntilOther.java	248	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeWhile.java	70	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTakeWhile.java	106	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTap.java	190	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTap.java	230	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTapFuseable.java	144	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTapRestoringThreadLocals.java	205	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTapRestoringThreadLocals.java	270	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimed.java	104	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimed.java	154	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimed.java	180	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimeout.java	147	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimeout.java	208	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimeout.java	332	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimeout.java	342	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimeout.java	407	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimeout.java	427	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsing.java	192	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsing.java	206	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsing.java	342	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsing.java	356	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsing.java	498	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsing.java	517	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	219	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	240	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	355	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	410	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	463	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	474	Incompatible parameter type for e.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	514	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	525	Incompatible parameter type for e.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	566	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	577	Incompatible parameter type for e.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindow.java	152	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindow.java	195	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindow.java	324	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindow.java	375	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindow.java	531	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindow.java	588	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowBoundary.java	177	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowBoundary.java	196	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowBoundary.java	394	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowBoundary.java	422	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	186	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	292	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	804	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	809	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowTimeout.java	167	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowTimeout.java	199	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowTimeout.java	1823	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowTimeout.java	1948	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowWhen.java	138	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowWhen.java	168	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowWhen.java	386	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowWhen.java	411	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowWhen.java	451	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowWhen.java	478	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWithLatestFrom.java	178	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWithLatestFrom.java	214	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWithLatestFrom.java	280	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWithLatestFrom.java	308	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	629	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	653	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	1085	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	1134	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZipIterable.java	103	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZipIterable.java	161	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/LambdaMonoSubscriber.java	110	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/LambdaMonoSubscriber.java	148	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/LambdaSubscriber.java	109	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/LambdaSubscriber.java	146	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4541	Incompatible parameter type for actual.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4753	Incompatible parameter type for ignored.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4758	Incompatible parameter type for ignored1.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4758	Incompatible parameter type for ignored2.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4790	Incompatible parameter type for ignored.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4795	Incompatible parameter type for ignored1.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4795	Incompatible parameter type for listenerContext.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoAll.java	99	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoAny.java	103	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateIf.java	306	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateIf.java	333	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	249	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	309	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	374	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	384	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheTime.java	302	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheTime.java	376	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCollect.java	116	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCollectList.java	88	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoContextWriteRestoringThreadLocals.java	89	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoContextWriteRestoringThreadLocals.java	118	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCount.java	71	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoDelayElement.java	127	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoDelayElement.java	246	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoDelayUntil.java	169	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoDelayUntil.java	195	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoDelayUntil.java	472	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoDelayUntil.java	497	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoElementAt.java	112	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFilterWhen.java	101	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFilterWhen.java	167	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFilterWhen.java	315	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFilterWhen.java	342	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	113	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	174	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	287	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	310	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMapMany.java	136	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMapMany.java	201	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMapMany.java	245	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMapMany.java	255	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoHasElement.java	76	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoHasElements.java	75	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoIgnoreElements.java	66	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoIgnoreElements.java	83	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoIgnoreThen.java	125	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoIgnoreThen.java	275	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoMaterialize.java	87	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoMaterialize.java	108	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoMetrics.java	110	Incompatible parameter type for e.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoMetrics.java	135	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoMetricsFuseable.java	141	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoNext.java	68	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoNext.java	88	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	151	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	243	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPublishMulticast.java	182	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPublishMulticast.java	202	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPublishOn.java	109	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPublishOn.java	124	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoReduce.java	95	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoReduce.java	151	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoReduceSeed.java	132	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSequenceEqual.java	334	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSequenceEqual.java	353	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSingle.java	113	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSingle.java	143	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSingleOptional.java	87	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSingleOptional.java	105	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoStreamCollector.java	130	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSubscribeOn.java	131	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSubscribeOn.java	151	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoTakeLastOne.java	110	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoToCompletableFuture.java	52	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoToCompletableFuture.java	76	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoUsing.java	200	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoUsing.java	246	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoUsingWhen.java	199	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoUsingWhen.java	220	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	397	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	409	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoZip.java	469	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoZip.java	498	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/NextProcessor.java	238	Incompatible parameter type for cause.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/NextProcessor.java	443	Incompatible parameter type for subscription.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/NextProcessor.java	610	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	1544	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	1551	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	1570	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	1907	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	1918	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	2043	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	2229	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	2234	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	2600	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	2610	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	2646	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Operators.java	2656	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelCollect.java	146	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelFlux.java	1093	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelGroup.java	130	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelGroup.java	145	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelMergeReduce.java	321	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelMergeReduce.java	353	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelMergeSequential.java	396	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelMergeSequential.java	408	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelMergeSort.java	351	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelMergeSort.java	363	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelReduceSeed.java	152	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelSource.java	172	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelSource.java	241	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	282	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	295	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ReplayProcessor.java	425	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ReplayProcessor.java	470	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/SerializedSubscriber.java	62	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/SerializedSubscriber.java	106	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/SinkManyEmitterProcessor.java	218	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/SinkManyEmitterProcessor.java	314	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/SinkManyReplayProcessor.java	395	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/SinkManyReplayProcessor.java	440	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/StrictSubscriber.java	71	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/StrictSubscriber.java	104	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/UnicastProcessor.java	274	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/UnicastProcessor.java	510	Incompatible parameter type for s.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	947	Incompatible parameter type for callable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1016	Incompatible parameter type for unit.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1025	Incompatible parameter type for task.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1034	Incompatible parameter type for result.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1053	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1064	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1076	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1087	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1099	Incompatible parameter type for command.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	266	Incompatible parameter type for task.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	272	Incompatible parameter type for result.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	284	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	291	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	299	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	305	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	313	Incompatible parameter type for command.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	327	Incompatible parameter type for callable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	43	Incompatible parameter type for callable.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	83	Incompatible parameter type for task.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	88	Incompatible parameter type for result.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	98	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	103	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	109	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	114	Incompatible parameter type for tasks.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	120	Incompatible parameter type for command.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/ReactorBlockHoundIntegration.java	37	Incompatible parameter type for builder.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/SingleWorkerScheduler.java	64	Incompatible parameter type for command.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	739	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscArrayQueue.java	120	Incompatible parameter type for a.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/util/context/ContextN.java	126	Incompatible parameter type for key.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/util/context/ContextN.java	135	Incompatible parameter type for key.
+eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/util/function/Tuples.java	464	Incompatible parameter type for o.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/Disposables.java	325	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCallable.java	44	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxDoOnEach.java	242	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxEmpty.java	63	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/ImmutableSignal.java	70	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCallable.java	68	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCallableOnAssembly.java	87	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoEmpty.java	61	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSupplier.java	62	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	50	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Signal.java	197	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	934	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	946	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	958	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	971	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1025	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1034	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1043	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1052	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1063	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	266	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	272	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	278	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	284	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	291	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	319	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	327	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	335	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	344	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	38	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	43	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	48	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	53	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	83	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	88	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	93	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	98	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	103	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	264	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	302	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	470	Incompatible return type.
+eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/util/context/ContextN.java	135	Incompatible return type.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/Fuseable.java	213	Incompatible bound for type parameter T1.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	946	Incompatible bound for type parameter V.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1025	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1034	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1052	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1063	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1076	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1086	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	266	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	272	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	284	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	291	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	299	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	305	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	327	Incompatible bound for type parameter V.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	43	Incompatible bound for type parameter V.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	83	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	88	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	98	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	103	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	109	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	114	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscArrayQueue.java	120	Incompatible bound for type parameter R.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/Scannable.java	447	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/CallSiteSupplierFactory.java	57	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/CallSiteSupplierFactory.java	60	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlatMap.java	295	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	59	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	195	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMapNoPrefetch.java	137	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	93	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/Schedulers.java	919	incompatible types in return.
+eisop	warning	return.type.incompatible	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	342	incompatible types in return.
+eisop	warning	toarray.nullable.elements.mismatched.size	package	no	reactor-core/src/main/java/reactor/util/context/Context.java	152	call of toArray on collection of non-null elements yields an array of possibly-null elements; cannot determine that the argument array has the same size as the receiver collection
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	244	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	266	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	272	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	278	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	284	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	291	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	299	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	319	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	327	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	335	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	344	write type annotations [@NonNull] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	244	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	266	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	272	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	278	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	284	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	291	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	299	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	319	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	327	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	335	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	344	write type annotation @NonNull immediately before type, after modifiers [public]
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9492	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9494	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9532	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatArray.java	132	incompatible type argument for type parameter T of ThreadLocal.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatArray.java	295	incompatible type argument for type parameter T of ThreadLocal.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxReplay.java	988	incompatible type argument for type parameter V of AtomicReference.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSubscribeOnValue.java	223	incompatible type argument for type parameter T of QueueSubscription.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1086	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1111	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1129	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1145	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1742	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1745	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	2154	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	2217	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4846	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4904	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	5361	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	5363	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoBridges.java	39	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	49	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	58	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	273	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateWhen.java	365	incompatible type argument for type parameter I of InnerConsumer.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	37	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	37	incompatible type argument for type parameter O of SourceProducer.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	58	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	112	incompatible type argument for type parameter O of InnerProducer.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	114	incompatible type argument for type parameter T of QueueSubscription.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelFlux.java	1123	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	32	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	55	incompatible type argument for type parameter O of InnerProducer.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelThen.java	57	incompatible type argument for type parameter T of QueueSubscription.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	275	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	176	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/ParallelScheduler.java	190	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/Scheduler.java	157	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	35	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	37	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	52	incompatible type argument for type parameter T extends @NonNull Object of Flux.create.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	52	incompatible type argument for type parameter T of FluxSink.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	78	incompatible type argument for type parameter T of FluxSink.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	82	incompatible type argument for type parameter T of FluxSink.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	87	incompatible type argument for type parameter T of FluxSink.
+eisop	warning	type.argument.type.incompatible	package	no	reactor-core/src/main/java/reactor/core/scheduler/SingleScheduler.java	166	incompatible type argument for type parameter T of Mono.
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/DelegateProcessor.java	109	Could not infer type arguments for Scannable.scanOrDefault
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	2581	Could not infer type arguments for Flux.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	3005	Could not infer type arguments for Flux.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	8580	Could not infer type arguments for Flux.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9353	Could not infer type arguments for Flux.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9473	Could not infer type arguments for Flux.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9476	Could not infer type arguments for Flux.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9478	Could not infer type arguments for Flux.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9495	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9533	Could not infer type arguments for Flux.then
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	10115	Could not infer type arguments for Flux.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	10610	Could not infer type arguments for Flux.windowUntilChanged
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandle.java	49	Could not infer type arguments for ContextPropagation.contextRestoreForHandle
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxHandleFuseable.java	62	Could not infer type arguments for ContextPropagation.contextRestoreForHandle
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRepeatWhen.java	79	Could not infer type arguments for Operators.toFluxOrMono
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRetryWhen.java	77	Could not infer type arguments for Operators.toFluxOrMono
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	195	Could not infer type arguments for Stream.of
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMapNoPrefetch.java	137	Could not infer type arguments for Stream.of
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	335	Could not infer type arguments for Flux.from
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	339	Could not infer type arguments for Flux.from
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	370	Could not infer type arguments for Operators.toFluxOrMono
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	391	Could not infer type arguments for Operators.toFluxOrMono
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	764	Could not infer type arguments for Operators.onDiscardQueueWithClear
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1088	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1091	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1093	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1112	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1130	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1147	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1150	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1152	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4724	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4827	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4830	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4832	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4905	Could not infer type arguments for Mono.then
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoDelayUntil.java	315	Could not infer type arguments for Operators.toFluxOrMono
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	93	Could not infer type arguments for Stream.of
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoHandle.java	46	Could not infer type arguments for ContextPropagation.contextRestoreForHandle
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoHandleFuseable.java	48	Could not infer type arguments for ContextPropagation.contextRestoreForHandle
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoIgnoreThen.java	267	Could not infer type arguments for Operators.toFluxOrMono
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	98	Could not infer type arguments for Operators.toFluxOrMono
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/publisher/ParallelFlux.java	1124	Could not infer type arguments for Mono.onAssembly
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	276	Could not infer type arguments for Mono.defer
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	177	Could not infer type arguments for Mono.defer
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/scheduler/ParallelScheduler.java	191	Could not infer type arguments for Mono.defer
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/scheduler/Scheduler.java	158	Could not infer type arguments for Mono.fromRunnable
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	44	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerState.java	51	Could not infer type arguments for Mono.empty
+eisop	warning	type.arguments.not.inferred	package	no	reactor-core/src/main/java/reactor/core/scheduler/SingleScheduler.java	167	Could not infer type arguments for Mono.defer
+eisop	warning	type.invalid.annotations.on.use	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	764	invalid type: annotations [@Nullable] conflict with declaration of type java.util.Optional
+eisop	warning	unboxing.of.nullable	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferTimeout.java	281	unboxing a possibly-null reference ts
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	73	Metrics in reactor.util has been deprecated
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMetrics.java	38	Metrics in reactor.util has been deprecated
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMetrics.java	38	MicrometerConfiguration in Metrics has been deprecated
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxMetricsFuseable.java	29	Metrics in reactor.util has been deprecated
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	64	Metrics in reactor.util has been deprecated
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoMetrics.java	23	Metrics in reactor.util has been deprecated
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoMetricsFuseable.java	27	Metrics in reactor.util has been deprecated
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerMetricDecorator.java	35	Metrics in reactor.util has been deprecated
+javac	warning	deprecation	package	no	reactor-core/src/main/java/reactor/core/scheduler/Schedulers.java	47	Metrics in reactor.util has been deprecated
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/Disposables.java	325	method returns @Nullable, but superclass method java.util.function.Supplier.get() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/Fuseable.java	213	Method type variable T1 has a non-null upper bound, but corresponding type variable of overridden method java.util.Collection.toArray has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/Scannable.java	446	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	2581	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	2581	incompatible types: Iterable<? extends Publisher<?>> cannot be converted to Iterable<? extends Publisher<? extends Object>>
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	3005	inference failure: type variable U is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	3591	inference failure: type variable V is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	3591	referenced method returns @Nullable, but functional interface method java.util.function.Function.apply(T) returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	8580	inference failure: type variable U is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9353	inference failure: type variable U is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9473	inference failure: type variable STATE is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9476	inference failure: type variable STATE is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	9478	inference failure: type variable STATE is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	10115	inference failure: type variable U is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Flux.java	10610	inference failure: type variable V is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferPredicate.java	390	passing @Nullable parameter 'buffer' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxBufferWhen.java	394	passing @Nullable parameter 'bufs.remove(idx)' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCallable.java	44	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCombineLatest.java	441	dereferenced expression 'v' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCombineLatest.java	445	dereferenced expression 'v' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	378	passing @Nullable parameter 'v' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxConcatMap.java	741	passing @Nullable parameter 'v' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxCreate.java	261	passing @Nullable parameter 'v' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxEmpty.java	63	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxExpand.java	179	dereferenced expression 'p' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxExpand.java	266	dereferenced expression 'q.poll()' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	206	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	306	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFilterWhen.java	326	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	382	passing @Nullable parameter 't' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxFlattenIterable.java	588	passing @Nullable parameter 't' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	47	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	59	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	231	passing @Nullable parameter 's' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	270	passing @Nullable parameter 's' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	321	passing @Nullable parameter 's' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxGenerate.java	355	passing @Nullable parameter 's' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	269	passing @Nullable parameter 'left' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	274	passing @Nullable parameter 'left' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	309	passing @Nullable parameter 'left' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	347	passing @Nullable parameter 'right' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	352	passing @Nullable parameter 'right' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	388	passing @Nullable parameter 'right' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	423	dereferenced expression 'end' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxJoin.java	429	dereferenced expression 'end' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	296	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	444	passing @Nullable parameter 'super.getMessage()' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnAssembly.java	604	incompatible types: @Nullable StackTraceElement [] cannot be converted to StackTraceElement []
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferStrategy.java	184	passing @Nullable parameter 'overflowElement' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxOnBackpressureBufferTimeout.java	281	unboxing of a @Nullable expression 'ts'
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxPublishOn.java	1007	passing @Nullable parameter 'v' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRepeatWhen.java	79	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxRetryWhen.java	77	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSampleTimeout.java	289	dereferenced expression 'o' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	195	inference failure: type variable T constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	195	passing @Nullable parameter 'inner' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMap.java	356	dereferenced expression 'si' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMapNoPrefetch.java	137	inference failure: type variable T constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxSwitchMapNoPrefetch.java	137	passing @Nullable parameter 'this.inner' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxTimed.java	104	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	335	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	339	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	370	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxUsingWhen.java	391	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindow.java	648	dereferenced expression 't' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowPredicate.java	764	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowTimeout.java	2058	passing @Nullable parameter '(T) o' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxWindowWhen.java	323	passing @Nullable parameter 't' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/FluxZip.java	224	incompatible types: @Nullable Object [] cannot be converted to Object []
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1091	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1150	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1870	inference failure: type variable R is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	1870	referenced method returns @Nullable, but functional interface method java.util.function.Function.apply(T) returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4724	inference failure: type variable U is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4827	inference failure: type variable STATE is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4830	inference failure: type variable STATE is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Mono.java	4832	inference failure: type variable STATE is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCacheInvalidateIf.java	148	passing @Nullable parameter 'cached' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCallable.java	68	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCallableOnAssembly.java	87	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoCompletionStage.java	145	incompatible types: MonoCompletionStageSubscription<T> cannot be converted to BiFunction<? super capture of ? extends @Nullable T, @Nullable Throwable, ? extends Void> (MonoCompletionStageSubscription<T> is a subtype of BiFunction<T, Throwable, Void>)
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoDelayUntil.java	315	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoEmpty.java	61	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	93	inference failure: type variable T constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoFlatMap.java	93	passing @Nullable parameter 'second' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoIgnoreThen.java	267	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	229	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	273	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoPeekTerminal.java	307	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoRunnable.java	68	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSequenceEqual.java	246	passing @Nullable parameter 'v1' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSequenceEqual.java	246	passing @Nullable parameter 'v2' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSupplier.java	62	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	98	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	98	incompatible types: Publisher<?> [] cannot be converted to Publisher<? extends Object> []
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	50	method returns @Nullable, but superclass method java.util.function.BiFunction.apply(T,U) returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	188	passing @Nullable parameter 'value' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	251	passing @Nullable parameter 'value' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	256	passing @Nullable parameter 'value' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/QueueDrainSubscriber.java	222	passing @Nullable parameter 'v' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/Signal.java	197	method returns @Nullable, but superclass method java.util.function.Supplier.get() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/SignalLogger.java	243	dereferenced expression 'clazz.getPackage()' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	946	Method type variable V has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ScheduledThreadPoolExecutor.schedule has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1025	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ScheduledThreadPoolExecutor.submit has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1034	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ScheduledThreadPoolExecutor.submit has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1052	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.AbstractExecutorService.invokeAll has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1063	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.AbstractExecutorService.invokeAll has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1076	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.AbstractExecutorService.invokeAny has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1086	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.AbstractExecutorService.invokeAny has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	266	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.submit has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	272	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.submit has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	284	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.invokeAll has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	291	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.invokeAll has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	299	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.invokeAny has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	305	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.invokeAny has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	327	Method type variable V has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ScheduledExecutorService.schedule has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	43	Method type variable V has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ScheduledExecutorService.schedule has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	83	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.submit has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	88	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.submit has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	98	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.invokeAll has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	103	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.invokeAll has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	109	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.invokeAny has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	114	Method type variable T has a non-null upper bound, but corresponding type variable of overridden method java.util.concurrent.ExecutorService.invokeAny has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/InstantPeriodicWorkerTask.java	74	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/PeriodicSchedulerTask.java	47	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/PeriodicWorkerTask.java	59	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/SchedulerTask.java	58	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/Schedulers.java	85	unboxing of a @Nullable expression 'Optional.ofNullable(System.getProperty("reactor.schedulers.defaultPoolSize"))
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/Schedulers.java	98	unboxing of a @Nullable expression 'Optional.ofNullable(System.getProperty("reactor.schedulers.defaultBoundedElasticSize"))
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/Schedulers.java	919	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/Schedulers.java	1278	dereferenced expression 't.getThreadGroup()' is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/scheduler/WorkerTask.java	86	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	342	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/Loggers.java	739	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/MpscLinkedQueue.java	198	parameter o is @NonNull, but parameter in superclass method java.util.AbstractCollection.remove(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	86	passing @Nullable parameter 'System.getProperty("reactor.bufferSize.x", "32")' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	92	passing @Nullable parameter 'System.getProperty("reactor.bufferSize.small", "256")' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	254	parameter o is @NonNull, but parameter in superclass method java.util.Collection.contains(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	264	method returns @Nullable, but superclass method java.util.Queue.element() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	302	method returns @Nullable, but superclass method java.util.Queue.remove() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	307	parameter o is @NonNull, but parameter in superclass method java.util.Collection.remove(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	374	parameter o is @NonNull, but parameter in superclass method java.util.Collection.contains(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	419	parameter o is @NonNull, but parameter in superclass method java.util.Collection.remove(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	470	method returns @Nullable, but superclass method java.util.Iterator.next() returns @NonNull
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscArrayQueue.java	69	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscArrayQueue.java	105	parameter o is @NonNull, but parameter in superclass method java.util.Collection.contains(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscArrayQueue.java	120	Method type variable R has a non-null upper bound, but corresponding type variable of overridden method java.util.Collection.toArray has a @Nullable upper bound
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscArrayQueue.java	125	parameter o is @NonNull, but parameter in superclass method java.util.Collection.remove(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscLinkedArrayQueue.java	157	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/concurrent/SpscLinkedArrayQueue.java	162	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/context/ContextN.java	126	parameter key is @NonNull, but parameter in superclass method java.util.LinkedHashMap.get(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/context/ContextN.java	135	parameter key is @NonNull, but parameter in superclass method java.util.LinkedHashMap.getOrDefault(java.lang.Object,V) is @Nullable
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/util/context/ContextN.java	178	incompatible types: Map<?, ?> cannot be converted to Map<? extends Object, ? extends Object>

@@ -1,0 +1,507 @@
+tool	kind	key	scope	nullaway_suppressed_file	file	line	msg
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/ExecutionResult.java	85	incompatible argument for parameter arg0 of Consumer.accept.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/GraphQLContext.java	165	incompatible argument for parameter key of GraphQLContext.put.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/ProfilerResult.java	277	incompatible argument for parameter arg1 of Map.put.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/analysis/QueryComplexityCalculator.java	42	incompatible argument for parameter arg0 of Map.getOrDefault.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/analysis/QueryComplexityCalculator.java	65	incompatible argument for parameter arg0 of Map.compute.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/analysis/values/ValueTraverser.java	321	incompatible argument for parameter arg1 of Map.put.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	74	incompatible argument for parameter arg0 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	74	incompatible argument for parameter arg1 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	312	incompatible argument for parameter completableFuture of Async.orNullCompletedFuture.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/SimpleInstrumentationContext.java	72	incompatible argument for parameter arg0 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/SimpleInstrumentationContext.java	72	incompatible argument for parameter arg1 of BiConsumer.accept.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/language/AstPrinter.java	636	incompatible argument for parameter arg0 of Map.get.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/language/PrettyAstPrinter.java	395	incompatible argument for parameter arg0 of Collectors.joining.
+eisop	warning	argument.type.incompatible	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	114	incompatible argument for parameter getChildren of SchemaTraverser constructor.
+eisop	warning	argument.type.incompatible	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	151	incompatible argument for parameter getChildren of SchemaTraverser constructor.
+eisop	warning	argument.type.incompatible	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	187	incompatible argument for parameter arg0 of ArrayList.addAll.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/util/Anonymizer.java	169	incompatible argument for parameter arg0 of Map.get.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/util/Anonymizer.java	398	incompatible argument for parameter arg0 of Map.get.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/util/Anonymizer.java	736	incompatible argument for parameter arg0 of Map.get.
+eisop	warning	argument.type.incompatible	class	no	src/main/java/graphql/util/Anonymizer.java	842	incompatible argument for parameter arg0 of Map.containsKey.
+eisop	warning	assignment.type.incompatible	class	no	src/main/java/graphql/EngineRunningState.java	63	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	class	no	src/main/java/graphql/EngineRunningState.java	81	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	class	no	src/main/java/graphql/GraphQL.java	541	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	class	no	src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java	138	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	71	incompatible types in assignment.
+eisop	warning	assignment.type.incompatible	class	no	src/main/java/graphql/execution/ExecutionContext.java	64	incompatible types in assignment.
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/TypeResolutionEnvironment.java	59	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/TypeResolutionEnvironment.java	103	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/TypeResolutionEnvironment.java	122	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/execution/ExecutionContext.java	202	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/execution/ExecutionContext.java	211	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/execution/instrumentation/parameters/InstrumentationExecutionParameters.java	62	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/language/NodeTraverser.java	159	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	128	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	153	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	163	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	cast.unsafe	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	168	cast from "@Nullable Object" to "T [ extends @NonNull Object super @NonNull NullType ]" cannot be statically verified
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/ExecutionResult.java	86	dereference of possibly-null reference builder
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java	92	dereference of possibly-null reference state
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java	104	dereference of possibly-null reference state
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	186	dereference of possibly-null reference parameters.getAlternativeCallContext()
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	408	dereference of possibly-null reference parameters.getAlternativeCallContext()
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	86	dereference of possibly-null reference tracingSupport
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	94	dereference of possibly-null reference tracingSupport
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	101	dereference of possibly-null reference tracingSupport
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	108	dereference of possibly-null reference tracingSupport
+eisop	warning	dereference.of.nullable	class	no	src/main/java/graphql/schema/GraphQLSchema.java	516	dereference of possibly-null reference objectNames
+eisop	warning	jspecify.unrecognized.location.local	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	96	JSpecify gives a nullness annotation no meaning on the root type of a local variable
+eisop	warning	jspecify.unrecognized.location.local	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	107	JSpecify gives a nullness annotation no meaning on the root type of a local variable
+eisop	warning	jspecify.unrecognized.location.local	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	108	JSpecify gives a nullness annotation no meaning on the root type of a local variable
+eisop	warning	jspecify.unrecognized.location.local	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	120	JSpecify gives a nullness annotation no meaning on the root type of a local variable
+eisop	warning	jspecify.unrecognized.location.local	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	218	JSpecify gives a nullness annotation no meaning on the root type of a local variable
+eisop	warning	jspecify.unrecognized.location.local	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	222	JSpecify gives a nullness annotation no meaning on the root type of a local variable
+eisop	warning	jspecify.unrecognized.location.local	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	290	JSpecify gives a nullness annotation no meaning on the root type of a local variable
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/ExceptionWhileDataFetching.java	99	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/SerializationError.java	73	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/TypeMismatchError.java	95	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/UnresolvedTypeError.java	75	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java	84	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java	89	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java	97	Incompatible parameter type for instrumentationExecuteOperationParameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/analysis/MaxQueryDepthInstrumentation.java	52	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/analysis/QueryTransformer.java	86	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/analysis/QueryTransformer.java	91	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	42	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	42	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/AsyncSerialExecutionStrategy.java	38	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/AsyncSerialExecutionStrategy.java	38	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/DataFetcherResult.java	140	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/DefaultValueUnboxer.java	22	Incompatible parameter type for object.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/ExecutionId.java	48	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/ResultPath.java	323	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/SimpleDataFetcherExceptionHandler.java	33	Incompatible parameter type for handlerParameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/SubscriptionExecutionStrategy.java	66	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/SubscriptionExecutionStrategy.java	66	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/incremental/DeferredExecution.java	38	Incompatible parameter type for obj.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	126	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	131	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	137	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	143	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	148	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	153	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	158	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	171	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	185	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	190	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	195	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	201	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	206	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	246	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	252	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	257	Incompatible parameter type for executionInput.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	257	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	262	Incompatible parameter type for documentAndVariables.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	262	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	268	Incompatible parameter type for schema.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	268	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	274	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	274	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	280	Incompatible parameter type for dataFetcher.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	280	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	286	Incompatible parameter type for executionResult.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	286	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	357	Incompatible parameter type for fieldValueInfoList.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	386	Incompatible parameter type for fieldValueInfoList.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	410	Incompatible parameter type for fetchedValue.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	415	Incompatible parameter type for dataFetcherResult.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	60	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	65	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	70	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	75	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	80	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	85	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	90	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	95	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	100	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	105	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	110	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	115	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	120	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	125	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	50	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	56	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	61	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	66	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	71	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	76	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	81	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	86	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	91	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	96	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	101	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	106	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	111	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	116	Incompatible parameter type for executionInput.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	116	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	121	Incompatible parameter type for documentAndVariables.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	121	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	126	Incompatible parameter type for schema.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	126	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	131	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	131	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	136	Incompatible parameter type for dataFetcher.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	136	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	141	Incompatible parameter type for executionResult.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/SimplePerformantInstrumentation.java	141	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	145	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	145	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	151	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	151	Incompatible parameter type for newParameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	157	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	157	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	164	Incompatible parameter type for alternativeCallContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	171	Incompatible parameter type for alternativeCallContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	177	Incompatible parameter type for alternativeCallContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	182	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	192	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/ExhaustedDataLoaderDispatchStrategy.java	197	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	268	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	268	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	277	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	277	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	287	Incompatible parameter type for fieldValueInfoList.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	287	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	294	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	294	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	301	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	301	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	313	Incompatible parameter type for fieldValueInfoList.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	313	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	320	Incompatible parameter type for t.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	320	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	358	Incompatible parameter type for executionContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	359	Incompatible parameter type for executionStrategyParameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	360	Incompatible parameter type for dataFetcher.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	361	Incompatible parameter type for fetchedValue.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	362	Incompatible parameter type for dataFetchingEnvironment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	377	Incompatible parameter type for alternativeCallContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	384	Incompatible parameter type for alternativeCallContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	399	Incompatible parameter type for alternativeCallContext.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	404	Incompatible parameter type for resultKey.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	404	Incompatible parameter type for fieldValueInfo.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	404	Incompatible parameter type for throwable.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	404	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/fieldvalidation/FieldValidationInstrumentation.java	43	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/fieldvalidation/SimpleFieldValidation.java	43	Incompatible parameter type for validationEnvironment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	76	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	81	Incompatible parameter type for executionResult.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	81	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	92	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	99	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/instrumentation/tracing/TracingInstrumentation.java	106	Incompatible parameter type for parameters.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/preparsed/persisted/ApolloPersistedQuerySupport.java	49	Incompatible parameter type for executionInput.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/preparsed/persisted/ApolloPersistedQuerySupport.java	60	Incompatible parameter type for persistedQueryId.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/preparsed/persisted/ApolloPersistedQuerySupport.java	60	Incompatible parameter type for queryText.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/preparsed/persisted/InMemoryPersistedQueryCache.java	34	Incompatible parameter type for persistedQueryId.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/preparsed/persisted/InMemoryPersistedQueryCache.java	34	Incompatible parameter type for executionInput.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/preparsed/persisted/InMemoryPersistedQueryCache.java	34	Incompatible parameter type for onCacheMiss.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/execution/reactive/SubscriptionPublisher.java	59	Incompatible parameter type for subscriber.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/AstNodeAdapter.java	30	Incompatible parameter type for newChildren.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/AstNodeAdapter.java	36	Incompatible parameter type for location.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/AstTransformer.java	71	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/AstTransformer.java	84	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/AstTransformer.java	89	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/NodeTraverser.java	63	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/NodeTraverser.java	68	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/NodeTraverser.java	99	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/NodeTraverser.java	104	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/NodeTraverser.java	136	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/NodeTraverser.java	141	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/StringValue.java	144	Incompatible parameter type for comments.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/StringValue.java	149	Incompatible parameter type for ignoredChars.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/StringValue.java	154	Incompatible parameter type for additionalData.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/StringValue.java	159	Incompatible parameter type for key.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/language/StringValue.java	159	Incompatible parameter type for value.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/relay/SimpleListConnection.java	52	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironment.java	70	Incompatible parameter type for name.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	142	Incompatible parameter type for name.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLAppliedDirective.java	111	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLAppliedDirective.java	111	Incompatible parameter type for visitor.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLAppliedDirective.java	128	Incompatible parameter type for newChildren.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLAppliedDirective.java	138	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLDirective.java	150	Incompatible parameter type for directiveName.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLDirective.java	165	Incompatible parameter type for directiveName.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLDirective.java	200	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLDirective.java	200	Incompatible parameter type for visitor.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLDirective.java	222	Incompatible parameter type for newChildren.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLDirective.java	247	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLEnumType.java	223	Incompatible parameter type for directiveName.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLEnumType.java	238	Incompatible parameter type for directiveName.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLEnumType.java	263	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLEnumType.java	263	Incompatible parameter type for visitor.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLEnumType.java	285	Incompatible parameter type for newChildren.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLEnumType.java	297	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLList.java	80	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLList.java	80	Incompatible parameter type for visitor.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLList.java	97	Incompatible parameter type for newChildren.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLList.java	116	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLScalarType.java	118	Incompatible parameter type for directiveName.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLScalarType.java	133	Incompatible parameter type for directiveName.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLScalarType.java	167	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLScalarType.java	167	Incompatible parameter type for visitor.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLScalarType.java	187	Incompatible parameter type for newChildren.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLScalarType.java	198	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLUnionType.java	152	Incompatible parameter type for directiveName.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLUnionType.java	167	Incompatible parameter type for directiveName.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLUnionType.java	192	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLUnionType.java	192	Incompatible parameter type for visitor.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLUnionType.java	214	Incompatible parameter type for newChildren.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/GraphQLUnionType.java	227	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/PropertyDataFetcher.java	118	Incompatible parameter type for fieldDefinition.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/PropertyDataFetcher.java	118	Incompatible parameter type for source.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/PropertyDataFetcher.java	118	Incompatible parameter type for environmentSupplier.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/PropertyDataFetcher.java	123	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	49	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	54	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	61	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	66	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	73	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	78	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	83	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	87	Incompatible parameter type for environment.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	201	Incompatible parameter type for node.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	202	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	231	Incompatible parameter type for objectType.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	231	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	244	Incompatible parameter type for interfaceType.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	244	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	284	Incompatible parameter type for inputObjectType.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	284	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	305	Incompatible parameter type for definition.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	306	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	315	Incompatible parameter type for definition.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	316	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	335	Incompatible parameter type for node.
+eisop	warning	override.param.invalid	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	336	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	167	Incompatible parameter type for graphQLTypeReference.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	167	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	175	Incompatible parameter type for graphQLArgument.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	175	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	204	Incompatible parameter type for graphQLArgument.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	204	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	218	Incompatible parameter type for graphQLInterfaceType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	218	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	233	Incompatible parameter type for graphQLEnumType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	233	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	245	Incompatible parameter type for enumValueDefinition.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	245	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	254	Incompatible parameter type for graphQLFieldDefinition.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	254	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	263	Incompatible parameter type for graphQLDirective.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	263	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	275	Incompatible parameter type for graphQLDirective.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	275	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	298	Incompatible parameter type for graphQLInputObjectField.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	298	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	320	Incompatible parameter type for graphQLInputObjectType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	320	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	333	Incompatible parameter type for graphQLObjectType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	333	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	345	Incompatible parameter type for graphQLScalarType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	345	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	357	Incompatible parameter type for graphQLUnionType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	357	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	466	Incompatible parameter type for graphQLArgument.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	466	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	509	Incompatible parameter type for graphQLArgument.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	509	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	520	Incompatible parameter type for graphQLDirective.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	520	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	529	Incompatible parameter type for graphQLAppliedDirective.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	529	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	539	Incompatible parameter type for graphQLInterfaceType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	539	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	549	Incompatible parameter type for graphQLEnumType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	549	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	559	Incompatible parameter type for enumValueDefinition.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	559	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	566	Incompatible parameter type for graphQLFieldDefinition.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	566	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	588	Incompatible parameter type for graphQLInputObjectField.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	588	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	596	Incompatible parameter type for graphQLInputObjectType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	596	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	607	Incompatible parameter type for graphQLObjectType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	607	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	617	Incompatible parameter type for graphQLScalarType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	617	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	627	Incompatible parameter type for graphQLUnionType.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/util/Anonymizer.java	627	Incompatible parameter type for context.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	678	Incompatible parameter type for node.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	678	Incompatible parameter type for ancestors.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	722	Incompatible parameter type for node.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	722	Incompatible parameter type for ancestors.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	1319	Incompatible parameter type for node.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	1319	Incompatible parameter type for path.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	1326	Incompatible parameter type for node.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	1326	Incompatible parameter type for path.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/OperationValidator.java	1753	Incompatible parameter type for o.
+eisop	warning	override.param.invalid	class	no	src/main/java/graphql/validation/ValidationError.java	101	Incompatible parameter type for o.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/analysis/values/ValueTraverser.java	95	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/execution/DefaultValueUnboxer.java	22	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/language/Field.java	173	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironment.java	45	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironment.java	70	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	127	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	142	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/schema/GraphQLDirective.java	150	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/schema/GraphQLDirective.java	165	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/schema/PropertyDataFetcher.java	118	Incompatible return type.
+eisop	warning	override.return.invalid	class	no	src/main/java/graphql/schema/PropertyDataFetcher.java	123	Incompatible return type.
+eisop	warning	override.typaram.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironment.java	45	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironment.java	70	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	127	Incompatible bound for type parameter T.
+eisop	warning	override.typaram.invalid	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	142	Incompatible bound for type parameter T.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	92	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/AsyncSerialExecutionStrategy.java	61	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	132	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	138	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	144	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	149	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	186	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	191	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	196	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	202	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	247	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	253	incompatible types in return.
+eisop	warning	return.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	236	incompatible types in return.
+eisop	warning	type.anno.before.decl.anno	class	no	src/main/java/graphql/execution/ExecutionStrategyParameters.java	86	write type annotations [@Nullable] immediately before type, after declaration annotation @Internal
+eisop	warning	type.anno.before.decl.anno	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	91	write type annotations [@Nullable] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	97	write type annotations [@Nullable] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.decl.anno	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	103	write type annotations [@Nullable] immediately before type, after declaration annotation @Override
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/EngineRunningState.java	29	write type annotation @Nullable immediately before type, after modifiers [private, final]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/EngineRunningState.java	35	write type annotation @Nullable immediately before type, after modifiers [private, volatile]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/ExecutionInput.java	102	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/ExecutionInput.java	131	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/ExecutionInput.java	139	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/ExecutionInput.java	172	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/ProfilerResult.java	26	write type annotation @Nullable immediately before type, after modifiers [private, volatile]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/ProfilerResult.java	38	write type annotation @Nullable immediately before type, after modifiers [private, volatile]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/ProfilerResult.java	40	write type annotation @Nullable immediately before type, after modifiers [private, volatile]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/ExecutionStepInfoFactory.java	73	write type annotation @NonNull immediately before type, after modifiers [private, static]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/ExecutionStrategyParameters.java	86	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/directives/QueryAppliedDirective.java	57	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/directives/QueryAppliedDirective.java	66	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/directives/QueryAppliedDirective.java	76	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/directives/QueryAppliedDirectiveArgument.java	87	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/directives/QueryAppliedDirectiveArgument.java	101	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/incremental/DeferredExecution.java	24	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/instrumentation/parameters/InstrumentationExecutionParameters.java	48	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/instrumentation/parameters/InstrumentationFieldCompleteParameters.java	63	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/execution/preparsed/PreparsedDocumentEntry.java	57	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	39	write type annotation @Nullable immediately before type, after modifiers [private, final]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	42	write type annotation @Nullable immediately before type, after modifiers [private, final]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	45	write type annotation @Nullable immediately before type, after modifiers [private, final]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	47	write type annotation @Nullable immediately before type, after modifiers [private, final]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/GraphQLSchema.java	693	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/GraphQLSchema.java	710	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	91	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	97	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	103	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/idl/MockedWiringFactory.java	108	write type annotation @Nullable immediately before type, after modifiers [private]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/idl/TypeDefinitionRegistry.java	627	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/idl/TypeDefinitionRegistry.java	640	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/idl/TypeDefinitionRegistry.java	652	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.anno.before.modifier	class	no	src/main/java/graphql/schema/idl/TypeDefinitionRegistry.java	670	write type annotation @Nullable immediately before type, after modifiers [public]
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/GraphQL.java	541	incompatible type argument for type parameter V of AtomicReference.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/GraphQL.java	560	incompatible type argument for type parameter V of AtomicReference.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/analysis/MaxQueryComplexityInstrumentation.java	138	incompatible type argument for type parameter V of AtomicReference.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/execution/ExecutionContext.java	64	incompatible type argument for type parameter V of AtomicReference.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/execution/SubscriptionExecutionStrategy.java	87	incompatible type argument for type parameter T of InstrumentationContext.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	153	incompatible type argument for type parameter T of InstrumentationContext.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/NoContextChainedInstrumentation.java	80	incompatible type argument for type parameter T of InstrumentationContext.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	222	incompatible type argument for type parameter V of AtomicReference.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	236	incompatible type argument for type parameter V of AtomicReference.
+eisop	warning	type.argument.type.incompatible	class	no	src/main/java/graphql/execution/instrumentation/dataloader/PerLevelDataLoaderDispatchStrategy.java	241	incompatible type argument for type parameter V of AtomicReference.
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/ExceptionWhileDataFetching.java	33	Could not infer type arguments for Collections.singletonList
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/analysis/values/ValueTraverser.java	72	Could not infer type arguments for ImmutableKit.filterAndMap
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	33	Could not infer type arguments for Collections.singletonList
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	39	Could not infer type arguments for Collections.singletonList
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	45	Could not infer type arguments for Collections.singletonList
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	55	Could not infer type arguments for Collections.singletonList
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/execution/SubscriptionExecutionStrategy.java	87	Could not infer type arguments for SimpleInstrumentationContext.nonNullCtx
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/execution/SubscriptionExecutionStrategy.java	124	Could not infer type arguments for CompletableFuture.thenApply
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	154	Could not infer type arguments for ChainedInstrumentation.chainedCtx
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/execution/preparsed/persisted/InMemoryPersistedQueryCache.java	52	Could not infer type arguments for CompletableFuture.completedFuture
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/language/Document.java	62	Could not infer type arguments for ImmutableKit.filterAndMap
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	234	Could not infer type arguments for DataLoaderRegistry.getDataLoader
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/schema/DataFetchingEnvironmentImpl.java	242	Could not infer type arguments for DataLoaderWithContext constructor
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/schema/idl/TypeDefinitionRegistry.java	731	Could not infer type arguments for ImmutableKit.filterAndMap
+eisop	warning	type.arguments.not.inferred	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	127	Could not infer type arguments for Stream.collect
+eisop	warning	type.arguments.not.inferred	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	371	Could not infer type arguments for Stream.collect
+eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/util/Anonymizer.java	802	Could not infer type arguments for TraverserContext.setVar
+eisop	warning	unboxing.of.nullable	class	no	src/main/java/graphql/validation/OperationValidator.java	903	unboxing a possibly-null reference introspectionFieldCounts.merge(key, 1, Integer::sum)
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	56	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	56	incompatible types: BiFunction<? super T, Throwable, ? extends U> cannot be converted to BiFunction<? super @Nullable T, @Nullable Throwable, ? extends U>
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	66	passing @Nullable parameter 't' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	66	passing @Nullable parameter 'throwable' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	74	incompatible types: BiConsumer<? super T, ? super Throwable> cannot be converted to BiConsumer<? super @Nullable T, ? super @Nullable Throwable>
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	83	passing @Nullable parameter 't' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	83	passing @Nullable parameter 'throwable' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	98	passing @Nullable parameter 'u' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	107	passing @Nullable parameter 'u1' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/ExceptionWhileDataFetching.java	33	inference failure: type variable T constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/ExceptionWhileDataFetching.java	33	passing @Nullable parameter 'sourceLocation' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/ExceptionWhileDataFetching.java	99	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/GraphQL.java	511	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	class	no	src/main/java/graphql/GraphQL.java	511	incompatible types: BiConsumer<capture of ? super ExecutionResult, capture of ? super Throwable> cannot be converted to BiConsumer<? super @Nullable ExecutionResult, ? super @Nullable Throwable> (target wildcard upper bound is Object; source wildcard upper bound is @Nullable Object; source wildcard is the type argument for type variable T of BiConsumer)
+nullaway	warning	NullAway	class	no	src/main/java/graphql/GraphQLContext.java	165	passing @Nullable parameter 'entry.getKey()' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/GraphQLContext.java	220	passing @Nullable parameter '(T) v' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/ProfilerResult.java	277	passing @Nullable parameter 'operationName' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/SerializationError.java	73	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/TypeMismatchError.java	95	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/UnresolvedTypeError.java	75	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/analysis/QueryComplexityCalculator.java	65	passing @Nullable parameter 'parentEnvironment' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/analysis/values/ValueTraverser.java	72	inference failure: type variable R is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	class	no	src/main/java/graphql/analysis/values/ValueTraverser.java	74	referenced method returns @Nullable, but functional interface method java.util.function.Function.apply(GraphQLInputSchemaElement) returns @NonNull
+nullaway	warning	NullAway	class	no	src/main/java/graphql/analysis/values/ValueTraverser.java	321	passing @Nullable parameter 'newValue' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	74	passing @Nullable parameter 'null' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	74	passing @Nullable parameter 'throwable.getCause()' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	78	dereferenced expression 'completeValueInfos' is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	84	incompatible types: BiConsumer<List<Object>, Throwable> cannot be converted to BiConsumer<? super @Nullable List<Object>, ? super @Nullable Throwable>
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/AsyncExecutionStrategy.java	92	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/AsyncSerialExecutionStrategy.java	67	incompatible types: BiConsumer<List<Object>, Throwable> cannot be converted to BiConsumer<? super @Nullable List<Object>, ? super @Nullable Throwable>
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/DataFetcherResult.java	140	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/ExecutionId.java	48	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	33	inference failure: type variable T constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	33	passing @Nullable parameter 'variableDefinition.getSourceLocation()' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	39	inference failure: type variable T constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	39	passing @Nullable parameter 'variableDefinition.getSourceLocation()' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	45	inference failure: type variable T constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	45	passing @Nullable parameter 'variableDefinition.getSourceLocation()' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	55	inference failure: type variable T constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/NonNullableValueCoercedAsNullException.java	55	passing @Nullable parameter 'variableDefinition.getSourceLocation()' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/ResultPath.java	323	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/SubscriptionExecutionStrategy.java	124	inference failure: type variable U constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/SubscriptionExecutionStrategy.java	126	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/incremental/DeferredExecution.java	38	parameter obj is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	89	incompatible types: BiFunction<Instrumentation, @Nullable InstrumentationState, InstrumentationContext<T>> cannot be converted to BiFunction<Instrumentation, @Nullable InstrumentationState, @Nullable InstrumentationContext<T>>
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	132	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	138	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	144	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	149	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	154	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	186	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	191	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	196	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	202	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	247	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	253	returning @Nullable expression from method with @NonNull return type
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/ChainedInstrumentation.java	287	parameter arg1 of referenced method is @NonNull, but parameter in functional interface method java.util.function.BiFunction.apply(Instrumentation,@Nullable InstrumentationState) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/SimpleInstrumentationContext.java	72	passing @Nullable parameter 'result' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/instrumentation/SimpleInstrumentationContext.java	72	passing @Nullable parameter 't' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/preparsed/persisted/InMemoryPersistedQueryCache.java	52	inference failure: type variable U constrained to be both @NonNull and @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/execution/preparsed/persisted/InMemoryPersistedQueryCache.java	52	passing @Nullable parameter 'documentEntry' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/language/AstPrinter.java	641	dereferenced expression 'clazz' is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/language/Document.java	62	inference failure: type variable R is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	class	no	src/main/java/graphql/language/Document.java	64	referenced method returns @Nullable, but functional interface method java.util.function.Function.apply(Definition) returns @NonNull
+nullaway	warning	NullAway	class	no	src/main/java/graphql/language/Document.java	97	dereferenced expression 'opDef' is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/language/PrettyAstPrinter.java	395	passing @Nullable parameter 'appliedSeparator' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/schema/idl/TypeDefinitionRegistry.java	731	inference failure: type variable R is constrained to be @Nullable, but its upper bound requires it to be @NonNull
+nullaway	warning	NullAway	class	no	src/main/java/graphql/schema/idl/TypeDefinitionRegistry.java	733	referenced method returns @Nullable, but functional interface method java.util.function.Function.apply(TypeDefinition) returns @NonNull
+nullaway	warning	NullAway	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	187	passing @Nullable parameter 'implementations' where @NonNull is required
+nullaway	warning	NullAway	class	no	src/main/java/graphql/validation/OperationValidator.java	903	unboxing of a @Nullable expression 'introspectionFieldCounts.merge(key, 1, Integer::sum)'
+nullaway	warning	NullAway	class	no	src/main/java/graphql/validation/OperationValidator.java	1753	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
+nullaway	warning	NullAway	class	no	src/main/java/graphql/validation/ValidationError.java	101	parameter o is @NonNull, but parameter in superclass method java.lang.Object.equals(java.lang.Object) is @Nullable
