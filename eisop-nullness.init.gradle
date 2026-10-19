@@ -8,6 +8,9 @@
 //   EISOP_COMPILE_JDK  JDK feature version to compile the checked tasks with; unset keeps the
 //                  project's own toolchain.
 //   EISOP_NULLAWAY_SKIP  modules to compile without NullAway, because it crashes on them.
+//   EISOP_ARGS     space-separated checker options that replace -Amode=jspecify.
+//   NULLAWAY_VERSION  NullAway version to use instead of the default.
+//   EISOP_DUMP_DIR  directory to write each checked task's javac arguments and paths to.
 
 // CF_GROUP selects the checker: io.github.eisop (default) or org.checkerframework, which has no
 // -Amode=jspecify, so CF_NO_MODE drops the mode for a like-for-like timing comparison.
@@ -16,14 +19,17 @@ def cfVersion = System.getenv('EISOP_VERSION')
         ?: (cfGroup == 'io.github.eisop' ? '3.49.5-eisop2-SNAPSHOT' : '3.49.5')
 def checkedTasks = (System.getenv('EISOP_TASKS') ?: 'compileJava').split(',') as Set
 def compileJdk = System.getenv('EISOP_COMPILE_JDK') as Integer
-def eisopArgs = (System.getenv('CF_NO_MODE') != null || cfGroup != 'io.github.eisop')
+// EISOP_ARGS, space-separated, replaces -Amode=jspecify, e.g. to pass the mode's options one by one.
+def eisopArgs = System.getenv('EISOP_ARGS') != null
+        ? System.getenv('EISOP_ARGS').split(' ').findAll { it } as List
+        : (System.getenv('CF_NO_MODE') != null || cfGroup != 'io.github.eisop')
         ? [] : ['-Amode=jspecify']
 // Added to the project's own NullAway configuration.  Projects leave out JSpecifyExperimental,
 // and with it JSpecify's JDK models, so without it NullAway is not comparable with EISOP.
 def nullawayOptions = [JSpecifyMode: 'true', JSpecifyExperimental: 'true']
 // One NullAway for every project, like NullAway's own compile-other-projects job: projects pin
 // their own, and a version before 0.14.0 silently ignores JSpecifyExperimental.
-def nullawayVersion = '0.14.1'
+def nullawayVersion = System.getenv('NULLAWAY_VERSION') ?: '0.14.1'
 def nullnessChecker = 'org.checkerframework.checker.nullness.NullnessChecker'
 // Which tools run on the checked tasks: both (default), eisop, nullaway, or none.  Used to
 // measure each tool's share of compile time; every mode still logs [eisop-time] per task.
@@ -83,7 +89,8 @@ beforeProject { project ->
     // with allWarningsAsErrors turns into a failure.  The Java tasks get checker-qual on their
     // classpath in the doFirst below; this gives it to the Kotlin tasks too.  From afterEvaluate:
     // Gradle rejects observing the plugin collection from inside the JavaBasePlugin callback.
-    project.afterEvaluate {
+    // EISOP_NO_KOTLIN_FIX leaves the Kotlin tasks alone, to see whether they still need this.
+    if (System.getenv('EISOP_NO_KOTLIN_FIX') == null) project.afterEvaluate {
         if ((project.pluginManager.hasPlugin('org.jetbrains.kotlin.jvm') || project.pluginManager.hasPlugin('kotlin'))
                 && project.configurations.findByName('compileOnly') != null) {
             project.dependencies.add('compileOnly', "${cfGroup}:checker-qual:${cfVersion}")
@@ -200,7 +207,8 @@ beforeProject { project ->
                     if (declared.find()) {
                         moduleNames << declared.group(1)
                     }
-                    try {
+                    // EISOP_OWN_MODULE_READS_ONLY skips the dependencies, to see whether they still need it.
+                    if (System.getenv('EISOP_OWN_MODULE_READS_ONLY') == null) try {
                         def paths = t.classpath.files.findAll { it.exists() }.collect { it.toPath() }
                         java.lang.module.ModuleFinder.of(paths as java.nio.file.Path[]).findAll().each {
                             moduleNames << it.descriptor().name()
@@ -228,6 +236,16 @@ beforeProject { project ->
                         + "${eisopArgs.join(' ')}; NullAway: ${nullaway}; javac: JDK ${jdk}")
             }
             t.doFirst { taskStart.set(System.nanoTime()) }
+            // EISOP_DUMP_DIR records how each checked task calls javac, to rerun one file outside Gradle.
+            if (System.getenv('EISOP_DUMP_DIR') != null) t.doFirst {
+                def dir = new File(System.getenv('EISOP_DUMP_DIR'), t.path.replace(':', '_'))
+                dir.mkdirs()
+                new File(dir, 'args.txt').text = t.options.allCompilerArgs.join('\n')
+                new File(dir, 'classpath.txt').text = t.classpath.files.join('\n')
+                new File(dir, 'processorpath.txt').text = (t.options.annotationProcessorPath?.files ?: []).join('\n')
+                new File(dir, 'sources.txt').text = t.source.files.join('\n')
+                new File(dir, 'jvmargs.txt').text = (t.options.forkOptions.jvmArgs ?: []).join('\n')
+            }
         }
     }
     // Compile with the corpus JDK, so every project is checked by the same javac.  Before JDK 22
