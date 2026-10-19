@@ -147,6 +147,8 @@ def main():
     with open(os.path.join(out, "build.log"), encoding="utf-8", errors="replace") as f:
         log_lines = [l.rstrip("\n") for l in f]
     injections = [l[len("[eisop] "):] for l in log_lines if l.startswith("[eisop] ")]
+    # Harness notes, such as a module compiled without NullAway or with the project's own compiler.
+    notes = sorted({l[len("[eisop-note] "):] for l in log_lines if l.startswith("[eisop-note] ")})
     failed_tasks = {m.group(1) for m in map(TASK_FAILED.match, log_lines) if m}
     injected = len(injections)
 
@@ -216,6 +218,8 @@ def main():
             f.write(f"| {tool} | `{key}` | {n} |\n")
         if crashes:
             f.write("\n## Crash lines\n\n```\n" + "\n".join(crashes[:20]) + "\n```\n")
+        if notes:
+            f.write("\n## Harness notes\n\n" + "".join(f"- {n}\n" for n in notes))
         if unanchored:
             f.write("\n## Compiler errors not tied to a file\n\n```\n" + "\n".join(unanchored[:20]) + "\n```\n")
     with open(os.path.join(out, "summary.md"), encoding="utf-8") as f:

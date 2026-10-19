@@ -23,7 +23,10 @@ name="${1:?usage: run-project.sh <name>}"
 
 row="$(awk -F'\t' -v n="$name" 'NR > 1 && $1 == n' "$HERE/corpus.tsv")"
 [ -n "$row" ] || { echo "no project '$name' in corpus.tsv" >&2; exit 2; }
-IFS=$'\t' read -r _ repo sha build tasks jdk status notes <<< "$row"
+IFS=$'\t' read -r _ repo sha build tasks jdk status notes nullaway_skip <<< "$row"
+# Modules NullAway crashes on, so that its crash does not stop the checker; "-" for none.
+export EISOP_NULLAWAY_SKIP="${nullaway_skip:--}"
+[ "$EISOP_NULLAWAY_SKIP" = - ] && EISOP_NULLAWAY_SKIP=""
 [ "$build" = gradle ] || { echo "$name: build system '$build' is not supported yet" >&2; exit 3; }
 
 jdk_var="JDK_HOME_$jdk"
@@ -88,7 +91,7 @@ set +e
 (cd "$src" && env -u CI JAVA_HOME="$java_home" EISOP_COMPILE_JDK="$jdk" ./gradlew \
     --init-script "$HERE/eisop-nullness.init.gradle" \
     --no-configuration-cache -Dorg.gradle.isolated-projects=false \
-    --no-build-cache --no-parallel --continue --console=plain \
+    --no-daemon --no-build-cache --no-parallel --continue --console=plain \
     -Porg.gradle.java.installations.paths="$java_home" \
     $tasks) > "$out/build.log" 2>&1
 status=$?

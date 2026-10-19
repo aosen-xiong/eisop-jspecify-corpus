@@ -7,6 +7,7 @@
 //   EISOP_TASKS    comma-separated JavaCompile task names to check (default: compileJava).
 //   EISOP_COMPILE_JDK  JDK feature version to compile the checked tasks with; unset keeps the
 //                  project's own toolchain.
+//   EISOP_NULLAWAY_SKIP  modules to compile without NullAway, because it crashes on them.
 
 // CF_GROUP selects the checker: io.github.eisop (default) or org.checkerframework, which has no
 // -Amode=jspecify, so CF_NO_MODE drops the mode for a like-for-like timing comparison.
@@ -32,6 +33,9 @@ def runNullaway = mode in ['both', 'nullaway', 'nullaway-only']
 // nullaway-only also turns off Error Prone's other checks, so that a project that runs the full
 // Error Prone check set is measured on the same footing as one that disables it.
 def onlyNullaway = mode == 'nullaway-only'
+// Modules (Gradle project names or paths, comma-separated) NullAway crashes on: a crash stops the
+// compile, and with it the checker, so NullAway is turned off there instead.
+def nullawaySkip = (System.getenv('EISOP_NULLAWAY_SKIP') ?: '').split(',')*.trim().findAll { it } as Set
 
 def projectReposForbidden = false
 def settingsDeclaresRepos = false
@@ -135,6 +139,15 @@ beforeProject { project ->
             // A skipped or cache-restored compile emits no diagnostics.
             t.outputs.upToDateWhen { false }
             t.outputs.cacheIf { false }
+            // The checker uses javac's internal packages.  Error Prone's plugin passes them to the forked
+            // compiler JVM, so a task without Error Prone (spring-framework's framework-docs) gets them here.
+            if (runEisop) {
+                t.options.fork = true
+                ['api', 'code', 'comp', 'file', 'main', 'model', 'parser', 'processing', 'tree', 'util'].each { pkg ->
+                    t.options.forkOptions.jvmArgs.add("--add-exports=jdk.compiler/com.sun.tools.javac.${pkg}=ALL-UNNAMED".toString())
+                    t.options.forkOptions.jvmArgs.add("--add-opens=jdk.compiler/com.sun.tools.javac.${pkg}=ALL-UNNAMED".toString())
+                }
+            }
 
             def taskStart = new java.util.concurrent.atomic.AtomicLong()
             t.doLast {
@@ -144,6 +157,10 @@ beforeProject { project ->
             t.doFirst {
                 // Every finding must be reported, not just those before the first failing module.
                 // Outside the injection below, so that it also holds when the checker is off.
+                // Some builds give every compile task the same list object (spring-framework's
+                // setCompilerArgs(COMPILER_ARGS)), so edit a copy; otherwise the arguments added
+                // below pile up across tasks.
+                t.options.compilerArgs = new ArrayList<String>(t.options.compilerArgs)
                 t.options.compilerArgs.removeAll { it == '-Werror' }
                 if (!runEisop) {
                     logger.lifecycle("[eisop] ${t.path}: checker not injected (EISOP_MODE=${mode})")
@@ -266,6 +283,15 @@ beforeProject { project ->
                         ep.disableAllChecks.set(true)
                     }
                     ep.allErrorsAsWarnings.set(true)
+                    if (nullawaySkip.contains(project.name) || nullawaySkip.contains(project.path)) {
+                        ep.disable('NullAway')
+                        def nullawayExt = ep.extensions.findByName('nullaway')
+                        if (nullawayExt != null && nullawayExt.metaClass.respondsTo(nullawayExt, 'disable')) {
+                            nullawayExt.disable()
+                        }
+                        logger.lifecycle("[eisop-note] ${t.path}: NullAway turned off (EISOP_NULLAWAY_SKIP)")
+                        return
+                    }
                     ep.warn('NullAway')
                     nullawayOptions.each { k, v -> ep.option("NullAway:${k}", v) }
                     // The net.ltgt.nullaway plugin sets NullAway's severity through its own
