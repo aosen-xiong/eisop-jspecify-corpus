@@ -1,5 +1,10 @@
 # Corpus status
 
+> **2026-10-19:** with EISOP master `8449d975e0`, every Gradle project below type-checks to the end
+> under `-Amode=jspecify` with no crash, and each has a baseline in `baselines/`, taken from CI run
+> 39275479059.  The sections below describe the state in September, when several runs were blocked
+> by EISOP crashes that are now fixed.
+
 Results of running `-Amode=jspecify` over the corpus, and open problems. How the corpus works is in
 [README.md](README.md).
 
