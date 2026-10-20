@@ -14,11 +14,11 @@ spring-security	spring-projects/spring-security	2ad2ec631b52c2f6318c4f186e599b93
 spring-kafka	spring-projects/spring-kafka	f48efc670f5fae747ff375188090e6eacb83f7dc	gradle	compileJava	25	trial	28 @NullMarked files; project runs NullAway; Gradle 9.8.1	-
 spring-amqp	spring-projects/spring-amqp	2e56398dc6a3b200903ab2d341b9d65ee210f15c	gradle	compileJava	25	trial	48 @NullMarked files; project runs NullAway; Gradle 9.8.1	-
 spring-integration	spring-projects/spring-integration	6a037f85a8025217b5d20d897fe41a5070126553	gradle	compileJava	25	trial	342 @NullMarked files; project runs NullAway; Gradle 9.8.1; many modules	-
-spring-graphql	spring-projects/spring-graphql	dc7ba32b148dd23f304f3049e43a26c6e5e87b97	gradle	compileJava	25	trial	26 @NullMarked files; project runs NullAway; Gradle 9.8.0	-
+spring-graphql	spring-projects/spring-graphql	dc7ba32b148dd23f304f3049e43a26c6e5e87b97	gradle	compileJava	25	trial	26 @NullMarked files; project runs NullAway; Gradle 9.8.0; NullAway overflows the stack on spring-graphql-test, so it is turned off there	spring-graphql-test
 spring-session	spring-projects/spring-session	35a35967004e4515b3da933d6ff5a0522af806c0	gradle	compileJava	21	trial	27 @NullMarked files; Gradle 8.14.5 does not run on JDK 25, so JDK 21, whose javac does not read type-use annotations from class files	-
 micrometer-tracing	micrometer-metrics/tracing	7e94fa4f535488f44c42b90ba42f9295fba91880	gradle	compileJava	25	trial	23 @NullMarked files; project runs NullAway; Gradle 9.8.1	-
 reactor-netty	reactor/reactor-netty	8a2ba963ffa0be72f0efc0e1821520878ec0c86f	gradle	compileJava	25	trial	21 @NullMarked files; project runs NullAway; Gradle 9.8.1	-
-openrewrite	openrewrite/rewrite	f450e1eb3740ed1ff5469b3e720a3d9f1a1002df	gradle	compileJava	25	trial	211 @NullMarked files; no NullAway; Gradle 9.8.1 (Kotlin DSL); AST and visitor generics	-
+openrewrite	openrewrite/rewrite	f450e1eb3740ed1ff5469b3e720a3d9f1a1002df	gradle	compileJava	25	unsupported	211 @NullMarked files; no NullAway; Gradle 9.8.1 (Kotlin DSL); its settings send org.openrewrite plugins to a private repository that needs CODEGENOME credentials	-
 nullaway	uber/NullAway	5ba2b547cecb789fbd8371e37205edfdbba9fa03	gradle	compileJava	25	trial	86 @NullMarked files; NullAway checks itself; Gradle 9.8.1	-
 spring-data-commons	spring-projects/spring-data-commons	10feb2ab4bb493498ac8843ff6676a035e4f9069	maven	compile	25	unsupported	50 @NullMarked files; needs a Maven injection path	-
 spring-batch	spring-projects/spring-batch	e7db3611a956d35065b111e893649d3639c70fb4	maven	compile	25	unsupported	80 @NullMarked files; needs a Maven injection path	-
