@@ -335,8 +335,12 @@ beforeProject { project ->
                     def hasNullaway = [project.configurations.findByName('errorprone'), processorPath]
                             .findAll { it != null }
                             .any { Configuration c -> c.allDependencies.any { it.group == 'com.uber.nullaway' || it.name == 'nullaway' } }
+                    // Error Prone is there to carry NullAway, so without NullAway it is turned off: its other
+                    // checks are not compared, and an old one may not run on the corpus JDK (reactor-netty's
+                    // Error Prone 2.10.0 fails on JDK 25).  The checked task forks with javac's exports anyway.
                     if (!hasNullaway) {
-                        logger.lifecycle("[eisop-note] ${t.path}: no NullAway on the Error Prone path, so NullAway is not run")
+                        ep.enabled.set(false)
+                        logger.lifecycle("[eisop-note] ${t.path}: no NullAway on the Error Prone path, so Error Prone is turned off")
                         return
                     }
                     if (nullawaySkip.contains(project.name) || nullawaySkip.contains(project.path)) {
