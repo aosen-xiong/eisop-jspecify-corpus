@@ -79,6 +79,21 @@ def discoverProcessors = { Iterable<File> path ->
     names
 }
 
+// Runs a hook after a project's own build script.  Gradle refuses Project#afterEvaluate while another
+// project's configuration is resolving this one (NullAway's jdk-recent-unit-tests resolves
+// :test-java-module), so such a project's hooks run from gradle.afterProject instead, which comes before
+// the project's own afterEvaluate actions; summary.md lists the projects this happened to.
+def afterEvaluateFallback = [:]
+gradle.afterProject { p -> afterEvaluateFallback.remove(p.path)?.each { it.call() } }
+def whenEvaluated = { Project p, Closure action ->
+    try {
+        p.afterEvaluate { action.call() }
+    } catch (Exception e) {
+        afterEvaluateFallback.computeIfAbsent(p.path) { [] } << action
+        logger.lifecycle("[eisop-note] ${p.path}: hooks run from gradle.afterProject: ${e.message}")
+    }
+}
+
 beforeProject { project ->
     // Included builds and buildSrc are the project's build logic, not code under evaluation.
     if (project.gradle.parent != null) {
@@ -90,7 +105,7 @@ beforeProject { project ->
     // classpath in the doFirst below; this gives it to the Kotlin tasks too.  From afterEvaluate:
     // Gradle rejects observing the plugin collection from inside the JavaBasePlugin callback.
     // EISOP_NO_KOTLIN_FIX leaves the Kotlin tasks alone, to see whether they still need this.
-    if (System.getenv('EISOP_NO_KOTLIN_FIX') == null) project.afterEvaluate {
+    if (System.getenv('EISOP_NO_KOTLIN_FIX') == null) whenEvaluated(project) {
         if ((project.pluginManager.hasPlugin('org.jetbrains.kotlin.jvm') || project.pluginManager.hasPlugin('kotlin'))
                 && project.configurations.findByName('compileOnly') != null) {
             project.dependencies.add('compileOnly', "${cfGroup}:checker-qual:${cfVersion}")
@@ -111,7 +126,7 @@ beforeProject { project ->
     // A project that declares any repository of its own no longer sees the settings-level ones,
     // so mavenLocal() goes on the project only when it already has repositories, or when there
     // are no settings-level ones to hide.  Otherwise settings-level mavenLocal() is enough.
-    project.afterEvaluate {
+    whenEvaluated(project) {
         if (!projectReposForbidden && (!project.repositories.isEmpty() || !settingsDeclaresRepos)) {
             project.repositories.mavenLocal()
         }
@@ -256,7 +271,7 @@ beforeProject { project ->
     // from afterEvaluate so that it runs after the project's own javaCompiler configuration.  If
     // the project's build already read it (reactor-core's benchmarks project does), the project's
     // compiler is kept; summary.md records the JDK each checked task actually used.
-    project.afterEvaluate {
+    whenEvaluated(project) {
         project.tasks.withType(JavaCompile).configureEach { JavaCompile t ->
             if (compileJdk != null && checkedTasks.contains(t.name)) {
                 try {
@@ -275,7 +290,7 @@ beforeProject { project ->
     // check the build names explicitly (error('NullAway')), and the build's own configureEach runs
     // after one registered here, so NullAway is demoted from afterEvaluate, which runs last.  The
     // plugin finalizes these properties before task actions run, so neither can move to doFirst.
-    project.afterEvaluate {
+    whenEvaluated(project) {
         project.plugins.withId('net.ltgt.errorprone') {
             project.tasks.withType(JavaCompile).configureEach { JavaCompile t ->
                 if (checkedTasks.contains(t.name)) {
