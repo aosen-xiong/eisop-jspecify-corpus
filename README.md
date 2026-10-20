@@ -33,7 +33,7 @@ Each project is built once, with both tools in the same compile.
 - **NullAway:** the project's own configuration, plus `JSpecifyMode=true JSpecifyExperimental=true`.
   Projects leave out `JSpecifyExperimental`, and with it JSpecify's JDK models, so their own
   NullAway setting is not a fair comparison. On context-propagation it reports 0 findings where
-  the experimental setting reports 9. NullAway itself is pinned to 0.14.1 in every project, as
+  the experimental setting reports 9. NullAway itself is pinned to 0.14.2 in every project, as
   NullAway's own compile-other-projects job swaps in one version: projects pin their own, and a
   version before 0.14.0 silently ignores `JSpecifyExperimental`. `summary.md` names the NullAway
   jar each compile task actually used.

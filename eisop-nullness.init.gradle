@@ -29,7 +29,7 @@ def eisopArgs = System.getenv('EISOP_ARGS') != null
 def nullawayOptions = [JSpecifyMode: 'true', JSpecifyExperimental: 'true']
 // One NullAway for every project, like NullAway's own compile-other-projects job: projects pin
 // their own, and a version before 0.14.0 silently ignores JSpecifyExperimental.
-def nullawayVersion = System.getenv('NULLAWAY_VERSION') ?: '0.14.1'
+def nullawayVersion = System.getenv('NULLAWAY_VERSION') ?: '0.14.2'
 def nullnessChecker = 'org.checkerframework.checker.nullness.NullnessChecker'
 // Which tools run on the checked tasks: both (default), eisop, nullaway, or none.  Used to
 // measure each tool's share of compile time; every mode still logs [eisop-time] per task.
