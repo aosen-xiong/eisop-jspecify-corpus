@@ -162,13 +162,27 @@ def main():
             canary_roots = [os.path.realpath(l.strip()) for l in f if l.strip()]
     # ":a:b:compileJava: ..." names project "b"; ":compileJava: ..." is the root project, "".
     injected_tasks = {inj.split(": ", 1)[0] for inj in injections}
-    compiled = {t.rsplit(":", 2)[-2] for t in injected_tasks}
+    # The init script logs each checked task's project directory; a project's name need not match
+    # its directory (spring-security's :spring-security-core is in core/).  Older logs have no
+    # [eisop-dir] lines, so the project name is the fallback.
+    task_dirs = {}
+    for l in log_lines:
+        if l.startswith("[eisop-dir] "):
+            task, _, d = l[len("[eisop-dir] "):].partition(" ")
+            task_dirs[task] = os.path.realpath(d)
+    if task_dirs:
+        project_of = lambda t: task_dirs.get(t)
+    else:
+        project_of = lambda t: t.rsplit(":", 2)[-2]
+    compiled = {project_of(t) for t in injected_tasks}
     # A checked task that failed with a compiler error reported nothing from the checker, which
     # skips type-checking after any javac error; its root is neither compiled nor a canary miss.
-    errored = {t.rsplit(":", 2)[-2] for t in injected_tasks & failed_tasks}
+    errored = {project_of(t) for t in injected_tasks & failed_tasks}
 
-    def root_in(names, root):
-        return os.path.basename(root) in names or ("" in names and root == src)
+    def root_in(projects, root):
+        if task_dirs:
+            return root in projects
+        return os.path.basename(root) in projects or ("" in projects and root == src)
 
     ran = [r for r in canary_roots if root_in(compiled, r) and not root_in(errored, r)]
     errored_roots = [os.path.relpath(r, src) for r in canary_roots if root_in(compiled, r) and root_in(errored, r)]

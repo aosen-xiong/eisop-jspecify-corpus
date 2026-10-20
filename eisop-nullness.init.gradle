@@ -194,6 +194,9 @@ beforeProject { project ->
                 // setCompilerArgs(COMPILER_ARGS)), so edit a copy; otherwise the arguments added
                 // below pile up across tasks.
                 t.options.compilerArgs = new ArrayList<String>(t.options.compilerArgs)
+                // summarize.py matches canary roots to project directories, which need not be named like
+                // the project (spring-security's :spring-security-core is in core/).
+                logger.lifecycle("[eisop-dir] ${t.path} ${project.projectDir}")
                 t.options.compilerArgs.removeAll { it == '-Werror' }
                 if (!runEisop) {
                     logger.lifecycle("[eisop] ${t.path}: checker not injected (EISOP_MODE=${mode})")
