@@ -316,6 +316,18 @@ beforeProject { project ->
                         ep.disableAllChecks.set(true)
                     }
                     ep.allErrorsAsWarnings.set(true)
+                    // Naming a check Error Prone does not have is an error, so NullAway is configured only
+                    // where the compile has it (not in reactor-netty, nor in NullAway's own :annotations), as a
+                    // released artifact or, in NullAway's own build, as project(':nullaway').
+                    def processorPath = t.options.annotationProcessorPath instanceof Configuration
+                            ? t.options.annotationProcessorPath : project.configurations.findByName('annotationProcessor')
+                    def hasNullaway = [project.configurations.findByName('errorprone'), processorPath]
+                            .findAll { it != null }
+                            .any { Configuration c -> c.allDependencies.any { it.group == 'com.uber.nullaway' || it.name == 'nullaway' } }
+                    if (!hasNullaway) {
+                        logger.lifecycle("[eisop-note] ${t.path}: no NullAway on the Error Prone path, so NullAway is not run")
+                        return
+                    }
                     if (nullawaySkip.contains(project.name) || nullawaySkip.contains(project.path)) {
                         ep.disable('NullAway')
                         def nullawayExt = ep.extensions.findByName('nullaway')
