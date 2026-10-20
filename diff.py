@@ -4,19 +4,22 @@
 usage: diff.py <baseline diagnostics.tsv> <new diagnostics.tsv>
 
 Diagnostics are matched on (tool, key, file, message), not line number, so unrelated edits that
-shift lines do not show up as churn.  Prints added and removed diagnostics and exits 1 if any
+shift lines do not show up as churn; capture variable numbers in a message are ignored too.  Prints added and removed diagnostics and exits 1 if any
 EISOP diagnostic was added or removed.
 """
 
 import collections
 import csv
+import re
 import sys
 
 
 def load(path):
     with open(path, encoding="utf-8", newline="") as f:
         rows = list(csv.DictReader(f, delimiter="\t", quoting=csv.QUOTE_NONE))
-    ident = lambda r: (r["tool"], r["key"], r["file"], r["msg"])
+    # javac numbers capture variables in processing order, which changes between runs (capture#17 in
+    # one run is capture#01 in the next), so the number is not part of a diagnostic's identity.
+    ident = lambda r: (r["tool"], r["key"], r["file"], re.sub(r"capture#\d+", "capture#N", r["msg"]))
     return collections.Counter(map(ident, rows)), {ident(r): r for r in rows}
 
 
