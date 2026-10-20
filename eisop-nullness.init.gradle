@@ -292,6 +292,13 @@ beforeProject { project ->
                     t.javaCompiler = project.extensions.getByType(JavaToolchainService).compilerFor {
                         languageVersion = JavaLanguageVersion.of(compileJdk)
                     }
+                    // A project that sets its Java level through its toolchain instead of --release
+                    // (reactor-netty, Java 8) would otherwise get class files for the corpus JDK, which
+                    // its own later compiles (reactor-netty's java11 and java17 source sets) cannot read.
+                    def level = project.extensions.findByType(JavaPluginExtension)?.toolchain?.languageVersion?.getOrNull()
+                    if (!t.options.release.present && level != null && level.asInt() < compileJdk) {
+                        t.options.release.set(level.asInt())
+                    }
                 } catch (IllegalStateException e) {
                     logger.lifecycle("[eisop-note] ${t.path}: kept the project's compiler: ${e.message}")
                 }
