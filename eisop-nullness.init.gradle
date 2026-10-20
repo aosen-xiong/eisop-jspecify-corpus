@@ -123,12 +123,23 @@ beforeProject { project ->
                     t.compilerOptions.allWarningsAsErrors.set(false)
                 }
     }
-    // A project that declares any repository of its own no longer sees the settings-level ones,
-    // so mavenLocal() goes on the project only when it already has repositories, or when there
-    // are no settings-level ones to hide.  Otherwise settings-level mavenLocal() is enough.
-    whenEvaluated(project) {
-        if (!projectReposForbidden && (!project.repositories.isEmpty() || !settingsDeclaresRepos)) {
-            project.repositories.mavenLocal()
+    // A project that declares any repository of its own no longer sees the settings-level ones, so
+    // mavenLocal() goes on the project as soon as it declares one, whenever that is (spring-security
+    // adds its repositories after evaluation), and after evaluation when there are no settings-level
+    // ones to hide.  Otherwise settings-level mavenLocal() is enough.
+    if (!projectReposForbidden) {
+        def mavenLocalAdded = false
+        project.repositories.all { r ->
+            if (!mavenLocalAdded && r.name != 'MavenLocal') {
+                mavenLocalAdded = true
+                project.repositories.mavenLocal()
+            }
+        }
+        whenEvaluated(project) {
+            if (!mavenLocalAdded && !settingsDeclaresRepos) {
+                mavenLocalAdded = true
+                project.repositories.mavenLocal()
+            }
         }
     }
     project.configurations.configureEach { Configuration c ->
