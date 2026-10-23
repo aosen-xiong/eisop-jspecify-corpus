@@ -61,7 +61,10 @@ while IFS= read -r marked_info; do
   pkg="$(sed -nE 's/^[[:space:]]*package[[:space:]]+([A-Za-z0-9_.]+)[[:space:]]*;.*/\1/p' "$marked_info" | head -1)"
   pkg_dir="$(dirname "$marked_info")"
   src_root="${pkg_dir%/"${pkg//.//}"}"
-  if [ -z "$pkg" ] || [ "$src_root" = "$pkg_dir" ] || printf '%s' "$canary_roots" | grep -qxF "$src_root"; then
+  # Only JSpecify's @NullMarked: NullAway also honors a project's own annotation of that name
+  # (micronaut-core's io.micronaut.core.annotation.NullMarked), and EISOP rightly does not.
+  if [ -z "$pkg" ] || [ "$src_root" = "$pkg_dir" ] || printf '%s' "$canary_roots" | grep -qxF "$src_root" \
+      || ! grep -qE 'org\.jspecify\.annotations\.(NullMarked\b|\*)' "$marked_info"; then
     continue
   fi
   canary_roots="$canary_roots$src_root"$'\n'
