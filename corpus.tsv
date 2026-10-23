@@ -22,3 +22,40 @@ openrewrite	openrewrite/rewrite	f450e1eb3740ed1ff5469b3e720a3d9f1a1002df	gradle	
 nullaway	uber/NullAway	5ba2b547cecb789fbd8371e37205edfdbba9fa03	gradle	compileJava	25	trial	86 @NullMarked files; NullAway checks itself; Gradle 9.8.1	-
 spring-data-commons	spring-projects/spring-data-commons	10feb2ab4bb493498ac8843ff6676a035e4f9069	maven	compile	25	unsupported	50 @NullMarked files; needs a Maven injection path	-
 spring-batch	spring-projects/spring-batch	e7db3611a956d35065b111e893649d3639c70fb4	maven	compile	25	unsupported	80 @NullMarked files; needs a Maven injection path	-
+micronaut-core	micronaut-projects/micronaut-core	128b6981e0b377d1ad27345250efd6c44b7a64a6	gradle	compileJava	25	trial	6438 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.2	-
+discord4j	Discord4J/Discord4J	e966d19c5e707bf6fa96c8ef1a3ee918d67e0133	gradle	compileJava	25	trial	1924 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.7.1	-
+spring-restdocs	spring-projects/spring-restdocs	3bb9bd1e3ec4218fbc25fd97ffcfd95524dc5341	gradle	compileJava	25	trial	1185 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.1.0	-
+mcprotocollib	GeyserMC/MCProtocolLib	b4fa8b23064bb85d7c7966cc2cd6bf369c9c1405	gradle	compileJava	21	trial	910 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 8.5; Gradle 8.5 does not run on JDK 25, so JDK 21	-
+adventure	PaperMC/adventure	19a4c058e7270cd988799915112e0b27a8afee30	gradle	compileJava	25	trial	885 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.5.0	-
+joml	JOML-CI/JOML	2d6c1dfa7a79795d1749ba5184e0a3fc74de1255	gradle	compileJava	21	trial	847 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 8.14.6; Gradle 8.14.6 does not run on JDK 25, so JDK 21	-
+joinfaces	joinfaces/joinfaces	39c71007ba94bfbd058af16f4dcda92ba2a3bdaf	gradle	compileJava	25	trial	437 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.1	-
+archforge	sofn/ArchForge	af9e614350451c2a193065fd17cd45db8d1a51e0	gradle	compileJava	25	trial	367 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.5.1	-
+spring-ws	spring-projects/spring-ws	8844c5dd07136bf54ee2e27099de8947b7ab9a71	gradle	compileJava	25	trial	346 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.1	-
+cyclonedx-gradle-plugin	CycloneDX/cyclonedx-gradle-plugin	0aedb5ee0b90acc39c3960d348487ff0daf38b8c	gradle	compileJava	25	trial	240 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.1	-
+pg-index-health	mfvanek/pg-index-health	85beace4d34bc053bbea057484c58fb0327de934	gradle	compileJava	25	trial	202 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.7.1	-
+arconia	arconia-io/arconia	20017ebcaf4ca67ef4c6baa9908197ec6050e862	gradle	compileJava	25	trial	198 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.2	-
+core-ng	neowu/core-ng-project	d32264a5c0f88f2242844f22d088bfcef8511447	gradle	compileJava	25	trial	141 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.0	-
+today-infrastructure	TAKETODAY/today-infrastructure	03543c66dabf42ae041a915f86f01536c93cc463	gradle	compileJava	25	trial	132 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.2	-
+opencqrs	open-cqrs/opencqrs	48b96bebfffc7442d1f0a99902bfe2ecf045a2c9	gradle	compileJava	25	trial	119 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.6.0	-
+libgdx-screenmanager	crykn/libgdx-screenmanager	2d27656682f175b0ccf2871bb38b2b9e3472f343	gradle	compileJava	17	trial	115 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 7.6.1; Gradle 7.6.1 runs only on JDK 19 or older, so JDK 17, whose javac does not read type-use annotations from class files	-
+jaybird	FirebirdSQL/jaybird	cde9f1ea3928d5e85c2ddc269471dfb80dadf792	gradle	compileJava	25	trial	113 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.1	-
+lowkey-vault	nagyesta/lowkey-vault	e898a475a23be5a84e9cda44bff236a4b239d03a	gradle	compileJava	25	trial	112 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.1	-
+axonframework	AxonIQ/AxonFramework	3bf89ef6360cab7683b6b737d8a7d8d4386d0e81	maven	compile	25	unsupported	3625 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+dependency-track	DependencyTrack/dependency-track	b9dcc8959e5bacb84259e1b4f6a5623131951f27	maven	compile	25	unsupported	4328 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+lwjgl3	LWJGL/lwjgl3	8adda2367a10f0283ba7ac27a2222fcf7fc67212	ant	compile	25	unsupported	5475 stars; from the 2026-10 GitHub code search for @NullMarked; built with Ant (build.xml); its Gradle build only publishes	-
+iced-latte	Sunagatov/Iced-Latte	271e968f99f0970f786fa570ffd211f0899eb9d1	maven	compile	25	unsupported	641 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+threeten-extra	ThreeTen/threeten-extra	eb003fa52281180642b07bdb289cfb7c170b81f1	maven	compile	25	unsupported	425 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+spring-cloud-aws	awspring/spring-cloud-aws	96912b65dd983ee2d1e5b663db57a3ffa71ef7ab	maven	compile	25	unsupported	1126 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+vlcj	caprica/vlcj	a200fb6a4cb218b849a1ce8dd7cc14a01f20d876	maven	compile	25	unsupported	1243 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+grantforge	devlive-community/grantforge	362ae205d786f26ac52dfac34852c133815d1728	maven	compile	25	unsupported	104 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+jackson-jq	eiiches/jackson-jq	1efc4d386f6643f1d43760f2eb4da89c793f809b	bazel	compile	25	unsupported	311 stars; from the 2026-10 GitHub code search for @NullMarked; built with Bazel	-
+morel	hydromatic/morel	72e7c7a8f1dcb18c3452e1bff9558c4e9cf4629e	maven	compile	25	unsupported	379 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+instancio	instancio/instancio	970e194f6c7e63ba093f33ee03099e703d72138b	maven	compile	25	unsupported	1170 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+occurrent	johanhaleby/occurrent	a9109665fc1c270e4b1466d2d5e56435f51e4a09	maven	compile	25	unsupported	166 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+jooby	jooby-project/jooby	7605c08a800d6d94ceec35e802a78656226641fb	maven	compile	25	unsupported	1782 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+operaton	operaton/operaton	68b0c681acbe70616412c102dbc272d18331bde3	maven	compile	25	unsupported	496 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+seed4j	seed4j/seed4j	1f549cbf392b0e34f4665aed37b8e52455dfbc8a	maven	compile	25	unsupported	617 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+semver4j	semver4j/semver4j	e9b049bfdee629e9579230dc3ad7d26adff56d0e	maven	compile	25	unsupported	119 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+spring-cloud-gateway	spring-cloud/spring-cloud-gateway	78067247c53eec763689228d40e5d830acf5e62a	maven	compile	25	unsupported	4915 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+spring-data-relational	spring-projects/spring-data-relational	022a11ee223b2739c37a36c341c7d6451db472a1	maven	compile	25	unsupported	827 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
+jrtf	ullenboom/jrtf	2ac63ab51686c63b4cc5103f95e3327374e89938	maven	compile	25	unsupported	102 stars; from the 2026-10 GitHub code search for @NullMarked; needs a Maven injection path	-
