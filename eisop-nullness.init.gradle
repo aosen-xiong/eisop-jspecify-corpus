@@ -200,6 +200,8 @@ beforeProject { project ->
                 // the project (spring-security's :spring-security-core is in core/).
                 logger.lifecycle("[eisop-dir] ${t.path} ${project.projectDir}")
                 t.options.compilerArgs.removeAll { it == '-Werror' }
+                // -proc:none (core-ng) would stop the checker, an annotation processor, from running.
+                if (runEisop) t.options.compilerArgs.removeAll { it == '-proc:none' }
                 if (!runEisop) {
                     logger.lifecycle("[eisop] ${t.path}: checker not injected (EISOP_MODE=${mode})")
                     return
