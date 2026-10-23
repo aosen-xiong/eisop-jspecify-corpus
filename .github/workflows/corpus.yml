@@ -81,7 +81,13 @@ jobs:
         with:
           name: eisop-maven-local
           path: ~/.m2/repository/io/github/eisop
-      # A project whose Gradle cannot run on JDK 25 (spring-session) uses JDK 21; 25 stays the default.
+      # A project whose Gradle cannot run on JDK 25 uses JDK 21 (spring-session) or, for Gradle 7, JDK 17
+      # (libgdx-screenmanager); 25 stays the default.
+      - id: jdk17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
       - id: jdk21
         uses: actions/setup-java@v4
         with:
@@ -95,6 +101,7 @@ jobs:
       - name: Run ${{ matrix.project }}
         env:
           EISOP_VERSION: ${{ needs.build-eisop.outputs.version }}
+          JDK_HOME_17: ${{ steps.jdk17.outputs.path }}
           JDK_HOME_21: ${{ steps.jdk21.outputs.path }}
           JDK_HOME_25: ${{ steps.jdk25.outputs.path }}
         run: |
