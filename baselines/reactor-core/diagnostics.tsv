@@ -712,30 +712,9 @@ eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/react
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/StrictSubscriber.java	104	Incompatible parameter type for t.
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/UnicastProcessor.java	274	Incompatible parameter type for throwable.
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/UnicastProcessor.java	510	Incompatible parameter type for s.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	947	Incompatible parameter type for callable.
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1016	Incompatible parameter type for unit.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1025	Incompatible parameter type for task.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1034	Incompatible parameter type for result.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1053	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1064	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1076	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1087	Incompatible parameter type for tasks.
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1099	Incompatible parameter type for command.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	266	Incompatible parameter type for task.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	272	Incompatible parameter type for result.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	284	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	291	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	299	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	305	Incompatible parameter type for tasks.
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	313	Incompatible parameter type for command.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	327	Incompatible parameter type for callable.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	43	Incompatible parameter type for callable.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	83	Incompatible parameter type for task.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	88	Incompatible parameter type for result.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	98	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	103	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	109	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	114	Incompatible parameter type for tasks.
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	120	Incompatible parameter type for command.
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/ReactorBlockHoundIntegration.java	37	Incompatible parameter type for builder.
 eisop	warning	override.param.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/SingleWorkerScheduler.java	64	Incompatible parameter type for command.
@@ -756,32 +735,17 @@ eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reac
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	50	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/publisher/Signal.java	197	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	934	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	946	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	958	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	971	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1025	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1034	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1043	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1052	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/BoundedElasticScheduler.java	1063	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	266	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	272	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	278	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	284	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	291	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	319	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	327	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	335	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegateServiceScheduler.java	344	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	38	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	43	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	48	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	53	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	83	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	88	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	93	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	98	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/core/scheduler/DelegatingScheduledExecutorService.java	103	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	264	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	302	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	reactor-core/src/main/java/reactor/util/concurrent/Queues.java	470	Incompatible return type.
@@ -1043,6 +1007,7 @@ nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/pub
 nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoSupplier.java	62	method returns @Nullable, but superclass method java.util.concurrent.Callable.call() returns @NonNull
 nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	98	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
 nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoWhen.java	98	incompatible types: Publisher<?> [] cannot be converted to Publisher<? extends Object> []
+nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/MonoZip.java	126	incompatible types: Mono<?> cannot be converted to Publisher<? extends capture of ?> (Mono<?> is a subtype of Publisher<?>)
 nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	50	method returns @Nullable, but superclass method java.util.function.BiFunction.apply(T,U) returns @NonNull
 nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	188	passing @Nullable parameter 'value' where @NonNull is required
 nullaway	warning	NullAway	package	no	reactor-core/src/main/java/reactor/core/publisher/OnNextFailureStrategy.java	251	passing @Nullable parameter 'value' where @NonNull is required

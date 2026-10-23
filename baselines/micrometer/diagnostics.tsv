@@ -1225,24 +1225,8 @@ eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io
 eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/distribution/ValueAtPercentile.java	56	Incompatible parameter type for o.
 eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/dropwizard/DropwizardFunctionTimer.java	134	Incompatible parameter type for output.
 eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutor.java	50	Incompatible parameter type for command.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	94	Incompatible parameter type for task.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	99	Incompatible parameter type for result.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	109	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	114	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	120	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	125	Incompatible parameter type for tasks.
 eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	131	Incompatible parameter type for command.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	100	Incompatible parameter type for task.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	105	Incompatible parameter type for result.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	115	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	120	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	126	Incompatible parameter type for tasks.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	131	Incompatible parameter type for tasks.
 eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	137	Incompatible parameter type for command.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	148	Incompatible parameter type for callable.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/kotlin/KotlinObservationContextElement.java	78	Incompatible parameter type for initial.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/kotlin/KotlinObservationContextElement.java	78	Incompatible parameter type for operation.
-eisop	warning	override.param.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/kotlin/KotlinObservationContextElement.java	83	Incompatible parameter type for key.
 eisop	warning	override.param.invalid	package	no	micrometer-jakarta9/src/main/java/io/micrometer/jakarta9/instrument/jms/MessageConsumerInvocationHandler.java	53	Incompatible parameter type for args.
 eisop	warning	override.param.invalid	package	no	micrometer-jakarta9/src/main/java/io/micrometer/jakarta9/instrument/jms/MessageConsumerInvocationHandler.java	78	Incompatible parameter type for message.
 eisop	warning	override.param.invalid	package	no	micrometer-jakarta9/src/main/java/io/micrometer/jakarta9/instrument/jms/MessageProducerInvocationHandler.java	52	Incompatible parameter type for args.
@@ -1258,7 +1242,6 @@ eisop	warning	override.param.invalid	package	no	micrometer-java11/src/main/java/
 eisop	warning	override.param.invalid	package	no	micrometer-java11/src/main/java/io/micrometer/java11/instrument/binder/jdk/MicrometerHttpClient.java	252	Incompatible parameter type for bodyHandler.
 eisop	warning	override.param.invalid	package	no	micrometer-java11/src/main/java/io/micrometer/java11/instrument/binder/jdk/MicrometerHttpClient.java	257	Incompatible parameter type for httpRequest.
 eisop	warning	override.param.invalid	package	no	micrometer-java11/src/main/java/io/micrometer/java11/instrument/binder/jdk/MicrometerHttpClient.java	258	Incompatible parameter type for bodyHandler.
-eisop	warning	override.param.invalid	package	no	micrometer-java11/src/main/java/io/micrometer/java11/instrument/binder/jdk/MicrometerHttpClient.java	258	Incompatible parameter type for pushPromiseHandler.
 eisop	warning	override.param.invalid	package	no	micrometer-jetty11/src/main/java/io/micrometer/jetty11/TimedHandler.java	109	Incompatible parameter type for path.
 eisop	warning	override.param.invalid	package	no	micrometer-jetty11/src/main/java/io/micrometer/jetty11/TimedHandler.java	109	Incompatible parameter type for baseRequest.
 eisop	warning	override.param.invalid	package	no	micrometer-jetty11/src/main/java/io/micrometer/jetty11/TimedHandler.java	109	Incompatible parameter type for request.
@@ -1291,103 +1274,11 @@ eisop	warning	override.param.invalid	package	yes	micrometer-test/src/main/java/i
 eisop	warning	override.param.invalid	package	yes	micrometer-test/src/main/java/io/micrometer/core/instrument/InstrumentationVerificationTests.java	167	Incompatible parameter type for annotationType.
 eisop	warning	override.param.invalid	package	yes	micrometer-test/src/main/java/io/micrometer/core/instrument/InstrumentationVerificationTests.java	172	Incompatible parameter type for annotationType.
 eisop	warning	override.param.invalid	package	no	samples/micrometer-samples-core/src/main/java/io/micrometer/core/samples/utils/SampleRegistries.java	141	Incompatible parameter type for k.
-eisop	warning	override.return.invalid	package	no	implementations/micrometer-registry-otlp/src/main/java/io/micrometer/registry/otlp/OtlpMeterRegistry.java	141	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	121	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	161	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	166	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	171	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	177	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	183	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	189	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	196	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	203	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	210	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	218	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	226	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	235	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	244	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	254	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	264	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	274	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	284	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	295	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	306	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	317	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	328	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	340	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	363	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	368	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	373	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	379	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	385	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	391	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	398	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	405	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	412	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	420	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	429	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	438	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	447	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	457	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	467	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	477	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	487	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	498	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	509	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	520	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	531	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	544	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	577	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	582	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	587	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	592	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	597	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	603	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	609	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	615	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	621	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	628	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	635	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	642	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	649	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	657	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	666	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	675	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	684	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	693	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	702	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	712	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	722	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	732	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	742	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	752	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	764	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	776	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	781	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	786	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	791	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/grpc/MetricCollectingClientInterceptor.java	114	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/grpc/MetricCollectingServerInterceptor.java	133	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/grpc/ObservationGrpcClientInterceptor.java	60	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/grpc/ObservationGrpcServerInterceptor.java	63	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	94	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	99	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	104	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	109	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedExecutorService.java	114	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	100	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	105	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	110	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	115	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	120	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	142	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	148	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	154	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	micrometer-core/src/main/java/io/micrometer/core/instrument/internal/TimedScheduledExecutorService.java	160	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-java11/src/main/java/io/micrometer/java11/instrument/binder/jdk/MicrometerHttpClient.java	207	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-java11/src/main/java/io/micrometer/java11/instrument/binder/jdk/MicrometerHttpClient.java	251	Incompatible return type.
-eisop	warning	override.return.invalid	package	no	micrometer-java11/src/main/java/io/micrometer/java11/instrument/binder/jdk/MicrometerHttpClient.java	257	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	micrometer-test/src/main/java/io/micrometer/core/instrument/InstrumentationVerificationTests.java	172	Incompatible return type.
 eisop	warning	override.return.invalid	package	no	samples/micrometer-samples-core/src/main/java/io/micrometer/core/samples/utils/SampleRegistries.java	141	Incompatible return type.
 eisop	warning	override.typaram.invalid	package	no	implementations/micrometer-registry-otlp/src/main/java/io/micrometer/registry/otlp/OtlpMeterRegistry.java	141	Incompatible bound for type parameter T.
 eisop	warning	override.typaram.invalid	package	yes	micrometer-core/src/main/java/io/micrometer/core/instrument/binder/db/MetricsDSLContext.java	121	Incompatible bound for type parameter R.

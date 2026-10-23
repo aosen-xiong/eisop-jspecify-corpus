@@ -433,7 +433,6 @@ eisop	warning	type.arguments.not.inferred	package	no	src/main/java/graphql/schem
 eisop	warning	type.arguments.not.inferred	package	no	src/main/java/graphql/schema/transform/FieldVisibilitySchemaTransformation.java	371	Could not infer type arguments for Stream.collect
 eisop	warning	type.arguments.not.inferred	class	no	src/main/java/graphql/util/Anonymizer.java	802	Could not infer type arguments for TraverserContext.setVar
 eisop	warning	unboxing.of.nullable	class	no	src/main/java/graphql/validation/OperationValidator.java	903	unboxing a possibly-null reference introspectionFieldCounts.merge(key, 1, Integer::sum)
-nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	56	inference failure: type variable T is constrained to be @Nullable, but its upper bound requires it to be @NonNull
 nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	56	incompatible types: BiFunction<? super T, Throwable, ? extends U> cannot be converted to BiFunction<? super @Nullable T, @Nullable Throwable, ? extends U>
 nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	66	passing @Nullable parameter 't' where @NonNull is required
 nullaway	warning	NullAway	class	no	src/main/java/graphql/EngineRunningState.java	66	passing @Nullable parameter 'throwable' where @NonNull is required

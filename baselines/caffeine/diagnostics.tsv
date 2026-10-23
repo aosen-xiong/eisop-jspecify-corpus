@@ -151,7 +151,6 @@ eisop	warning	override.param.invalid	package	yes	caffeine/src/main/java/com/gith
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AsyncCacheLoader.java	167	Incompatible return type.
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3015	Incompatible return type.
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3057	Incompatible return type.
-eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/CacheLoader.java	230	Incompatible return type.
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	518	Incompatible return type.
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	526	Incompatible return type.
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalAsyncCache.java	549	Incompatible return type.
@@ -165,7 +164,6 @@ eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/git
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	341	Incompatible return type.
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	743	Incompatible return type.
 eisop	warning	override.return.invalid	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/UnboundedLocalCache.java	936	Incompatible return type.
-eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/AsyncCacheLoader.java	165	incompatible types in return.
 eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	467	incompatible types in return.
 eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	472	incompatible types in return.
 eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	542	incompatible types in return.
@@ -183,7 +181,6 @@ eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/gi
 eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3157	incompatible types in return.
 eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	3209	incompatible types in return.
 eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/BoundedLocalCache.java	4943	incompatible types in return.
-eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/CacheLoader.java	223	incompatible types in return.
 eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	259	incompatible types in return.
 eisop	warning	return.type.incompatible	package	yes	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCache.java	266	incompatible types in return.
 eisop	warning	return.type.incompatible	package	no	caffeine/src/main/java/com/github/benmanes/caffeine/cache/LocalCacheFactory.java	115	incompatible types in return.
