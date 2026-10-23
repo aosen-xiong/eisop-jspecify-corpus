@@ -22,7 +22,7 @@ openrewrite	openrewrite/rewrite	f450e1eb3740ed1ff5469b3e720a3d9f1a1002df	gradle	
 nullaway	uber/NullAway	5ba2b547cecb789fbd8371e37205edfdbba9fa03	gradle	compileJava	25	trial	86 @NullMarked files; NullAway checks itself; Gradle 9.8.1	-
 spring-data-commons	spring-projects/spring-data-commons	10feb2ab4bb493498ac8843ff6676a035e4f9069	maven	compile	25	unsupported	50 @NullMarked files; needs a Maven injection path	-
 spring-batch	spring-projects/spring-batch	e7db3611a956d35065b111e893649d3639c70fb4	maven	compile	25	unsupported	80 @NullMarked files; needs a Maven injection path	-
-micronaut-core	micronaut-projects/micronaut-core	128b6981e0b377d1ad27345250efd6c44b7a64a6	gradle	compileJava	25	trial	6438 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.2	-
+micronaut-core	micronaut-projects/micronaut-core	128b6981e0b377d1ad27345250efd6c44b7a64a6	gradle	compileJava	25	trial	6438 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.8.2; NullAway 0.14.2 throws VerifyException ("A wildcard type cannot be assigned to a local variable") on micronaut-inject, so it is off there	micronaut-inject
 discord4j	Discord4J/Discord4J	e966d19c5e707bf6fa96c8ef1a3ee918d67e0133	gradle	compileJava	25	trial	1924 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.7.1	-
 spring-restdocs	spring-projects/spring-restdocs	3bb9bd1e3ec4218fbc25fd97ffcfd95524dc5341	gradle	compileJava	25	trial	1185 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 9.1.0	-
 mcprotocollib	GeyserMC/MCProtocolLib	b4fa8b23064bb85d7c7966cc2cd6bf369c9c1405	gradle	compileJava	21	trial	910 stars; from the 2026-10 GitHub code search for @NullMarked; Gradle 8.5; Gradle 8.5 does not run on JDK 25, so JDK 21	-
