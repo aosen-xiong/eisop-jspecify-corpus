@@ -102,6 +102,10 @@ def main():
                 canary_file = os.path.realpath(m.group("file"))
                 where = "unmarked" if "/eisopcorpus/unmarked/" in canary_file else "marked"
                 root = canary_file.split("/src/main/java/", 1)[0]
+                if root == canary_file:
+                    # A copy the build generated from the sources: joml compiles a preprocessed
+                    # tree under build/.
+                    root = canary_file.split("/build/", 1)[0]
                 canary_hits[(root, where)].add(tool_of(m.group("key")))
                 continue
             d = m.groupdict()
