@@ -71,7 +71,9 @@ def discoverProcessors = { Iterable<File> path ->
                 zip.close()
             }
         }
-        text?.eachLine { line ->
+        // Not String#eachLine: Gradle 9.1's file-input instrumentation takes it for File#eachLine and
+        // fails on the missing file.
+        text?.split(/\r?\n/)?.each { line ->
             def name = line.replaceAll(/#.*/, '').trim()
             if (name) names << name
         }
